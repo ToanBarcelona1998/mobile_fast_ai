@@ -38,12 +38,14 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   image_picker: ^1.0.7
   shimmer: ^3.0.0
-  cached_network_image: ^3.3.1
   flutter_datetime_picker_plus: ^2.1.0
   flutter_staggered_grid_view: ^0.7.0
   qr_flutter: ^4.1.0
 
   cupertino_icons: ^1.0.2
+
+  cache_network_image_extended:
+    path: ./packages/cache_network_image_extended
 
 dev_dependencies:
   flutter_test:
