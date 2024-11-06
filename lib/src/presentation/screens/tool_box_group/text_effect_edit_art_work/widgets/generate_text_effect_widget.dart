@@ -1,4 +1,4 @@
-import 'package:mobile_fast_ai/src/application/app_theme/app_theme.dart';
+import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/cores/constants/dummy_data.dart';
 import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';

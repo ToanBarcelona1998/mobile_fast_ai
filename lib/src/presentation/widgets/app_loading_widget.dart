@@ -1,5 +1,5 @@
-import 'package:mobile_fast_ai/src/application/app_theme/app_theme.dart';
-import 'package:mobile_fast_ai/src/application/app_theme/app_theme_builder.dart';
+import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
+import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme_builder.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:math' as math show sin, pi;
 

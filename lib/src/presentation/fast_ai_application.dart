@@ -1,6 +1,6 @@
-import 'package:mobile_fast_ai/src/application/app_theme/app_theme_cubit.dart';
-import 'package:mobile_fast_ai/src/application/localization/app_translations_delegate.dart';
-import 'package:mobile_fast_ai/src/application/localization/localization_manager.dart';
+import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme_cubit.dart';
+import 'package:mobile_fast_ai/src/application/global/localization/app_translations_delegate.dart';
+import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_typography.dart';
 import 'package:mobile_fast_ai/src/presentation/app_navigator.dart';
 import 'package:flutter/material.dart';
