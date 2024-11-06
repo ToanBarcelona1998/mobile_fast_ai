@@ -1,5 +1,5 @@
 final class FastAIError{
-  final String code;
+  final int code;
   final String? message;
 
   const FastAIError({
