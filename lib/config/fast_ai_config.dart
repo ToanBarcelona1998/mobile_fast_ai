@@ -3,6 +3,10 @@ enum FastAIEnvironment {
   prod,
 }
 
-final class FastAIConfig{
+final class FastAIConfig {
+  final String baseUrl;
 
+  const FastAIConfig({
+    required this.baseUrl,
+  });
 }
