@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:cache_network_image_extended/cache_network_image_extended.dart';
-import 'package:mobile_fast_ai/src/application/app_theme/app_theme.dart';
+import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

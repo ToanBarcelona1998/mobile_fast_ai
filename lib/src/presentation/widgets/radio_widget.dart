@@ -1,4 +1,4 @@
-import 'package:mobile_fast_ai/src/application/app_theme/app_theme.dart';
+import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_typography.dart';
 import 'package:mobile_fast_ai/src/cores/constants/asset_path.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/icon_with_text_widget.dart';

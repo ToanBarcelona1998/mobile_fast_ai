@@ -1,5 +1,5 @@
-import 'package:mobile_fast_ai/src/application/app_theme/app_theme.dart';
-import 'package:mobile_fast_ai/src/application/localization/localization_manager.dart';
+import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
+import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
 import 'package:mobile_fast_ai/src/cores/constants/asset_path.dart';
 import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';

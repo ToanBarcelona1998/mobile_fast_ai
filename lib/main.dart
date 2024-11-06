@@ -1,4 +1,4 @@
-import 'package:mobile_fast_ai/src/application/localization/localization_manager.dart';
+import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
 import 'package:mobile_fast_ai/src/presentation/fast_ai_application.dart';
 import 'package:flutter/material.dart';
 

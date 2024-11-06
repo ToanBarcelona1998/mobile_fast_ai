@@ -1,4 +1,4 @@
-import 'package:mobile_fast_ai/src/application/app_theme/app_theme.dart';
+import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 typedef OnSliderChange<T> = void Function(T value);

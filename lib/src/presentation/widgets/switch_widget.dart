@@ -1,4 +1,4 @@
-import 'package:mobile_fast_ai/src/application/app_theme/app_theme.dart';
+import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:flutter/cupertino.dart';
 
 class SwitchWidget extends StatelessWidget {
