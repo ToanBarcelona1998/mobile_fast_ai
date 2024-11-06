@@ -1,7 +1,7 @@
 import 'dart:io';
+import 'package:cache_network_image_extended/cache_network_image_extended.dart';
 import 'package:mobile_fast_ai/src/cores/constants/asset_path.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart' show CupertinoActivityIndicator;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -67,14 +67,15 @@ class CircleAvatarWidget extends StatelessWidget {
         }
       case PhotoType.network:
         if (imageType == ImageType.normal) {
-          return CachedNetworkImage(
+          return CacheNetworkImageExtend(
             imageUrl: url,
             fit: fit,
             height: height,
             width: width,
-            useOldImageOnUrlChange: true,
-            placeholder: (context, url) => const CupertinoActivityIndicator(),
-            errorWidget: (context, url, _) => _placeHolder,
+            loadingBuilder: (context, url,_) => const CupertinoActivityIndicator(),
+            errorBuilder: (context, url, _) => _placeHolder,
+            targetWidth: width,
+            targetHeight: height,
           );
         } else {
           return SvgPicture.network(

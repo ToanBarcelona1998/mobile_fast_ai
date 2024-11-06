@@ -1,10 +1,11 @@
 import 'dart:io';
 
+import 'package:cache_network_image_extended/cache_network_image_extended.dart';
 import 'package:mobile_fast_ai/src/application/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mobile_fast_ai/src/cores/utils/context_extension.dart';
 import 'package:shimmer/shimmer.dart';
 
 abstract class ImageWidget extends StatelessWidget {
@@ -73,17 +74,19 @@ final class NetworkImageWidget extends ImageWidget {
 
   @override
   Widget imageBuilder(BuildContext context, AppTheme appTheme) {
-    return CachedNetworkImage(
+    return CacheNetworkImageExtend(
       imageUrl: imageUrl,
       fit: fit,
       width: width,
       height: height,
-      placeholder: (context, url) {
+      loadingBuilder: (context, url , isLoading) {
         return placeholder();
       },
-      errorWidget: (context, url, error) {
+      errorBuilder: (context, url, error) {
         return errorWidget();
       },
+      targetHeight: context.cacheImageTarget,
+      targetWidth: context.cacheImageTarget,
     );
   }
 }
