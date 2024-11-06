@@ -1,4 +1,4 @@
-final class LoginRequest {
+class LoginRequest {
   final String userName;
   final String password;
 

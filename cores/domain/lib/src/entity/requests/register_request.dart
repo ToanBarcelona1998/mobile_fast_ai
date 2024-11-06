@@ -1,4 +1,4 @@
-final class RegisterRequest {
+class RegisterRequest {
   final String userName;
   final String password;
 
