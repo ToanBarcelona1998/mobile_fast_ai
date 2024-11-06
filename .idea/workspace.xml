@@ -5,14 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/config/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/package.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/login_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/register_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/auth_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/user_repository.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,15 +46,15 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/Users/toannv/Documents/Home-Work/mobile_fast_ai",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/toannv/Documents/Home-Work/mobile_fast_ai&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
