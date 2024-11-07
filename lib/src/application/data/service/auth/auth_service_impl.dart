@@ -11,14 +11,14 @@ final class AuthServiceImpl implements AuthService {
   const AuthServiceImpl(this._authServiceGenerator);
 
   @override
-  Future<BaseResponse<LoginResponse>> login({
+  Future<BaseResponse> login({
     required Map<String, dynamic> body,
   }) {
     return _authServiceGenerator.login(body);
   }
 
   @override
-  Future<BaseResponse<RegisterResponse>> register({
+  Future<BaseResponse> register({
     required Map<String, dynamic> body,
   }) {
     return _authServiceGenerator.register(body);
@@ -34,11 +34,11 @@ abstract class AuthServiceGenerator {
 
   @POST(APIService.login)
   @MultiPart()
-  Future<BaseResponse<LoginResponse>> login(
+  Future<BaseResponse> login(
       @Part() Map<String, dynamic> body);
 
   @POST(APIService.register)
   @MultiPart()
-  Future<BaseResponse<RegisterResponse>> register(
+  Future<BaseResponse> register(
       @Part() Map<String, dynamic> body);
 }
