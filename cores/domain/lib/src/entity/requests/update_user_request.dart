@@ -5,6 +5,7 @@ final class UpdateUserRequest {
   final String? birthday;
   final String? avatar;
   final int gender;
+  final int status;
 
   const UpdateUserRequest({
     required this.name,
@@ -13,6 +14,7 @@ final class UpdateUserRequest {
     this.birthday,
     this.avatar,
     this.address,
+    required this.status,
   });
 
   bool isValidGender(){
