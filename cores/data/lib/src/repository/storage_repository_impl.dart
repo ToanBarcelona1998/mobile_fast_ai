@@ -1,10 +1,10 @@
 import 'package:data/src/resource/local/local_storage_service.dart';
 import 'package:domain/domain.dart';
 
-abstract class StorageRepositoryImpl<T extends LocalStorageService> implements StorageRepository {
+abstract class LocalStorageRepositoryImpl<T extends LocalStorageService> implements LocalStorageRepository {
   final T _localStorageService;
 
-  const StorageRepositoryImpl(this._localStorageService);
+  const LocalStorageRepositoryImpl(this._localStorageService);
 
   @override
   Future<bool> add({required AddLocalStorageRequest request}) {
@@ -27,10 +27,10 @@ abstract class StorageRepositoryImpl<T extends LocalStorageService> implements S
   }
 }
 
-final class NormalStorageRepositoryImpl extends StorageRepositoryImpl<NormalLocalStorageService> implements NormalStorageRepository {
-  const NormalStorageRepositoryImpl(NormalLocalStorageService localStorageService) : super(localStorageService);
+final class NormalLocalStorageRepositoryImpl extends LocalStorageRepositoryImpl<NormalLocalStorageService> implements NormalLocalStorageRepository{
+  const NormalLocalStorageRepositoryImpl(NormalLocalStorageService localStorageService) : super(localStorageService);
 }
 
-final class SecureStorageRepositoryImpl extends StorageRepositoryImpl<SecureLocalStorageService> implements SecureStorageRepository {
-  const SecureStorageRepositoryImpl(SecureLocalStorageService localStorageService) : super(localStorageService);
+final class SecureLocalStorageRepositoryImpl extends LocalStorageRepositoryImpl<SecureLocalStorageService> implements SecureLocalStorageRepository {
+  const SecureLocalStorageRepositoryImpl(SecureLocalStorageService localStorageService) : super(localStorageService);
 }
