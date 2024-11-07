@@ -92,8 +92,23 @@ Future<void> initDependency(FastAIConfig config) async {
   );
 
   getIt.registerLazySingleton<SecureLocalStorageRepository>(
-        () => SecureLocalStorageRepositoryImpl(
+    () => SecureLocalStorageRepositoryImpl(
       getIt.get<SecureLocalStorageService>(),
+    ),
+  );
+
+  // Use case
+  getIt.registerLazySingleton(
+    () => AuthUseCase(
+      getIt.get<SecureLocalStorageRepository>(),
+      getIt.get<AuthRepository>(),
+    ),
+  );
+
+  getIt.registerLazySingleton(
+    () => UserUseCase(
+      getIt.get<UserRepository>(),
+      getIt.get<SecureLocalStorageRepository>(),
     ),
   );
 }
