@@ -1,12 +1,61 @@
+import 'dart:convert';
+
+import 'package:domain/domain.dart';
+import 'package:flutter/services.dart';
+import 'package:mobile_fast_ai/config/di.dart' as di;
+import 'package:mobile_fast_ai/config/fast_ai_config.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
 import 'package:mobile_fast_ai/src/presentation/fast_ai_application.dart';
 import 'package:flutter/material.dart';
+
+import 'src/cores/constants/asset_path.dart';
+
+import 'dart:developer' as developer;
+
+// Change this one if you want to change environment
+const FastAIEnvironment environment = FastAIEnvironment.dev;
+
+Future<Map<String, dynamic>> _loadConfig() async {
+  String loader;
+  String path;
+
+  switch (environment) {
+    case FastAIEnvironment.dev:
+      path = AssetConfigPath.configDev;
+      break;
+    case FastAIEnvironment.prod:
+      path = AssetConfigPath.configProd;
+  }
+  try {
+    loader = await rootBundle.loadString(
+      path,
+    );
+  } catch (e) {
+    loader = '';
+    LogProvider.log('can\'t load config ${e.toString()}');
+  }
+
+  return jsonDecode(loader);
+}
+
+class LogProviderImpl implements LogProvider {
+  @override
+  void printLog(String message) {
+    developer.log(message, name: 'a_wallet');
+  }
+}
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
 
   // Load languages
   await AppLocalizationManager.instance.load();
+
+  final rootConfig = await _loadConfig();
+
+  final fastAIConfig = FastAIConfig.fromJson(rootConfig);
+
+  await di.initDependency(fastAIConfig);
 
   runApp(
     const FastAIApplication(),

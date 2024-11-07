@@ -1,17 +1,22 @@
-const String assets = 'assets/';
+const String _assets = 'assets/';
+
+sealed class AssetConfigPath{
+  static const String configDev = '${_assets}config/config.dev.json';
+  static const String configProd = '${_assets}config/config.prod.json';
+}
 
 sealed class AssetLanguagePath{
-  static const String languagePath = '${assets}languages/';
+  static const String languagePath = '${_assets}languages/';
 }
 
 sealed class AssetLogoPath{
-  static const String _logoBasePath = '${assets}logo/';
+  static const String _logoBasePath = '${_assets}logo/';
   static const String logo = '${_logoBasePath}logo.svg';
   static const String logoSmall = '${_logoBasePath}logo_small.svg';
 }
 
 sealed class AssetImagePath{
-  static const String _imgBasePath = '${assets}image/';
+  static const String _imgBasePath = '${_assets}image/';
   static const String commonDefaultAvatar = '${_imgBasePath}img_default_avatar.svg';
   static const String imgWalkThrough1 = '${_imgBasePath}img_walk_through1.png';
   static const String imgWalkThrough2 = '${_imgBasePath}img_walk_through2.png';
@@ -22,7 +27,7 @@ sealed class AssetImagePath{
 }
 
 sealed class AssetIconPath{
-  static const String _iconBasePath = '${assets}icon/';
+  static const String _iconBasePath = '${_assets}icon/';
   static const String icCommonArrowBack = '${_iconBasePath}ic_common_arrow_back.svg';
   static const String icCommonCheckboxUncheck = '${_iconBasePath}ic_common_check_box_uncheck.svg';
   static const String icCommonCheckboxChecked = '${_iconBasePath}ic_common_check_box_checked.svg';

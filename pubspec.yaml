@@ -27,14 +27,15 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  flutter_bloc: ^8.1.5
+  flutter_bloc: ^8.1.6
 
   #helper
   permission_handler: ^11.3.1
   intl: ^0.19.0
+  get_it: ^8.0.2
 
   #ui
-  flutter_svg: ^2.0.12
+  flutter_svg: ^2.0.13
   smooth_page_indicator: ^1.2.0+3
   image_picker: ^1.1.2
   shimmer: ^3.0.0
@@ -42,14 +43,25 @@ dependencies:
   flutter_staggered_grid_view: ^0.7.0
   qr_flutter: ^4.1.0
 
+  # network
+  dio: ^5.7.0
+  retrofit: ^4.4.1
+
   cupertino_icons: ^1.0.2
 
   cache_network_image_extended:
     path: ./packages/cache_network_image_extended
+  domain:
+    path: ./cores/domain
+  data:
+    path: ./cores/data
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  retrofit_generator: ^9.1.4
+  freezed: ^2.5.7
+  build_runner: ^2.4.13
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
