@@ -49,6 +49,10 @@ class LogProviderImpl implements LogProvider {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  final LogProvider logProvider = LogProviderImpl();
+
+  LogProvider.init(logProvider);
+
   // Load languages
   await AppLocalizationManager.instance.load();
 
