@@ -33,10 +33,12 @@ abstract class AuthServiceGenerator {
   }) = _AuthServiceGenerator;
 
   @POST(APIService.login)
+  @MultiPart()
   Future<BaseResponse<LoginResponse>> login(
-      @MultiPart() Map<String, dynamic> body);
+      @Part() Map<String, dynamic> body);
 
   @POST(APIService.register)
+  @MultiPart()
   Future<BaseResponse<RegisterResponse>> register(
-      @MultiPart() Map<String, dynamic> body);
+      @Part() Map<String, dynamic> body);
 }
