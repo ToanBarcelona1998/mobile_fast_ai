@@ -18,7 +18,7 @@ abstract interface class ErrorHandler with BaseException{
       return _instance;
     }
 
-    throw 'ErrorHandler have to set instance before to be used';
+    throw 'ErrorHandler has to set instance before to be used';
   }
 
   Future<T> call<T>({
