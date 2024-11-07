@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:mobile_fast_ai/config/di.dart' as di;
 import 'package:mobile_fast_ai/config/fast_ai_config.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
+import 'package:mobile_fast_ai/src/cores/error_handle_impl.dart';
 import 'package:mobile_fast_ai/src/presentation/fast_ai_application.dart';
 import 'package:flutter/material.dart';
 
@@ -41,12 +42,16 @@ Future<Map<String, dynamic>> _loadConfig() async {
 class LogProviderImpl implements LogProvider {
   @override
   void printLog(String message) {
-    developer.log(message, name: 'a_wallet');
+    developer.log(message, name: 'mobile_fast_ai');
   }
 }
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  final LogProvider logProvider = LogProviderImpl();
+
+  LogProvider.init(logProvider);
 
   // Load languages
   await AppLocalizationManager.instance.load();
@@ -54,6 +59,12 @@ void main() async{
   final rootConfig = await _loadConfig();
 
   final fastAIConfig = FastAIConfig.fromJson(rootConfig);
+
+  final ErrorHandler fastAiErrorHandler = ErrorHandlerImpl();
+
+  ErrorHandler.setInstance(
+    fastAiErrorHandler,
+  );
 
   await di.initDependency(fastAIConfig);
 

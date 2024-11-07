@@ -13,9 +13,9 @@ final class AuthRepositoryImpl implements AuthRepository {
       body: request.toJson(),
     );
 
-    final loginResponse = baseResponse.handleResponse();
+    final data = baseResponse.handleResponse();
 
-    return loginResponse!.accessToken;
+    return data['accessToken'];
   }
 
   @override
@@ -24,8 +24,8 @@ final class AuthRepositoryImpl implements AuthRepository {
       body: request.toJson(),
     );
 
-    final registerResponse = baseResponse.handleResponse();
+    final data = baseResponse.handleResponse();
 
-    return registerResponse!.accessToken;
+    return data['accessToken'];
   }
 }

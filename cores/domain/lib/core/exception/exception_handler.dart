@@ -2,7 +2,8 @@ import 'package:domain/core/exception/fast_ai_error.dart';
 
 import 'base_exception_handle.dart';
 
-abstract interface class ErrorHandler with BaseException{
+abstract class ErrorHandler with BaseException{
+
   static late ErrorHandler _instance;
 
   static bool _isInitialized = false;

@@ -1,12 +1,11 @@
 import 'package:data/core/base_response.dart';
-import 'response/response.dart';
 
 abstract interface class AuthService {
-  Future<BaseResponse<LoginResponse>> login({
+  Future<BaseResponse> login({
     required Map<String, dynamic> body,
   });
 
-  Future<BaseResponse<RegisterResponse>> register({
+  Future<BaseResponse> register({
     required Map<String, dynamic> body,
   });
 }
