@@ -1,7 +1,7 @@
-import 'package:domain/core/constant.dart';
 import 'package:domain/core/core.dart';
 import 'package:domain/src/entity/requests/request.dart';
 import 'package:domain/src/repository/repository.dart';
+import 'package:domain/src/utils/token_management.dart';
 
 final class AuthUseCase {
   final AuthRepository _authRepository;
@@ -10,21 +10,19 @@ final class AuthUseCase {
   const AuthUseCase(this._secureLocalStorageRepository, this._authRepository);
 
   Future<void> login(String userName, String password) async {
-    final LoginRequest request = LoginRequest(userName: userName, password: password);
+    final LoginRequest request =
+        LoginRequest(userName: userName, password: password);
 
     final String accessToken = await ErrorHandler.getInstance().call<String>(
       request: _authRepository.login(request: request),
     );
 
-    final AddLocalStorageRequest addLocalStorageRequest =
-    AddLocalStorageRequest(
-      value: accessToken,
-      key: accessTokenKey,
-    );
+    final TokenManagement tokenManagement = TokenManagement(_secureLocalStorageRepository);
 
     await ErrorHandler.getInstance().call(
-      request: _secureLocalStorageRepository.add(
-          request: addLocalStorageRequest),
+      request: tokenManagement.saveToken(
+        accessToken,
+      ),
     );
   }
 
@@ -36,15 +34,12 @@ final class AuthUseCase {
       request: _authRepository.register(request: request),
     );
 
-    final AddLocalStorageRequest addLocalStorageRequest =
-        AddLocalStorageRequest(
-      value: accessToken,
-      key: accessTokenKey,
-    );
+    final TokenManagement tokenManagement = TokenManagement(_secureLocalStorageRepository);
 
     await ErrorHandler.getInstance().call(
-      request: _secureLocalStorageRepository.add(
-          request: addLocalStorageRequest),
+      request: tokenManagement.saveToken(
+        accessToken,
+      ),
     );
   }
 }

@@ -90,6 +90,7 @@ flutter:
     - assets/icon/
     - assets/image/
     - assets/languages/
+    - assets/config/
 
   fonts:
     - family: Urbanist

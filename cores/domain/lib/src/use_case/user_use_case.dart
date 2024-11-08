@@ -1,7 +1,7 @@
-import 'package:domain/core/constant.dart';
 import 'package:domain/core/core.dart';
 import 'package:domain/src/entity/entity.dart';
 import 'package:domain/src/repository/repository.dart';
+import 'package:domain/src/utils/token_management.dart';
 
 final class UserUseCase {
   final UserRepository _userRepository;
@@ -10,13 +10,14 @@ final class UserUseCase {
   const UserUseCase(this._userRepository, this._secureLocalStorageRepository);
 
   Future<User> getUser() async {
-    final String? accessToken = await ErrorHandler.getInstance().call(
-      request: _secureLocalStorageRepository.get(id: accessTokenKey),
+    final TokenManagement tokenManagement = TokenManagement(_secureLocalStorageRepository);
+    final String accessToken = await ErrorHandler.getInstance().call(
+      request: tokenManagement.getBearerToken(),
     );
 
     return ErrorHandler.getInstance().call(
       request: _userRepository.get(
-        accessToken: accessToken ?? '',
+        accessToken: accessToken,
       ),
     );
   }
@@ -26,8 +27,9 @@ final class UserUseCase {
     required int gender,
     required int status,
   }) async {
-    final String? accessToken = await ErrorHandler.getInstance().call(
-      request: _secureLocalStorageRepository.get(id: accessTokenKey),
+    final TokenManagement tokenManagement = TokenManagement(_secureLocalStorageRepository);
+    final String accessToken = await ErrorHandler.getInstance().call(
+      request: tokenManagement.getBearerToken(),
     );
 
     final UpdateUserRequest updateUserRequest = UpdateUserRequest(
@@ -39,7 +41,7 @@ final class UserUseCase {
     await ErrorHandler.getInstance().call(
       request: _userRepository.update(
         request: updateUserRequest,
-        accessToken: accessToken ?? '',
+        accessToken: accessToken,
       ),
     );
   }
