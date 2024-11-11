@@ -91,8 +91,10 @@ class _TextEffectArtEditArtWorkGenerateImageWidget extends StatelessWidget {
       ),
       alignment: Alignment.center,
       child: loading
-          ? const Center(
-              child: AppLoadingWidget(),
+          ? Center(
+              child: AppLoadingWidget(
+                appTheme: appTheme,
+              ),
             )
           : NetworkImageWidget(
               imageUrl: url,

@@ -36,7 +36,9 @@ class ThreeDToImageEditArtWorkGenerateImageWidget extends StatelessWidget {
         ),
       ),
       child: loading
-          ? const AppLoadingWidget()
+          ? AppLoadingWidget(
+              appTheme: appTheme,
+            )
           : Stack(
               children: [
                 NetworkImageWidget(
@@ -70,7 +72,6 @@ class ThreeDToImageEditArtWorkBoxImageWidget extends StatelessWidget {
   final AppLocalizationManager localization;
   final VoidCallback onTap;
 
-
   const ThreeDToImageEditArtWorkBoxImageWidget({
     this.loading = true,
     this.isSelected = false,
@@ -95,9 +96,9 @@ class ThreeDToImageEditArtWorkBoxImageWidget extends StatelessWidget {
           ),
           border: isSelected
               ? Border.all(
-            color: appTheme.primaryColor900,
-            width: BorderSize.border02,
-          )
+                  color: appTheme.primaryColor900,
+                  width: BorderSize.border02,
+                )
               : null,
         ),
         child: loading
@@ -105,7 +106,7 @@ class ThreeDToImageEditArtWorkBoxImageWidget extends StatelessWidget {
             : NetworkImageWidget(
                 imageUrl: url,
                 appTheme: appTheme,
-          height: double.maxFinite,
+                height: double.maxFinite,
               ),
       ),
     );

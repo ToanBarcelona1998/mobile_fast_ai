@@ -41,7 +41,9 @@ class ImageToPaintingEditArtWorkGenerateImageWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const AppLoadingWidget(),
+                AppLoadingWidget(
+                  appTheme: appTheme,
+                ),
                 const SizedBox(
                   height: BoxSize.boxSize05,
                 ),
