@@ -1,3 +1,5 @@
+import 'package:mobile_fast_ai/src/application/global/app_global/app_global_cubit.dart';
+import 'package:mobile_fast_ai/src/application/global/app_global/app_global_state.dart';
 import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme_cubit.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/app_translations_delegate.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
@@ -14,8 +16,8 @@ class FastAIApplication extends StatefulWidget {
   State<FastAIApplication> createState() => _FastAIApplicationState();
 }
 
-class _FastAIApplicationState extends State<FastAIApplication> with WidgetsBindingObserver{
-
+class _FastAIApplicationState extends State<FastAIApplication>
+    with WidgetsBindingObserver {
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
@@ -63,10 +65,32 @@ class _FastAIApplicationState extends State<FastAIApplication> with WidgetsBindi
             BlocProvider(
               create: (context) => AppThemeCubit(),
             ),
+            BlocProvider(
+              create: (context) => AppGlobalCubit(),
+            )
           ],
-          child: child ?? const SizedBox.shrink(),
+          child: MultiBlocListener(
+            listeners: [
+              BlocListener<AppGlobalCubit,AppGlobalState>(
+                listenWhen: (previous, current) => previous.status != current.status,
+                listener: _onListenAppGlobalStateChange,
+              ),
+            ],
+            child: child ?? const SizedBox.shrink(),
+          ),
         );
       },
     );
+  }
+
+  void _onListenAppGlobalStateChange(BuildContext context,AppGlobalState state){
+    switch(state.status){
+      case AppGlobalStatus.authorized:
+        AppNavigator.push(RoutePath.home);
+        break;
+      case AppGlobalStatus.unauthorized:
+        AppNavigator.replaceAllWith(RoutePath.splash);
+        break;
+    }
   }
 }
