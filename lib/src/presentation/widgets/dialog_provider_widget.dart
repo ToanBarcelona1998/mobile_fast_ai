@@ -72,7 +72,9 @@ final class _LoadingDialog extends _DialogProviderWidget {
         const SizedBox(
           height: BoxSize.boxSize07,
         ),
-        const AppLoadingWidget(),
+        AppLoadingWidget(
+          appTheme: appTheme,
+        ),
         const SizedBox(
           height: BoxSize.boxSize09,
         ),

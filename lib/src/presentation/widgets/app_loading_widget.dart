@@ -1,7 +1,8 @@
 import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
-import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme_builder.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:math' as math show sin, pi;
+
+import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
 
 class _DelayTween extends Tween<double> {
   _DelayTween({
@@ -24,20 +25,19 @@ class _DelayTween extends Tween<double> {
 class AppLoadingWidget extends StatefulWidget {
   const AppLoadingWidget({
     Key? key,
-    this.color,
-    this.size = 50.0,
+    this.size = BoxSize.boxSize10,
     this.itemBuilder,
+    required this.appTheme,
     this.duration = const Duration(
       milliseconds: 1200,
     ),
     this.controller,
   }) : super(key: key);
-
-  final Color? color;
   final double size;
   final IndexedWidgetBuilder? itemBuilder;
   final Duration duration;
   final AnimationController? controller;
+  final AppTheme appTheme;
 
   @override
   State<AppLoadingWidget> createState() => _AppLoadingWidgetState();
@@ -80,7 +80,7 @@ class _AppLoadingWidgetState extends State<AppLoadingWidget>
                 left: position,
                 top: position,
                 child: Transform(
-                  transform: Matrix4.rotationZ(30.0 * index * 0.0174533),
+                  transform: Matrix4.rotationZ(BoxSize.boxSize08 * index * 0.0174533),
                   child: Align(
                     alignment: Alignment.center,
                     child: ScaleTransition(
@@ -89,16 +89,12 @@ class _AppLoadingWidgetState extends State<AppLoadingWidget>
                         end: 1.0,
                         delay: index / _itemCount,
                       ).animate(_controller),
-                      child: AppThemeBuilder(
-                        builder: (appTheme) {
-                          return SizedBox.fromSize(
-                            size: Size.square(widget.size * 0.15),
-                            child: _itemBuilder(
-                              index,
-                              appTheme,
-                            ),
-                          );
-                        },
+                      child: SizedBox.fromSize(
+                        size: Size.square(widget.size * 0.15),
+                        child: _itemBuilder(
+                          index,
+                          widget.appTheme,
+                        ),
                       ),
                     ),
                   ),
@@ -116,7 +112,7 @@ class _AppLoadingWidgetState extends State<AppLoadingWidget>
           ? widget.itemBuilder!(context, index)
           : DecoratedBox(
               decoration: BoxDecoration(
-                color: widget.color ?? appTheme.primaryColor900,
+                color: appTheme.primaryColor900,
                 shape: BoxShape.circle,
               ),
             );
