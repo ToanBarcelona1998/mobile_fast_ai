@@ -36,7 +36,9 @@ class ControlNetEditArtWorkGenerateImageWidget extends StatelessWidget {
         ),
       ),
       child: loading
-          ? const AppLoadingWidget()
+          ? AppLoadingWidget(
+              appTheme: appTheme,
+            )
           : Stack(
               children: [
                 NetworkImageWidget(

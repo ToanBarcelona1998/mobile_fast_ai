@@ -37,8 +37,10 @@ class LogoGeneratorEditArtWorkGenerateImageWidget extends StatelessWidget {
         ),
       ),
       child: loading
-          ? const Center(
-              child: AppLoadingWidget(),
+          ? Center(
+              child: AppLoadingWidget(
+                appTheme: appTheme,
+              ),
             )
           : Stack(
               children: [

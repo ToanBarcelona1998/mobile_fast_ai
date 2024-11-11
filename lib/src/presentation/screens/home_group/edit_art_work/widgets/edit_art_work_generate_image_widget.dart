@@ -39,7 +39,9 @@ class EditArtWorkGenerateImageWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const AppLoadingWidget(),
+                AppLoadingWidget(
+                  appTheme: appTheme,
+                ),
                 const SizedBox(
                   height: BoxSize.boxSize05,
                 ),
@@ -54,27 +56,27 @@ class EditArtWorkGenerateImageWidget extends StatelessWidget {
               ],
             )
           : Stack(
-            children: [
-              Positioned.fill(
-                child: NetworkImageWidget(
+              children: [
+                Positioned.fill(
+                  child: NetworkImageWidget(
                     imageUrl: url,
                     appTheme: appTheme,
                     width: double.maxFinite,
                   ),
-              ),
-              Positioned(
-                bottom: Spacing.spacing02,
-                left: Spacing.spacing02,
-                child: GestureDetector(
-                  behavior: HitTestBehavior.opaque,
-                  onTap: onDownLoad,
-                  child: SvgPicture.asset(
-                    AssetIconPath.icEditArtWorkDownload,
+                ),
+                Positioned(
+                  bottom: Spacing.spacing02,
+                  left: Spacing.spacing02,
+                  child: GestureDetector(
+                    behavior: HitTestBehavior.opaque,
+                    onTap: onDownLoad,
+                    child: SvgPicture.asset(
+                      AssetIconPath.icEditArtWorkDownload,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
     );
   }
 }
@@ -106,9 +108,9 @@ class EditArtWorkBoxImageWidget extends StatelessWidget {
       child: loading
           ? const SizedBox.shrink()
           : NetworkImageWidget(
-            imageUrl: url,
-            appTheme: appTheme,
-          ),
+              imageUrl: url,
+              appTheme: appTheme,
+            ),
     );
   }
 }
