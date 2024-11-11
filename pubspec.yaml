@@ -29,6 +29,10 @@ dependencies:
 
   flutter_bloc: ^8.1.6
 
+  #tool
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
   #helper
   permission_handler: ^11.3.1
   intl: ^0.19.0
@@ -46,6 +50,7 @@ dependencies:
   flutter_datetime_picker_plus: ^2.2.0
   flutter_staggered_grid_view: ^0.7.0
   qr_flutter: ^4.1.0
+  fluttertoast: ^8.2.8
 
   # network
   dio: ^5.7.0
@@ -66,6 +71,7 @@ dev_dependencies:
   retrofit_generator: ^9.1.4
   freezed: ^2.5.7
   build_runner: ^2.4.13
+  json_serializable: ^6.8.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -90,6 +96,7 @@ flutter:
     - assets/icon/
     - assets/image/
     - assets/languages/
+    - assets/config/
 
   fonts:
     - family: Urbanist

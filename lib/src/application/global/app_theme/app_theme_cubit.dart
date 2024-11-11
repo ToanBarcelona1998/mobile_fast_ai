@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'app_theme.dart';
@@ -12,4 +13,6 @@ final class AppThemeCubit extends Cubit<AppTheme> {
   void changeAppTheme(AppTheme appTheme) {
     emit(appTheme);
   }
+
+  static AppThemeCubit of(BuildContext context) => BlocProvider.of<AppThemeCubit>(context);
 }
