@@ -23,6 +23,18 @@ final class AuthServiceImpl implements AuthService {
   }) {
     return _authServiceGenerator.register(body);
   }
+
+  @override
+  Future<BaseResponse> refreshToken({required Map<String, dynamic> body}) {
+    // TODO: implement refreshToken
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<BaseResponse> verifyEmail({required Map<String, dynamic> body}) {
+    // TODO: implement verifyEmail
+    throw UnimplementedError();
+  }
 }
 
 @RestApi()
@@ -34,11 +46,17 @@ abstract class AuthServiceGenerator {
 
   @POST(APIService.login)
   @MultiPart()
-  Future<BaseResponse> login(
-      @Part() Map<String, dynamic> body);
+  Future<BaseResponse> login(@Part() Map<String, dynamic> body);
 
   @POST(APIService.register)
   @MultiPart()
-  Future<BaseResponse> register(
-      @Part() Map<String, dynamic> body);
+  Future<BaseResponse> register(@Part() Map<String, dynamic> body);
+
+  @POST(APIService.refreshToken)
+  @MultiPart()
+  Future<BaseResponse> refreshToken(@Part() Map<String, dynamic> body);
+
+  @POST(APIService.registerVerifyEmail)
+  @MultiPart()
+  Future<BaseResponse> verifyEmail(@Part() Map<String, dynamic> body);
 }
