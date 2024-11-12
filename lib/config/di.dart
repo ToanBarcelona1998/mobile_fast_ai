@@ -7,6 +7,7 @@ import 'package:mobile_fast_ai/src/application/data/local/local_storage_service_
 import 'package:mobile_fast_ai/src/application/data/service/auth/auth_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/user/user_service_impl.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_local_constant.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/splash/splash_cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'fast_ai_config.dart';
 
@@ -109,6 +110,13 @@ Future<void> initDependency(FastAIConfig config) async {
     () => UserUseCase(
       getIt.get<UserRepository>(),
       getIt.get<SecureLocalStorageRepository>(),
+    ),
+  );
+
+  // Bloc
+  getIt.registerFactory<SplashCubit>(
+    () => SplashCubit(
+      getIt.get<UserUseCase>(),
     ),
   );
 }

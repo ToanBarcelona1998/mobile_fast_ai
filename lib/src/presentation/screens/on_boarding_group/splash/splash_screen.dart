@@ -1,3 +1,7 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobile_fast_ai/config/di.dart';
+import 'package:mobile_fast_ai/src/application/global/app_global/app_global_cubit.dart';
+import 'package:mobile_fast_ai/src/application/global/app_global/app_global_state.dart';
 import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_typography.dart';
@@ -5,6 +9,8 @@ import 'package:mobile_fast_ai/src/cores/constants/asset_path.dart';
 import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
 import 'package:mobile_fast_ai/src/presentation/app_navigator.dart';
+import 'splash_state.dart';
+import 'splash_cubit.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/app_loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -18,6 +24,9 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> with StateFulBaseScreen {
+
+  final SplashCubit _cubit = getIt.get<SplashCubit>();
+
   @override
   void initState() {
     super.initState();
@@ -63,8 +72,29 @@ class _SplashScreenState extends State<SplashScreen> with StateFulBaseScreen {
   @override
   Widget wrapBuild(BuildContext context, Widget child, AppTheme appTheme,
       AppLocalizationManager localization) {
-    return Scaffold(
-      body: child,
+    return BlocProvider.value(
+      value: _cubit,
+      child: BlocListener<SplashCubit,SplashState>(
+        listener: (context, state) {
+          switch(state.status){
+            case SplashStatus.loading:
+              showLoading();
+              break;
+            case SplashStatus.checkedIn:
+              hideLoading();
+
+              AppGlobalCubit.of(context).changeStatus(AppGlobalStatus.authorized);
+              break;
+            case SplashStatus.error:
+              AppNavigator.replaceWith(RoutePath.walkThrough);
+              hideLoading();
+              break;
+          }
+        },
+        child: Scaffold(
+          body: child,
+        ),
+      ),
     );
   }
 }
