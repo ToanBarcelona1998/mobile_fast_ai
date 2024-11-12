@@ -1,4 +1,5 @@
 import 'package:domain/core/core.dart';
+import 'package:domain/src/entity/auth_token.dart';
 import 'package:domain/src/entity/requests/request.dart';
 import 'package:domain/src/repository/repository.dart';
 import 'package:domain/src/utils/token_management.dart';
@@ -13,7 +14,7 @@ final class AuthUseCase {
     final LoginRequest request =
         LoginRequest(userName: userName, password: password);
 
-    final String accessToken = await ErrorHandler.getInstance().call<String>(
+    final AuthToken authToken = await ErrorHandler.getInstance().call<AuthToken>(
       request: _authRepository.login(request: request),
     );
 
@@ -21,7 +22,13 @@ final class AuthUseCase {
 
     await ErrorHandler.getInstance().call(
       request: tokenManagement.saveToken(
-        accessToken,
+        authToken.accessToken,
+      ),
+    );
+
+    await ErrorHandler.getInstance().call(
+      request: tokenManagement.saveRefreshToken(
+        authToken.refreshToken,
       ),
     );
   }
@@ -30,7 +37,7 @@ final class AuthUseCase {
     final RegisterRequest request =
         RegisterRequest(userName: userName, password: password);
 
-    final String accessToken = await ErrorHandler.getInstance().call<String>(
+    final AuthToken authToken = await ErrorHandler.getInstance().call<AuthToken>(
       request: _authRepository.register(request: request),
     );
 
@@ -38,7 +45,13 @@ final class AuthUseCase {
 
     await ErrorHandler.getInstance().call(
       request: tokenManagement.saveToken(
-        accessToken,
+        authToken.accessToken,
+      ),
+    );
+
+    await ErrorHandler.getInstance().call(
+      request: tokenManagement.saveRefreshToken(
+        authToken.refreshToken,
       ),
     );
   }
