@@ -6,4 +6,5 @@ export 'payment_provider.dart';
 export 'purchase.dart';
 export 'user.dart';
 export 'user_credit.dart';
+export 'auth_token.dart';
 export 'requests/request.dart';

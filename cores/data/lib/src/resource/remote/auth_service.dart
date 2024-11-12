@@ -8,4 +8,12 @@ abstract interface class AuthService {
   Future<BaseResponse> register({
     required Map<String, dynamic> body,
   });
+
+  Future<BaseResponse> verifyEmail({
+    required Map<String, dynamic> body,
+  });
+
+  Future<BaseResponse> refreshToken({
+    required Map<String, dynamic> body,
+  });
 }
