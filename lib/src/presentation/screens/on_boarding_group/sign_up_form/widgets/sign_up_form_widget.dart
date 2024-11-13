@@ -4,6 +4,9 @@ import 'package:mobile_fast_ai/src/cores/constants/app_typography.dart';
 import 'package:mobile_fast_ai/src/cores/constants/asset_path.dart';
 import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_form/sign_up_form_bloc.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_form/sign_up_form_event.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_form/sign_up_form_selector.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/check_box_widget.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/text_input_base/text_input_base.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/text_input_base/text_input_manager.dart';
@@ -17,8 +20,6 @@ class SignupFormWidget extends StatelessWidget {
   final AppLocalizationManager localization;
   final AppTheme appTheme;
   final void Function(bool?) onRememberChanged;
-  final bool obscurePassword;
-  final VoidCallback onChangeObscurePassword;
 
   const SignupFormWidget({
     required this.emailController,
@@ -26,8 +27,6 @@ class SignupFormWidget extends StatelessWidget {
     required this.localization,
     required this.appTheme,
     required this.onRememberChanged,
-    this.obscurePassword = false,
-    required this.onChangeObscurePassword,
     super.key,
   });
 
@@ -40,6 +39,9 @@ class SignupFormWidget extends StatelessWidget {
           label: localization.translate(
             LanguageKey.onBoardingSignupFormScreenEmail,
           ),
+          onChanged: (email, _) {
+            _onEmailChange(context,email);
+          },
           hintText: localization.translate(
             LanguageKey.onBoardingSignupFormScreenEmailHint,
           ),
@@ -54,27 +56,34 @@ class SignupFormWidget extends StatelessWidget {
         const SizedBox(
           height: BoxSize.boxSize07,
         ),
-        NormalTextInputWidget(
-          controller: passwordController,
-          label: localization.translate(
-            LanguageKey.onBoardingSignupFormScreenPassword,
-          ),
-          hintText: localization.translate(
-            LanguageKey.onBoardingSignupFormScreenPasswordHint,
-          ),
-          maxLine: 1,
-          obscureText: obscurePassword,
-          suffix: GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onTap: onChangeObscurePassword,
-            child: obscurePassword
-                ? SvgPicture.asset(
-                    AssetIconPath.icCommonEyeHide,
-                  )
-                : SvgPicture.asset(
-                    AssetIconPath.icCommonEyeHide,
-                  ),
-          ),
+        SignUpFormHidePasswordSelector(
+          builder: (obscurePassword) {
+            return NormalTextInputWidget(
+              controller: passwordController,
+              label: localization.translate(
+                LanguageKey.onBoardingSignupFormScreenPassword,
+              ),
+              hintText: localization.translate(
+                LanguageKey.onBoardingSignupFormScreenPasswordHint,
+              ),
+              maxLine: 1,
+              obscureText: obscurePassword,
+              onChanged: (password, _) {
+                _onPasswordChange(context,password);
+              },
+              suffix: GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () => _onChangeObscurePassword(context),
+                child: obscurePassword
+                    ? SvgPicture.asset(
+                        AssetIconPath.icCommonEyeHide,
+                      )
+                    : SvgPicture.asset(
+                        AssetIconPath.icCommonEyeHide,
+                      ),
+              ),
+            );
+          }
         ),
         const SizedBox(
           height: BoxSize.boxSize05,
@@ -94,21 +103,39 @@ class SignupFormWidget extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: ' ${localization.translate(
-                    LanguageKey.onBoardingSignupFormScreenTerm,
-                  )}',
-                  style: AppTypography.bodyLargeSemiBold.copyWith(
-                    color: appTheme.primaryColor900,
-                  ),
-                  recognizer: TapGestureRecognizer()..onTap = (){
-                    //
-                  }
-                ),
+                    text: ' ${localization.translate(
+                      LanguageKey.onBoardingSignupFormScreenTerm,
+                    )}',
+                    style: AppTypography.bodyLargeSemiBold.copyWith(
+                      color: appTheme.primaryColor900,
+                    ),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        //
+                      }),
               ],
             ),
           ),
         ),
       ],
+    );
+  }
+
+  void _onPasswordChange(BuildContext context,String password) {
+    SignUpFormBloc.of(context).add(
+      SignUpFormOnChangePasswordEvent(password),
+    );
+  }
+
+  void _onEmailChange(BuildContext context,String email) {
+    SignUpFormBloc.of(context).add(
+      SignUpFormOnChangeEmailEvent(email),
+    );
+  }
+
+  void _onChangeObscurePassword(BuildContext context){
+    SignUpFormBloc.of(context).add(
+      const SignUpFormOnChangeHidePasswordEvent(),
     );
   }
 }
