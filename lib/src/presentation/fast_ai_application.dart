@@ -76,7 +76,13 @@ class _FastAIApplicationState extends State<FastAIApplication>
                 listener: _onListenAppGlobalStateChange,
               ),
             ],
-            child: child ?? const SizedBox.shrink(),
+            child: Overlay(
+              initialEntries: [
+                OverlayEntry(builder: (context) {
+                  return child ?? const SizedBox.shrink();
+                },)
+              ],
+            ),
           ),
         );
       },

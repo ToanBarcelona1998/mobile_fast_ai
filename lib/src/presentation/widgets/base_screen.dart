@@ -79,7 +79,7 @@ mixin StateFulBaseScreen<T extends StatefulWidget> on State<T> {
 
   Widget _buildLoader(AppTheme appTheme) {
     return Container(
-      color: appTheme.darkColor5,
+      color: appTheme.darkColor5.withOpacity(0.3),
       alignment: Alignment.center,
       child: AppThemeBuilder(
         builder: (appTheme) => AppLoadingWidget(
