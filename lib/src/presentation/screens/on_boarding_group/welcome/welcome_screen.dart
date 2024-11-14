@@ -51,7 +51,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         appTheme: appTheme,
                         onSignInWithPasswordTap: _onSignInWithPassword,
                         onSignupTap: () {
-
+                          AppNavigator.push(RoutePath.signupForm);
                         },
                       ),
                     ],
