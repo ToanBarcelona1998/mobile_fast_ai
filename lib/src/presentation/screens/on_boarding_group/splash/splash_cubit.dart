@@ -15,7 +15,6 @@ final class SplashCubit extends Cubit<SplashState> {
     );
 
     try {
-      await Future.delayed(const Duration(seconds: 2));
       await _userUseCase.getUser();
 
       emit(
