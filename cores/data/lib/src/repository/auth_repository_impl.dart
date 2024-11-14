@@ -48,8 +48,9 @@ final class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<bool> verifyEmail({required VerifyEmailRequest request}) async {
+  Future<bool> verifyEmail({required String token,required VerifyEmailRequest request}) async {
     final baseResponse = await _authService.verifyEmail(
+      token: token,
       body: request.toJson(),
     );
 

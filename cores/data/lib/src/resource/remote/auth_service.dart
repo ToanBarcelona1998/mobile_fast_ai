@@ -10,6 +10,7 @@ abstract interface class AuthService {
   });
 
   Future<BaseResponse> verifyEmail({
+    required String token,
     required Map<String, dynamic> body,
   });
 

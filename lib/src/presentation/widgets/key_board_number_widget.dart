@@ -49,7 +49,7 @@ class _KeyboardNumberWidgetState extends State<KeyboardNumberWidget> {
       alignment: Alignment.center,
       child: Column(
         children: <Widget>[
-          ButtonBar(
+          OverflowBar(
             alignment: widget.mainAxisAlignment,
             children: <Widget>[
               _calcButton('1'),
@@ -57,7 +57,7 @@ class _KeyboardNumberWidgetState extends State<KeyboardNumberWidget> {
               _calcButton('3'),
             ],
           ),
-          ButtonBar(
+          OverflowBar(
             alignment: widget.mainAxisAlignment,
             children: <Widget>[
               _calcButton('4'),
@@ -65,7 +65,7 @@ class _KeyboardNumberWidgetState extends State<KeyboardNumberWidget> {
               _calcButton('6'),
             ],
           ),
-          ButtonBar(
+          OverflowBar(
             alignment: widget.mainAxisAlignment,
             children: <Widget>[
               _calcButton('7'),
@@ -73,7 +73,7 @@ class _KeyboardNumberWidgetState extends State<KeyboardNumberWidget> {
               _calcButton('9'),
             ],
           ),
-          ButtonBar(
+          OverflowBar(
             alignment: widget.mainAxisAlignment,
             children: <Widget>[
               Container(

@@ -23,9 +23,11 @@ final class SplashCubit extends Cubit<SplashState> {
         ),
       );
     } catch (e) {
+      LogProvider.log('Splash screen: ${e.toString()}');
       emit(
         state.copyWith(
           status: SplashStatus.error,
+          error: e.toString()
         ),
       );
     }

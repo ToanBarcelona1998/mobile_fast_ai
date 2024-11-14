@@ -47,7 +47,7 @@ mixin CustomFlutterToast<T extends StatefulWidget> on State<T> {
         borderRadius: BorderRadius.circular(
           BorderRadiusSize.borderRadius03,
         ),
-        color: theme.bodyBackGroundColor,
+        color: theme.darkColor5,
       ),
       child: Text(
         message,
@@ -93,7 +93,7 @@ mixin CustomFlutterToast<T extends StatefulWidget> on State<T> {
   void showToast(
       String message, [
         Duration duration = const Duration(
-          milliseconds: 2200,
+          milliseconds: 3300,
         ),
       ]) {
     _fToast.showToast(
@@ -106,7 +106,7 @@ mixin CustomFlutterToast<T extends StatefulWidget> on State<T> {
   void showSuccessToast(
       String message, [
         Duration duration = const Duration(
-          milliseconds: 2200,
+          milliseconds: 3300,
         ),
       ]) {
     _fToast.showToast(

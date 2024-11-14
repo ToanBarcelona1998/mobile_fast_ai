@@ -29,6 +29,7 @@ class _SplashScreenState extends State<SplashScreen> with StateFulBaseScreen {
 
   @override
   void initState() {
+    _cubit.starting();
     super.initState();
   }
 
@@ -78,11 +79,8 @@ class _SplashScreenState extends State<SplashScreen> with StateFulBaseScreen {
         listener: (context, state) {
           switch(state.status){
             case SplashStatus.loading:
-              showLoading();
               break;
             case SplashStatus.checkedIn:
-              hideLoading();
-
               AppGlobalCubit.of(context).changeStatus(AppGlobalStatus.authorized);
               break;
             case SplashStatus.error:

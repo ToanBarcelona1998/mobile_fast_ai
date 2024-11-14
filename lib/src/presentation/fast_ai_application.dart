@@ -38,48 +38,63 @@ class _FastAIApplicationState extends State<FastAIApplication>
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: AppTypography.urBanistFontFamily,
-      ),
-      navigatorKey: AppNavigator.navigatorKey,
-      onGenerateRoute: AppNavigator.onGenerateRoute,
-      locale: AppLocalizationManager.instance.getAppLocale(),
-      localizationsDelegates: const [
-        AppTranslationsDelegate(),
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      initialRoute: RoutePath.splash,
-      supportedLocales: AppLocalizationManager.instance.supportedLang
-          .map(
-            (e) => Locale(e),
-          )
-          .toList(),
-      builder: (context, child) {
-        return MultiBlocProvider(
-          providers: [
-            BlocProvider(
-              create: (context) => AppThemeCubit(),
-            ),
-            BlocProvider(
-              create: (context) => AppGlobalCubit(),
-            )
-          ],
-          child: MultiBlocListener(
-            listeners: [
-              BlocListener<AppGlobalCubit,AppGlobalState>(
-                listenWhen: (previous, current) => previous.status != current.status,
-                listener: _onListenAppGlobalStateChange,
-              ),
-            ],
-            child: child ?? const SizedBox.shrink(),
-          ),
-        );
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () {
+        if (WidgetsBinding.instance.focusManager.primaryFocus?.hasFocus ??
+            false) {
+          WidgetsBinding.instance.focusManager.primaryFocus?.unfocus();
+        }
       },
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: true,
+          fontFamily: AppTypography.urBanistFontFamily,
+        ),
+        navigatorKey: AppNavigator.navigatorKey,
+        onGenerateRoute: AppNavigator.onGenerateRoute,
+        locale: AppLocalizationManager.instance.getAppLocale(),
+        localizationsDelegates: const [
+          AppTranslationsDelegate(),
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        initialRoute: RoutePath.splash,
+        supportedLocales: AppLocalizationManager.instance.supportedLang
+            .map(
+              (e) => Locale(e),
+            )
+            .toList(),
+        builder: (context, child) {
+          return MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => AppThemeCubit(),
+              ),
+              BlocProvider(
+                create: (context) => AppGlobalCubit(),
+              )
+            ],
+            child: MultiBlocListener(
+              listeners: [
+                BlocListener<AppGlobalCubit,AppGlobalState>(
+                  listenWhen: (previous, current) => previous.status != current.status,
+                  listener: _onListenAppGlobalStateChange,
+                ),
+              ],
+              child: Overlay(
+                initialEntries: [
+                  OverlayEntry(builder: (context) {
+                    return child ?? const SizedBox.shrink();
+                  },)
+                ],
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 
@@ -89,7 +104,7 @@ class _FastAIApplicationState extends State<FastAIApplication>
         AppNavigator.push(RoutePath.home);
         break;
       case AppGlobalStatus.unauthorized:
-        AppNavigator.replaceAllWith(RoutePath.splash);
+        AppNavigator.replaceAllWith(RoutePath.signInWithPassword);
         break;
     }
   }

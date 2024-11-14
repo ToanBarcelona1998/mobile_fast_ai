@@ -54,7 +54,7 @@ abstract class TextInputWidgetBase extends StatefulWidget {
     this.onSubmit,
     this.maxLength,
     this.minLine,
-    this.maxLine,
+    this.maxLine = 1,
     this.enable = true,
     this.autoFocus = false,
     this.obscureText = false,
