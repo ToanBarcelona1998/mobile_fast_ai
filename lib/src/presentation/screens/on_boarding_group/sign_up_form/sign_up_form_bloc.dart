@@ -1,6 +1,8 @@
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobile_fast_ai/src/cores/utils/dart_core_extension.dart';
+import 'package:mobile_fast_ai/src/cores/utils/validator.dart';
 import 'sign_up_form_event.dart';
 import 'sign_up_form_state.dart';
 
@@ -17,19 +19,37 @@ final class SignUpFormBloc extends Bloc<SignUpFormEvent, SignUpFormState> {
     on(_onSubmit);
   }
 
+  bool _isValidForm(String email, String password) {
+    return email.validateEmail() && password.isNotNullOrEmpty;
+  }
+
   void _onChangeEmail(
       SignUpFormOnChangeEmailEvent event, Emitter<SignUpFormState> emit) {
-    emit(state.copyWith(email: event.email));
+    emit(
+      state.copyWith(
+        email: event.email,
+        isReadySubmit: _isValidForm(event.email, state.password),
+      ),
+    );
   }
 
   void _onChangePassword(
       SignUpFormOnChangePasswordEvent event, Emitter<SignUpFormState> emit) {
-    emit(state.copyWith(password: event.password));
+    emit(
+      state.copyWith(
+        password: event.password,
+        isReadySubmit: _isValidForm(state.email, event.password),
+      ),
+    );
   }
 
   void _onChangeHidePassword(SignUpFormOnChangeHidePasswordEvent event,
       Emitter<SignUpFormState> emit) {
-    emit(state.copyWith(hidePassword: !state.hidePassword));
+    emit(
+      state.copyWith(
+        hidePassword: !state.hidePassword,
+      ),
+    );
   }
 
   void _onSubmit(
@@ -40,6 +60,7 @@ final class SignUpFormBloc extends Bloc<SignUpFormEvent, SignUpFormState> {
           status: SignUpFormStatus.loading,
         ),
       );
+
       await _authUseCase.register(state.email, state.password);
 
       emit(
@@ -48,6 +69,7 @@ final class SignUpFormBloc extends Bloc<SignUpFormEvent, SignUpFormState> {
         ),
       );
     } catch (e) {
+      LogProvider.log('Sign up form bloc: ${e.toString()}');
       emit(
         state.copyWith(
           error: e.toString(),
@@ -57,5 +79,6 @@ final class SignUpFormBloc extends Bloc<SignUpFormEvent, SignUpFormState> {
     }
   }
 
-  static SignUpFormBloc of(BuildContext context) => BlocProvider.of<SignUpFormBloc>(context);
+  static SignUpFormBloc of(BuildContext context) =>
+      BlocProvider.of<SignUpFormBloc>(context);
 }

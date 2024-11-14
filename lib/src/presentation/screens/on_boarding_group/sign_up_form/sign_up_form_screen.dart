@@ -26,7 +26,7 @@ class SignupFormScreen extends StatefulWidget {
 }
 
 class _SignupFormScreenState extends State<SignupFormScreen>
-    with StateFulBaseScreen , CustomFlutterToast {
+    with StateFulBaseScreen, CustomFlutterToast {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
@@ -51,35 +51,36 @@ class _SignupFormScreenState extends State<SignupFormScreen>
     return Column(
       children: [
         Expanded(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              SignupFormContentWidget(
-                localization: localization,
-                appTheme: appTheme,
-              ),
-              SignupFormWidget(
-                emailController: _emailController,
-                passwordController: _passwordController,
-                localization: localization,
-                appTheme: appTheme,
-                onRememberChanged: (value) {},
-              ),
-              const SizedBox(
-                height: BoxSize.boxSize07,
-              ),
-              SubSignupFormWidget(
-                appTheme: appTheme,
-                localization: localization,
-                onSignInTap: () {
-                  AppNavigator.pop();
-                },
-                onGoogleTap: () {},
-                onAppleTap: () {},
-                onFacebookTap: () {},
-                onTwitterTap: () {},
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SignupFormContentWidget(
+                  localization: localization,
+                  appTheme: appTheme,
+                ),
+                SignupFormWidget(
+                  emailController: _emailController,
+                  passwordController: _passwordController,
+                  localization: localization,
+                  appTheme: appTheme,
+                  onRememberChanged: (value) {},
+                ),
+                const SizedBox(
+                  height: BoxSize.boxSize07,
+                ),
+                SubSignupFormWidget(
+                  appTheme: appTheme,
+                  localization: localization,
+                  onSignInTap: () {
+                    AppNavigator.pop();
+                  },
+                  onGoogleTap: () {},
+                  onAppleTap: () {},
+                  onFacebookTap: () {},
+                  onTwitterTap: () {},
+                ),
+              ],
+            ),
           ),
         ),
         SignUpFormIsReadySubmitSelector(
@@ -91,7 +92,7 @@ class _SignupFormScreenState extends State<SignupFormScreen>
               ),
               onPress: _onSignup,
             );
-          }
+          },
         ),
       ],
     );
@@ -103,6 +104,7 @@ class _SignupFormScreenState extends State<SignupFormScreen>
     return BlocProvider.value(
       value: _bloc,
       child: BlocListener<SignUpFormBloc, SignUpFormState>(
+        listenWhen: (previous, current) => previous.status != current.status,
         listener: _listenStatusChange,
         child: Scaffold(
           appBar: AppBarStepWidget(
@@ -114,8 +116,8 @@ class _SignupFormScreenState extends State<SignupFormScreen>
     );
   }
 
-  void _listenStatusChange(BuildContext context, SignUpFormState state){
-    switch(state.status){
+  void _listenStatusChange(BuildContext context, SignUpFormState state) {
+    switch (state.status) {
       case SignUpFormStatus.none:
         break;
       case SignUpFormStatus.loading:
