@@ -11,6 +11,7 @@ abstract interface class AuthRepository {
   });
 
   Future<bool> verifyEmail({
+    required String token,
     required VerifyEmailRequest request,
   });
 
