@@ -82,6 +82,14 @@ extension ListExtensions<T> on List<T>? {
 
     return true;
   }
+
+  T ? valueOrNullAtIndex(int i){
+    if(constantIndex(i)){
+      return this![i];
+    }
+
+    return null;
+  }
 }
 
 extension IntExtension on int {
