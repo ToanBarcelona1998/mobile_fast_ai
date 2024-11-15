@@ -18,4 +18,8 @@ abstract interface class AuthRepository {
   Future<AuthToken> refreshToken({
     required RefreshTokenRequest request,
   });
+
+  Future<void> completeOnboardingProfile({
+    required UpdateUserRequest request,
+  });
 }

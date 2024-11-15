@@ -221,7 +221,7 @@ class RegexpConstraint extends Constraint {
       r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
   static const String _passwordPattern =
       r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{6,}$';
-  static const String _phonePattern = r"^(?:[+0]9)?[0-9]{10,}$";
+  static const String _phonePattern = r'^(?:[+0]9)?[0-9]{10,}$';
 
   RegexpConstraint({
     this.regex,

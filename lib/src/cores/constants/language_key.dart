@@ -5,6 +5,10 @@ sealed class LanguageKey{
   static const String globalLoginWithFacebook = 'global_login_with_facebook';
   static const String globalLoginWithTwitter= 'global_login_with_twitter';
 
+  static const String commonGenderMale = 'common_gender_male';
+  static const String commonGenderFeMale = 'common_gender_female';
+  static const String commonGenderOther = 'common_gender_other';
+
   static const String onBoardingWalkThroughScreenFirstPageTitle = 'on_boarding_walk_through_screen_first_page_title';
   static const String onBoardingWalkThroughScreenFirstPageContent = 'on_boarding_walk_through_screen_first_page_content';
   static const String onBoardingWalkThroughScreenSecondPageTitle = 'on_boarding_walk_through_screen_second_page_title';
@@ -74,29 +78,20 @@ sealed class LanguageKey{
 
   static const String onBoardingSignupPersonalInfoScreenTitle = 'on_boarding_sign_up_personal_info_screen_title';
   static const String onBoardingSignupPersonalInfoScreenContent = 'on_boarding_sign_up_personal_info_screen_content';
-  static const String onBoardingSignupPersonalInfoScreenFullName = 'on_boarding_sign_up_personal_info_screen_full_name';
-  static const String onBoardingSignupPersonalInfoScreenFullNameHint = 'on_boarding_sign_up_personal_info_screen_full_name_hint';
+  static const String onBoardingSignupPersonalInfoScreenUserName = 'on_boarding_sign_up_personal_info_screen_use_name';
+  static const String onBoardingSignupPersonalInfoScreenUserNameHint = 'on_boarding_sign_up_personal_info_screen_use_name_hint';
+  static const String onBoardingSignupPersonalInfoScreenUserNameInvalid = 'on_boarding_sign_up_personal_info_screen_use_name_invalid';
   static const String onBoardingSignupPersonalInfoScreenPhoneNumber = 'on_boarding_sign_up_personal_info_screen_phone_number';
   static const String onBoardingSignupPersonalInfoScreenPhoneNumberHint = 'on_boarding_sign_up_personal_info_screen_phone_number_hint';
+  static const String onBoardingSignupPersonalInfoScreenPhoneNumberInValid = 'on_boarding_sign_up_personal_info_screen_phone_number_invalid';
   static const String onBoardingSignupPersonalInfoScreenDateOfBirth = 'on_boarding_sign_up_personal_info_screen_date_of_birth';
   static const String onBoardingSignupPersonalInfoScreenDateOfBirthHint = 'on_boarding_sign_up_personal_info_screen_date_of_birth_hint';
   static const String onBoardingSignupPersonalInfoScreenGender = 'on_boarding_sign_up_personal_info_screen_gender';
-  static const String onBoardingSignupPersonalInfoScreenSkip = 'on_boarding_sign_up_personal_info_screen_skip';
-  static const String onBoardingSignupPersonalInfoScreenContinue = 'on_boarding_sign_up_personal_info_screen_continue';
-
-  static const String onBoardingSignupPublicProfileScreenTitle = 'on_boarding_sign_up_public_profile_screen_title';
-  static const String onBoardingSignupPublicProfileScreenContent = 'on_boarding_sign_up_public_profile_screen_content';
-  static const String onBoardingSignupPublicProfileScreenUserName = 'on_boarding_sign_up_public_profile_screen_user_name';
-  static const String onBoardingSignupPublicProfileScreenUserNameHint = 'on_boarding_sign_up_public_profile_screen_user_name_hint';
-  static const String onBoardingSignupPublicProfileScreenNickName = 'on_boarding_sign_up_public_profile_screen_nick_name';
-  static const String onBoardingSignupPublicProfileScreenNickNameHint = 'on_boarding_sign_up_public_profile_screen_nick_name_hint';
-  static const String onBoardingSignupPublicProfileScreenPronouns = 'on_boarding_sign_up_public_profile_screen_pronouns';
-  static const String onBoardingSignupPublicProfileScreenPronounsHint = 'on_boarding_sign_up_public_profile_screen_pronouns_hint';
-  static const String onBoardingSignupPublicProfileScreenBio = 'on_boarding_sign_up_public_profile_screen_bio';
-  static const String onBoardingSignupPublicProfileScreenBioHint = 'on_boarding_sign_up_public_profile_screen_bio_hint';
-  static const String onBoardingSignupPublicProfileScreenFinish = 'on_boarding_sign_up_public_profile_screen_finish';
-  static const String onBoardingSignupPublicProfileScreenSignupSuccessfulDialogTitle = 'on_boarding_sign_up_public_profile_screen_sign_up_successful_dialog_title';
-  static const String onBoardingSignupPublicProfileScreenSignupSuccessfulDialogContent = 'on_boarding_sign_up_public_profile_screen_sign_up_successful_dialog_content';
+  static const String onBoardingSignupPersonalInfoScreenAddress = 'on_boarding_sign_up_personal_info_screen_address';
+  static const String onBoardingSignupPersonalInfoScreenAddressHint = 'on_boarding_sign_up_personal_info_screen_address_hint';
+  static const String onBoardingSignupPersonalInfoScreenCreate = 'on_boarding_sign_up_personal_info_screen_create';
+  static const String onBoardingSignupPersonalInfoScreenSignUpSuccessfulDialogTitle = 'on_boarding_sign_up_personal_info_screen_sign_up_successful_dialog_title';
+  static const String onBoardingSignupPersonalInfoScreenSignUpSuccessfulDialogContent = 'on_boarding_sign_up_personal_info_screen_sign_up_successful_dialog_content';
 
 
   static const String homeScreenBottomNavigatorBarHomePage = 'home_screen_bottom_navigator_bar_home_page';

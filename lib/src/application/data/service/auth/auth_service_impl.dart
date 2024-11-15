@@ -34,6 +34,12 @@ final class AuthServiceImpl implements AuthService {
   Future<BaseResponse> verifyEmail({required String token,required Map<String, dynamic> body}) {
     return _authServiceGenerator.verifyEmail(token,body);
   }
+
+  @override
+  Future<BaseResponse> completeOnboardingProfile({required String token, required Map<String, dynamic> body}) {
+    // TODO: implement completeOnboardingProfile
+    throw UnimplementedError();
+  }
 }
 
 @RestApi()
@@ -58,6 +64,13 @@ abstract class AuthServiceGenerator {
   @POST(APIService.registerVerifyEmail)
   @MultiPart()
   Future<BaseResponse> verifyEmail(
+      @Header('Authorization') String accessToken,
+    @Part() Map<String, dynamic> body,
+  );
+
+  @POST(APIService.registerCompleteProfile)
+  @MultiPart()
+  Future<BaseResponse> completeOnboardingProfile(
       @Header('Authorization') String accessToken,
     @Part() Map<String, dynamic> body,
   );

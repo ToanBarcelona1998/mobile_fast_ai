@@ -17,4 +17,9 @@ abstract interface class AuthService {
   Future<BaseResponse> refreshToken({
     required Map<String, dynamic> body,
   });
+
+  Future<BaseResponse> completeOnboardingProfile({
+    required String token,
+    required Map<String, dynamic> body,
+  });
 }

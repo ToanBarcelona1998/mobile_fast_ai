@@ -9,6 +9,6 @@ class SignUpPersonalInfoEvent with _$SignUpPersonalInfoEvent{
   const factory SignUpPersonalInfoEvent.onBirthdayChange(String birthday) = SignUpPersonalInfoEventOnBirthdayChange;
   const factory SignUpPersonalInfoEvent.onGenderChange(int gender) = SignUpPersonalInfoEventOnGenderChange;
   const factory SignUpPersonalInfoEvent.onAddressChange(String address) = SignUpPersonalInfoEventOnAddressChange;
-  const factory SignUpPersonalInfoEvent.onUploadAvatar(String filePath) = SignUpPersonalInfoEventOnUploadAvatar;
+  const factory SignUpPersonalInfoEvent.onPickImage(String filePath) = SignUpPersonalInfoEventOnPickImage;
   const factory SignUpPersonalInfoEvent.obSubmit() = SignUpPersonalInfoEventOnSubmit;
 }

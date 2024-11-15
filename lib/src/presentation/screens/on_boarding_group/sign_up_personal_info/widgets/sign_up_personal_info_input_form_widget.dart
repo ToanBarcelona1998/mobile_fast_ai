@@ -6,6 +6,9 @@ import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
 import 'package:mobile_fast_ai/src/cores/helpers/date_picker_helper.dart';
 import 'package:mobile_fast_ai/src/cores/utils/app_date_formatter.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_bloc.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_event.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_selector.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/choice_select_widget.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/circle_avatar_widget.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/label_input_widget.dart';
@@ -16,18 +19,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SignupPersonalInfoInputFormWidget extends StatelessWidget {
-  final TextEditingController fullNameController;
+  final TextEditingController userNameController;
   final TextEditingController phoneNumberController;
   final TextEditingController addressController;
   final AppLocalizationManager localization;
   final AppTheme appTheme;
+  final List<String> genders;
 
   const SignupPersonalInfoInputFormWidget({
-    required this.fullNameController,
+    required this.userNameController,
     required this.phoneNumberController,
     required this.addressController,
     required this.appTheme,
     required this.localization,
+    required this.genders,
     super.key,
   });
 
@@ -46,17 +51,20 @@ class SignupPersonalInfoInputFormWidget extends StatelessWidget {
           height: BoxSize.boxSize07,
         ),
         NormalTextInputWidget(
-          controller: fullNameController,
+          controller: userNameController,
           label: localization.translate(
-            LanguageKey.onBoardingSignupPersonalInfoScreenFullName,
+            LanguageKey.onBoardingSignupPersonalInfoScreenUserName,
           ),
           hintText: localization.translate(
-            LanguageKey.onBoardingSignupPersonalInfoScreenFullNameHint,
+            LanguageKey.onBoardingSignupPersonalInfoScreenUserNameHint,
           ),
+          onChanged: (userName, _) {
+            _onUserNameChange(context, userName);
+          },
           constraintManager: ConstraintManager()
             ..notEmpty(
               errorMessage: localization.translate(
-                '',
+                LanguageKey.onBoardingSignupPersonalInfoScreenUserNameInvalid,
               ),
             ),
         ),
@@ -74,28 +82,33 @@ class SignupPersonalInfoInputFormWidget extends StatelessWidget {
           constraintManager: ConstraintManager()
             ..phone(
               errorMessage: localization.translate(
-                '',
+                LanguageKey.onBoardingSignupPersonalInfoScreenPhoneNumberInValid,
               ),
             ),
+          onChanged: (phoneNumber, _) {
+            _onPhoneNumberChange(context, phoneNumber);
+          },
+        ),
+        const SizedBox(
+          height: BoxSize.boxSize07,
+        ),
+        NormalTextInputWidget(
+          controller: addressController,
+          label: localization.translate(
+            LanguageKey.onBoardingSignupPersonalInfoScreenAddress,
+          ),
+          hintText: localization.translate(
+            LanguageKey.onBoardingSignupPersonalInfoScreenAddressHint,
+          ),
+          onChanged: (phoneNumber, _) {
+            _onPhoneNumberChange(context, phoneNumber);
+          },
         ),
         const SizedBox(
           height: BoxSize.boxSize07,
         ),
         LabelInputWidget(
-          onTap: () async {
-            final CupertinoDatePickerHelper  picker = CupertinoDatePickerHelper(
-              appTheme: appTheme,
-            );
-            final DateTime ? dateTime = await picker.showDatePicker(
-              context,
-              onConfirm: (p0) {},
-            );
-
-            if(dateTime == null){
-              return null;
-            }
-            return AppDateFormatter.monthDayYearWithHyphen.format(dateTime);
-          },
+          onTap: () => _onBirthdayClick(context),
           onChanged: (value) {},
           label: localization.translate(
             LanguageKey.onBoardingSignupPersonalInfoScreenDateOfBirth,
@@ -110,35 +123,83 @@ class SignupPersonalInfoInputFormWidget extends StatelessWidget {
         const SizedBox(
           height: BoxSize.boxSize07,
         ),
-        ChoiceSelectWidget(
-          data: const ['Male', 'Female', 'Other'],
-          builder: (genders) {
-            return Text(
-              genders.join(),
-              style: AppTypography.bodyLargeMedium.copyWith(
-                color: appTheme.greyScaleColor900,
+        SignUpPersonalInfoGenderSelector(
+          builder: (gender) {
+            return ChoiceSelectWidget(
+              data: genders,
+              builder: (genders) {
+                return Text(
+                  genders.join(),
+                  style: AppTypography.bodyLargeMedium.copyWith(
+                    color: appTheme.greyScaleColor900,
+                  ),
+                );
+              },
+              optionBuilder: (gender) {
+                return Text(
+                  gender,
+                  style: AppTypography.bodyLargeRegular.copyWith(
+                    color: appTheme.greyScaleColor900,
+                  ),
+                );
+              },
+              modalTitle: localization.translate(
+                LanguageKey.onBoardingSignupPersonalInfoScreenGender,
+              ),
+              isSelected: (selectedOptions, item) {
+                final index = genders.indexOf(item);
+
+                return index == gender;
+              },
+              label: localization.translate(
+                LanguageKey.onBoardingSignupPersonalInfoScreenGender,
               ),
             );
-          },
-          optionBuilder: (gender) {
-            return Text(
-              gender,
-              style: AppTypography.bodyLargeRegular.copyWith(
-                color: appTheme.greyScaleColor900,
-              ),
-            );
-          },
-          modalTitle: localization.translate(
-            LanguageKey.onBoardingSignupPersonalInfoScreenGender,
-          ),
-          isSelected: (selectedOptions, item) {
-            return item == 'Male';
-          },
-          label: localization.translate(
-            LanguageKey.onBoardingSignupPersonalInfoScreenGender,
-          ),
+          }
         ),
       ],
+    );
+  }
+
+  Future<String?> _onBirthdayClick(BuildContext context) async {
+    final CupertinoDatePickerHelper picker = CupertinoDatePickerHelper(
+      appTheme: appTheme,
+    );
+    final DateTime? dateTime = await picker.showDatePicker(
+      context,
+      onConfirm: (p0) {},
+    );
+
+    if (dateTime == null) {
+      return null;
+    }
+    final String birthday =
+        AppDateFormatter.monthDayYearWithHyphen.format(dateTime);
+
+    if(context.mounted){
+      SignUpPersonalInfoBloc.of(context).add(
+        SignUpPersonalInfoEventOnBirthdayChange(
+          birthday,
+        ),
+      );
+    }
+
+    return birthday;
+  }
+
+  void _onUserNameChange(BuildContext context, String userName) {
+    SignUpPersonalInfoBloc.of(context).add(
+      SignUpPersonalInfoEventOnUserNameChange(
+        userName,
+      ),
+    );
+  }
+
+  void _onPhoneNumberChange(BuildContext context, String phoneNumber) {
+    SignUpPersonalInfoBloc.of(context).add(
+      SignUpPersonalInfoEvent.onPhoneNumberChange(
+        phoneNumber,
+      ),
     );
   }
 }

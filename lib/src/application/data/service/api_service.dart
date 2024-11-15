@@ -4,6 +4,7 @@ sealed class APIService{
   static const String register = '$_auth/register';
   static const String registerVerifyEmail = '$register/verify-email';
   static const String refreshToken = '$_auth/refresh-token';
+  static const String registerCompleteProfile = '$register/complete-profile';
 
   static const String _user = '/user';
   static const String getUser = _user;

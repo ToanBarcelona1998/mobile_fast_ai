@@ -5,6 +5,5 @@ abstract interface class UserRepository {
 
   Future<bool> update({
     required UpdateUserRequest request,
-    required String accessToken,
   });
 }

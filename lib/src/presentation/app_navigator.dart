@@ -14,7 +14,6 @@ import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/create
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/otp_code_verification/otp_code_verification_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/reset_password/reset_password_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_in_with_password/sign_in_with_password_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_create_public_profile/sign_up_create_public_profile_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_form/sign_up_form_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/splash/splash_screen.dart';
@@ -90,8 +89,6 @@ sealed class RoutePath {
   static const String createNewPassword = '$_onBoarding/create_new_password';
   static const String signupForm = '$_onBoarding/sign_up_form';
   static const String signupPersonalInfo = '$_onBoarding/sign_up_personal_info';
-  static const String signupCreatePublicProfile =
-      '$_onBoarding/sign_up_public_profile';
 
   static const String home = '${splash}home_screen';
   static const String artStyle = '$home/art_style';
@@ -258,11 +255,6 @@ sealed class AppNavigator {
         return _defaultRoute(
           settings,
           const SignupPersonalInfoScreen(),
-        );
-      case RoutePath.signupCreatePublicProfile:
-        return _defaultRoute(
-          settings,
-          const SignupCreatePublicProfileScreen(),
         );
       case RoutePath.home:
         return _defaultRoute(

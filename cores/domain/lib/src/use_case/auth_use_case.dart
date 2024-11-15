@@ -60,8 +60,9 @@ final class AuthUseCase {
     );
   }
 
-  Future<bool> verifyEmail(String email, String otp) async{
-    final TokenManagement tokenManagement = TokenManagement(_secureLocalStorageRepository);
+  Future<bool> verifyEmail(String email, String otp) async {
+    final TokenManagement tokenManagement =
+        TokenManagement(_secureLocalStorageRepository);
 
     final String accessToken = await ErrorHandler.getInstance().call(
       request: tokenManagement.getBearerToken(),
@@ -73,6 +74,38 @@ final class AuthUseCase {
     return ErrorHandler.getInstance().call(
       request: _authRepository.verifyEmail(
         token: accessToken,
+        request: request,
+      ),
+    );
+  }
+
+  Future<void> completeOnboardingProfile({
+    String? userName,
+    String? address,
+    String? birthday,
+    String? phoneNumber,
+    String? avatar,
+    int? gender,
+  }) async {
+    final TokenManagement tokenManagement =
+        TokenManagement(_secureLocalStorageRepository);
+
+    final String accessToken = await ErrorHandler.getInstance().call(
+      request: tokenManagement.getBearerToken(),
+    );
+
+    final UpdateUserRequest request = UpdateUserRequest(
+      accessToken: accessToken,
+      name: userName,
+      address: address,
+      gender: gender,
+      phoneNumber: phoneNumber,
+      birthday: birthday,
+      avatar: avatar,
+    );
+
+    return ErrorHandler.getInstance().call(
+      request: _authRepository.completeOnboardingProfile(
         request: request,
       ),
     );
