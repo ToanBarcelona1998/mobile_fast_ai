@@ -40,8 +40,18 @@ class _SignupFormScreenState extends State<SignupFormScreen>
   }
 
   void _onSignup() {
+    // AppNavigator.push(RoutePath.otpCodeVerification,{
+    //   'email' : _emailController.text.trim(),
+    //   'callback' : _callBack,
+    // });
     _bloc.add(
       const SignUpFormOnSubmitEvent(),
+    );
+  }
+
+  void _callBack(){
+    AppNavigator.push(
+      RoutePath.signupPersonalInfo,
     );
   }
 
@@ -86,7 +96,8 @@ class _SignupFormScreenState extends State<SignupFormScreen>
         SignUpFormIsReadySubmitSelector(
           builder: (isReadySubmit) {
             return PrimaryAppButton(
-              isDisable: !isReadySubmit,
+              //isDisable: !isReadySubmit,
+              isDisable: false, // testing
               text: localization.translate(
                 LanguageKey.onBoardingSignupFormScreenSignup,
               ),
@@ -125,10 +136,10 @@ class _SignupFormScreenState extends State<SignupFormScreen>
         break;
       case SignUpFormStatus.success:
         hideLoading();
-        AppNavigator.push(
-          RoutePath.otpCodeVerification,
-          state.email,
-        );
+        AppNavigator.push(RoutePath.otpCodeVerification,{
+          'email' : _emailController.text.trim(),
+          'callback' : _callBack,
+        });
         break;
       case SignUpFormStatus.failed:
         hideLoading();

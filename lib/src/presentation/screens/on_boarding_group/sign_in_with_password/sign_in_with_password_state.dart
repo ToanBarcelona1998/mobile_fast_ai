@@ -6,6 +6,8 @@ enum SignInWithPasswordStatus {
   none,
   loading,
   success,
+  userMissingOtpFlow,
+  userMissingOnboardingFlow,
   failed,
 }
 
@@ -15,6 +17,7 @@ class SignInWithPasswordState with _$SignInWithPasswordState {
     @Default(SignInWithPasswordStatus.none) SignInWithPasswordStatus status,
     String ?errorMsg,
     @Default(false) bool isReadySubmit,
+    @Default(true) bool hidePassword,
     @Default('') String userName,
     @Default('') String password,
   }) = _SignInWithPasswordState;

@@ -4,9 +4,11 @@ import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
 import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
+import 'package:mobile_fast_ai/src/cores/utils/flutter_toast.dart';
 import 'package:mobile_fast_ai/src/presentation/app_navigator.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/base_screen.dart';
 import 'sign_in_with_password_event.dart';
+import 'sign_in_with_password_selector.dart';
 import 'sign_in_with_password_state.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/app_bar_widget.dart';
 import 'sign_in_with_password_bloc.dart';
@@ -24,16 +26,12 @@ class SignInWithPasswordScreen extends StatefulWidget {
       _SignInWithPasswordScreenState();
 }
 
-class _SignInWithPasswordScreenState extends State<SignInWithPasswordScreen> with StateFulBaseScreen{
+class _SignInWithPasswordScreenState extends State<SignInWithPasswordScreen>
+    with StateFulBaseScreen, CustomFlutterToast {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   final SignInWithPasswordBloc _bloc = getIt.get<SignInWithPasswordBloc>();
-
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   void dispose() {
@@ -48,12 +46,9 @@ class _SignInWithPasswordScreenState extends State<SignInWithPasswordScreen> wit
     );
   }
 
-  void _onEmailChange(){
-
-  }
-
   @override
-  Widget child(BuildContext context, AppTheme appTheme, AppLocalizationManager localization) {
+  Widget child(BuildContext context, AppTheme appTheme,
+      AppLocalizationManager localization) {
     return Column(
       children: [
         Expanded(
@@ -73,7 +68,6 @@ class _SignInWithPasswordScreenState extends State<SignInWithPasswordScreen> wit
                   localization: localization,
                   appTheme: appTheme,
                   onRememberChanged: (p0) {},
-                  onChangeObscurePassword: () {},
                 ),
                 const SizedBox(
                   height: BoxSize.boxSize07,
@@ -103,34 +97,27 @@ class _SignInWithPasswordScreenState extends State<SignInWithPasswordScreen> wit
         const SizedBox(
           height: BoxSize.boxSize05,
         ),
-        PrimaryAppButton(
-          text: localization.translate(
-            LanguageKey
-                .onBoardingSignInWithPasswordScreenSignIn,
-          ),
-          onPress: _onSignIn,
-        ),
+        SignInWithPasswordIsReadySubmitSelector(builder: (isReadySubmit) {
+          return PrimaryAppButton(
+            isDisable: !isReadySubmit,
+            text: localization.translate(
+              LanguageKey.onBoardingSignInWithPasswordScreenSignIn,
+            ),
+            onPress: _onSignIn,
+          );
+        }),
       ],
     );
   }
 
   @override
-  Widget wrapBuild(BuildContext context, Widget child, AppTheme appTheme, AppLocalizationManager localization) {
+  Widget wrapBuild(BuildContext context, Widget child, AppTheme appTheme,
+      AppLocalizationManager localization) {
     return BlocProvider.value(
       value: _bloc,
-      child: BlocListener<SignInWithPasswordBloc,SignInWithPasswordState>(
-        listener: (context, state) {
-          switch(state.status){
-            case SignInWithPasswordStatus.none:
-              break;
-            case SignInWithPasswordStatus.loading:
-              break;
-            case SignInWithPasswordStatus.failed:
-              break;
-            case SignInWithPasswordStatus.success:
-              break;
-          }
-        },
+      child: BlocListener<SignInWithPasswordBloc, SignInWithPasswordState>(
+        listenWhen: (previous, current) => previous.status != current.status,
+        listener: _listenStateChange,
         child: Scaffold(
           backgroundColor: appTheme.bodyBackGroundColor,
           appBar: NormalAppBar(
@@ -140,5 +127,29 @@ class _SignInWithPasswordScreenState extends State<SignInWithPasswordScreen> wit
         ),
       ),
     );
+  }
+
+  void _listenStateChange(BuildContext context, SignInWithPasswordState state) {
+    switch (state.status) {
+      case SignInWithPasswordStatus.none:
+        break;
+      case SignInWithPasswordStatus.loading:
+        showLoading();
+        break;
+      case SignInWithPasswordStatus.failed:
+        hideLoading();
+        showToast(state.errorMsg ?? '');
+        break;
+      case SignInWithPasswordStatus.success:
+        hideLoading();
+        break;
+      case SignInWithPasswordStatus.userMissingOtpFlow:
+        hideLoading();
+        break;
+      case SignInWithPasswordStatus.userMissingOnboardingFlow:
+        hideLoading();
+        AppNavigator.push(RoutePath.signupPersonalInfo);
+        break;
+    }
   }
 }

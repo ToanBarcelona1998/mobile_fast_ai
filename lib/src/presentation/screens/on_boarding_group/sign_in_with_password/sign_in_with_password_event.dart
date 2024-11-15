@@ -12,6 +12,9 @@ class SignInWithPasswordEvent with _$SignInWithPasswordEvent {
     String password,
   ) = SignInWithPasswordEventOnPasswordChange;
 
+  const factory SignInWithPasswordEvent.onHidePasswordChange() =
+      SignInWithPasswordEventOnHidePasswordChange;
+
   const factory SignInWithPasswordEvent.onSubmit() =
       SignInWithPasswordEventOnSubmit;
 }

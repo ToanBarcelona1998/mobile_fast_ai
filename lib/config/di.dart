@@ -7,6 +7,7 @@ import 'package:mobile_fast_ai/src/application/data/local/local_storage_service_
 import 'package:mobile_fast_ai/src/application/data/service/auth/auth_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/user/user_service_impl.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_local_constant.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/otp_code_verification/otp_code_verification_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_in_with_password/sign_in_with_password_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_form/sign_up_form_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/splash/splash_cubit.dart';
@@ -131,6 +132,13 @@ Future<void> initDependency(FastAIConfig config) async {
   getIt.registerFactory<SignUpFormBloc>(
     () => SignUpFormBloc(
       getIt.get<AuthUseCase>(),
+    ),
+  );
+
+  getIt.registerFactoryParam<OtpCodeVerificationBloc, String, dynamic>(
+    (email, _) => OtpCodeVerificationBloc(
+      getIt.get<AuthUseCase>(),
+      email: email,
     ),
   );
 }
