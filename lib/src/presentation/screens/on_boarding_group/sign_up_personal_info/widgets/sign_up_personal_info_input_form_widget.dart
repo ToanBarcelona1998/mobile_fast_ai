@@ -18,12 +18,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 class SignupPersonalInfoInputFormWidget extends StatelessWidget {
   final TextEditingController fullNameController;
   final TextEditingController phoneNumberController;
+  final TextEditingController addressController;
   final AppLocalizationManager localization;
   final AppTheme appTheme;
 
   const SignupPersonalInfoInputFormWidget({
     required this.fullNameController,
     required this.phoneNumberController,
+    required this.addressController,
     required this.appTheme,
     required this.localization,
     super.key,
