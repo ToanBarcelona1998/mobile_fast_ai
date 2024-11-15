@@ -236,11 +236,12 @@ sealed class AppNavigator {
           const ResetPasswordScreen(),
         );
       case RoutePath.otpCodeVerification:
-        final String email = settings.arguments as String;
+        final Map<String,dynamic> args = settings.arguments as Map<String,dynamic>;
         return _defaultRoute(
           settings,
           OtpCodeVerificationScreen(
-            email: email,
+            email: args['email'],
+            call: args['callback'],
           ),
         );
       case RoutePath.createNewPassword:
