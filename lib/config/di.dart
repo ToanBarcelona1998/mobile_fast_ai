@@ -5,6 +5,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobile_fast_ai/src/application/data/local/local_storage_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/auth/auth_service_impl.dart';
+import 'package:mobile_fast_ai/src/application/data/service/upload/upload_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/user/user_service_impl.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_local_constant.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/otp_code_verification/otp_code_verification_bloc.dart';
@@ -59,6 +60,12 @@ Future<void> initDependency(FastAIConfig config) async {
     ),
   );
 
+  getIt.registerLazySingleton<UploadServiceGenerator>(
+    () => UploadServiceGenerator(
+      getIt.get<Dio>(),
+    ),
+  );
+
   // Service
   getIt.registerLazySingleton<AuthService>(
     () => AuthServiceImpl(
@@ -78,6 +85,12 @@ Future<void> initDependency(FastAIConfig config) async {
 
   getIt.registerLazySingleton<SecureLocalStorageService>(
     () => const SecureLocalStorageServiceImpl(secureStorage),
+  );
+
+  getIt.registerLazySingleton<UploadService>(
+    () => UploadServiceImpl(
+      getIt.get<UploadServiceGenerator>(),
+    ),
   );
 
   // Repository
@@ -101,17 +114,30 @@ Future<void> initDependency(FastAIConfig config) async {
     ),
   );
 
+  getIt.registerLazySingleton<UploadRepository>(
+    () => UploadRepositoryImpl(
+      getIt.get<UploadService>(),
+    ),
+  );
+
   // Use case
-  getIt.registerLazySingleton(
+  getIt.registerLazySingleton<AuthUseCase>(
     () => AuthUseCase(
       getIt.get<SecureLocalStorageRepository>(),
       getIt.get<AuthRepository>(),
     ),
   );
 
-  getIt.registerLazySingleton(
+  getIt.registerLazySingleton<UserUseCase>(
     () => UserUseCase(
       getIt.get<UserRepository>(),
+      getIt.get<SecureLocalStorageRepository>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<UploadUseCase>(
+        () => UploadUseCase(
+      getIt.get<UploadRepository>(),
       getIt.get<SecureLocalStorageRepository>(),
     ),
   );
