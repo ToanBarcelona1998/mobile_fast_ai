@@ -1,2 +1,2 @@
-const int userMissingVerificationEmailError = 1015;
-const int userMissingOnBoardingError = 1014;
+const int userMissingVerificationEmailError = 1014;
+const int userMissingOnBoardingError = 1015;
