@@ -35,13 +35,12 @@ final class UserUseCase {
     final UpdateUserRequest updateUserRequest = UpdateUserRequest(
       name: userName,
       gender: gender,
-      status: status,
+      accessToken: accessToken,
     );
 
     await ErrorHandler.getInstance().call(
       request: _userRepository.update(
         request: updateUserRequest,
-        accessToken: accessToken,
       ),
     );
   }

@@ -1,5 +1,4 @@
 import 'package:data/src/dto/dto.dart';
-import 'package:data/src/dto/request/request_dto.dart';
 import 'package:data/src/resource/remote/remote.dart';
 import 'package:domain/domain.dart';
 
@@ -48,12 +47,25 @@ final class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<bool> verifyEmail({required String token,required VerifyEmailRequest request}) async {
+  Future<bool> verifyEmail(
+      {required String token, required VerifyEmailRequest request}) async {
     final baseResponse = await _authService.verifyEmail(
       token: token,
       body: request.toJson(),
     );
 
     return baseResponse.handleResponse();
+  }
+
+  @override
+  Future<void> completeOnboardingProfile({
+    required UpdateUserRequest request,
+  }) async {
+    final baseResponse = await _authService.completeOnboardingProfile(
+      token: request.accessToken,
+      body: request.toJson(),
+    );
+
+    baseResponse.handleResponse();
   }
 }

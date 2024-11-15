@@ -8,7 +8,6 @@ extension UpdateUserRequestDto on UpdateUserRequest{
       'birthday' : birthday,
       'address' : address,
       'avatar' : avatar,
-      'status' : status,
       'gender' : gender,
     };
   }

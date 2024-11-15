@@ -5,7 +5,6 @@ part 'sign_up_personal_info_state.freezed.dart';
 enum SignUpPersonalInfoStatus {
   none,
   loading,
-  uploaded,
   success,
   failed,
 }

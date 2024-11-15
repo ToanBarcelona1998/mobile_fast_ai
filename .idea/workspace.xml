@@ -5,24 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/upload_dto.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/upload_repository_impl.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/upload_service.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/upload_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/upload.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/upload_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/upload_use_case.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/application/data/service/upload/upload_service_impl.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/dto/dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/dto.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/remote.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/remote.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/entity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/entity.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/use_case.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/di.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/di.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/languages/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/dto/request/update_user_request_dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/update_user_request_dto.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/repository/auth_repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/auth_repository_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/repository/user_repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/user_repository_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/auth_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/auth_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/update_user_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/update_user_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/repository/auth_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/auth_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/repository/user_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/user_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/auth_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/auth_use_case.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/user_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/user_use_case.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/application/data/service/auth/auth_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/data/service/auth/auth_service_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/cores/utils/validator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/utils/validator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_create_public_profile/sign_up_create_public_profile_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_create_public_profile/widgets/sign_up_create_public_profile_content_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_create_public_profile/widgets/sign_up_create_public_profile_input_form_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_selector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_selector.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/widgets/sign_up_personal_info_bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/widgets/sign_up_personal_info_bottom_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/widgets/sign_up_personal_info_input_form_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/widgets/sign_up_personal_info_input_form_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/widgets/text_input_base/text_input_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/widgets/text_input_base/text_input_manager.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
