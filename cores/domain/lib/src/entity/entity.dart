@@ -7,4 +7,5 @@ export 'purchase.dart';
 export 'user.dart';
 export 'user_credit.dart';
 export 'auth_token.dart';
+export 'upload.dart';
 export 'requests/request.dart';

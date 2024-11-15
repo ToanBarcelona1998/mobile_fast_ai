@@ -76,6 +76,12 @@ final class SignInWithPasswordBloc
         ),
       );
       await _authUseCase.login(state.userName, state.password);
+
+      emit(
+        state.copyWith(
+          status: SignInWithPasswordStatus.success,
+        ),
+      );
     } catch (e) {
       SignInWithPasswordStatus status = SignInWithPasswordStatus.failed;
 

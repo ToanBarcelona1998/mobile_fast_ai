@@ -8,4 +8,7 @@ sealed class APIService{
   static const String _user = '/user';
   static const String getUser = _user;
   static const String updateUser = _user;
+
+  static const String _upload = '/upload';
+  static const String upload = _upload;
 }
