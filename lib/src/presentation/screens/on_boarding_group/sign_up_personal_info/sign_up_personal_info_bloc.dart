@@ -34,7 +34,9 @@ final class SignUpPersonalInfoBloc
       validForm = phoneNumber!.validatePhoneNumber();
     }
 
-    if (birthday.isNotNullOrEmpty) {}
+    if (birthday.isNotNullOrEmpty) {
+      validForm = birthday!.validateBirthday();
+    }
     return userName.isNotEmpty && validForm;
   }
 
@@ -137,6 +139,15 @@ final class SignUpPersonalInfoBloc
 
         avatar = uploaded.url;
       }
+
+      await _authUseCase.completeOnboardingProfile(
+        userName: state.userName,
+        birthday: state.birthday,
+        avatar: avatar,
+        phoneNumber: state.phoneNumber,
+        gender: state.gender,
+        address: state.address,
+      );
     } catch (e) {
       emit(
         state.copyWith(

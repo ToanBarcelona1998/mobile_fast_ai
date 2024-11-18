@@ -11,6 +11,7 @@ import 'package:mobile_fast_ai/src/cores/constants/app_local_constant.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/otp_code_verification/otp_code_verification_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_in_with_password/sign_in_with_password_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_form/sign_up_form_bloc.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/splash/splash_cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'fast_ai_config.dart';
@@ -136,7 +137,7 @@ Future<void> initDependency(FastAIConfig config) async {
   );
 
   getIt.registerLazySingleton<UploadUseCase>(
-        () => UploadUseCase(
+    () => UploadUseCase(
       getIt.get<UploadRepository>(),
       getIt.get<SecureLocalStorageRepository>(),
     ),
@@ -165,6 +166,13 @@ Future<void> initDependency(FastAIConfig config) async {
     (email, _) => OtpCodeVerificationBloc(
       getIt.get<AuthUseCase>(),
       email: email,
+    ),
+  );
+
+  getIt.registerFactory<SignUpPersonalInfoBloc>(
+    () => SignUpPersonalInfoBloc(
+      getIt.get<AuthUseCase>(),
+      getIt.get<UploadUseCase>(),
     ),
   );
 }

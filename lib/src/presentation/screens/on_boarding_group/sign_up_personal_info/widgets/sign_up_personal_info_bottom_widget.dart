@@ -28,7 +28,6 @@ class SignupPersonalInfoBottomWidget extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: Spacing.spacing05,
             vertical: Spacing.spacing07,
           ),
           child: SignUpPersonalInfoReadySubmitSelector(
