@@ -61,7 +61,11 @@ class CupertinoDatePickerHelper {
         titleHeight: titleHeight,
       ),
       currentTime: current ?? DateTime.now(),
-      minTime: DateTime.now(),
+      minTime: DateTime(
+        DateTime.now().year - 70,
+        12,
+        31,
+      ),
       maxTime: DateTime(
         DateTime.now().year + 10,
         12,

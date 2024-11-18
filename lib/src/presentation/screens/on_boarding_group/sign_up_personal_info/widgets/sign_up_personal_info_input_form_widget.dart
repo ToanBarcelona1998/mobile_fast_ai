@@ -135,6 +135,9 @@ class SignupPersonalInfoInputFormWidget extends StatelessWidget {
                   ),
                 );
               },
+              selectedData: [
+                genders[gender]
+              ],
               optionBuilder: (gender) {
                 return Text(
                   gender,

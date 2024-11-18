@@ -37,8 +37,7 @@ final class AuthServiceImpl implements AuthService {
 
   @override
   Future<BaseResponse> completeOnboardingProfile({required String token, required Map<String, dynamic> body}) {
-    // TODO: implement completeOnboardingProfile
-    throw UnimplementedError();
+    return _authServiceGenerator.completeOnboardingProfile(token, body);
   }
 }
 

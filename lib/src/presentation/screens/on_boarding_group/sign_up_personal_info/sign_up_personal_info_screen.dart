@@ -81,7 +81,7 @@ class _SignupPersonalInfoScreenState extends State<SignupPersonalInfoScreen>
                   addressController: _addressController,
                   appTheme: appTheme,
                   localization: localization,
-                  genders: [],
+                  genders: _genders,
                 ),
               ],
             ),
@@ -121,6 +121,8 @@ class _SignupPersonalInfoScreenState extends State<SignupPersonalInfoScreen>
         break;
       case SignUpPersonalInfoStatus.success:
         hideLoading();
+
+        AppNavigator.push(RoutePath.home);
         break;
       case SignUpPersonalInfoStatus.failed:
         hideLoading();
