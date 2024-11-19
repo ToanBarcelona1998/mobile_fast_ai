@@ -1,5 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_fast_ai/config/di.dart';
+import 'package:mobile_fast_ai/src/application/global/app_global/app_global_cubit.dart';
+import 'package:mobile_fast_ai/src/application/global/app_global/app_global_state.dart';
 import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
 import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
@@ -142,6 +144,7 @@ class _SignInWithPasswordScreenState extends State<SignInWithPasswordScreen>
         break;
       case SignInWithPasswordStatus.success:
         hideLoading();
+        AppGlobalCubit.of(context).changeStatus(AppGlobalStatus.authorized);
         break;
       case SignInWithPasswordStatus.userMissingOtpFlow:
         hideLoading();

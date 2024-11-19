@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/transaction.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/apple_payment.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/google_payment.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/payment.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/web3_payment.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/type.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/payment.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/provider/local_storage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/provider/transaction_provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/reown_connect/lib/src/ReownConnectImpl.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile_fast_ai.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile_fast_ai.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/test/payment_core_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/test/payment_core_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/languages/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_in_with_password/sign_in_with_password_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_in_with_password/sign_in_with_password_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_in_with_password/widgets/login_form_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_in_with_password/widgets/login_form_widget.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

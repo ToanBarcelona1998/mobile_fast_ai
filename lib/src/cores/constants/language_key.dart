@@ -28,8 +28,10 @@ sealed class LanguageKey{
   static const String onBoardingSignInWithPasswordScreenWelcomeBackTitle = 'on_boarding_sign_in_with_password_screen_welcome_back_title';
   static const String onBoardingSignInWithPasswordScreenWelcomeBackContent = 'on_boarding_sign_in_with_password_screen_welcome_back_content';
   static const String onBoardingSignInWithPasswordScreenEmailLabel = 'on_boarding_sign_in_with_password_screen_email_label';
+  static const String onBoardingSignInWithPasswordScreenEmailInValid = 'on_boarding_sign_in_with_password_screen_email_invalid';
   static const String onBoardingSignInWithPasswordScreenEmailHint = 'on_boarding_sign_in_with_password_screen_email_hint';
   static const String onBoardingSignInWithPasswordScreenPasswordLabel = 'on_boarding_sign_in_with_password_screen_password_label';
+  static const String onBoardingSignInWithPasswordScreenPasswordInvalid = 'on_boarding_sign_in_with_password_screen_password_invalid';
   static const String onBoardingSignInWithPasswordScreenPasswordHint = 'on_boarding_sign_in_with_password_screen_password_hint';
   static const String onBoardingSignInWithPasswordScreenRememberMe = 'on_boarding_sign_in_with_password_screen_remember_me';
   static const String onBoardingSignInWithPasswordScreenForgotPassword = 'on_boarding_sign_in_with_password_screen_forgot_password';

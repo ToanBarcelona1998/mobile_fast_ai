@@ -9,6 +9,6 @@ final class FastAIError{
 
   @override
   String toString() {
-    return '[$code]: ${message ?? ''}';
+    return '[$code] ${message ?? ''}';
   }
 }
