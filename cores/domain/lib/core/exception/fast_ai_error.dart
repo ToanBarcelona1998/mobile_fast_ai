@@ -11,4 +11,6 @@ final class FastAIError{
   String toString() {
     return '[$code] ${message ?? ''}';
   }
+
+  static const int developerErrorCode = -1000;
 }

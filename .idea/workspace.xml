@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/application/data/service/image_generator/image_generator_service_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/generator_use_case.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/core/exception/fast_ai_error.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/core/exception/fast_ai_error.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/use_case.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/utils/validate_base64.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/utils/validate_base64.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

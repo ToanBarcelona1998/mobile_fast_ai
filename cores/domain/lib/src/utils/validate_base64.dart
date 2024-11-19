@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 extension Base64Validate on String{
-  bool validate(){
+  bool base64Validate(){
     try{
       base64.decode(this);
 
