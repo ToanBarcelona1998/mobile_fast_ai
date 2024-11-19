@@ -20,4 +20,8 @@ sealed class APIService{
   static const String controlNet = '$_imageGenerator/control-net';
   static const String imageToText = '$_imageGenerator/image-to-text';
   static const String enhancePrompt = '$_imageGenerator/enhance-prompt';
+
+
+  static const String _model = '/model';
+  static const String getAllModel = '$_model/get-all';
 }

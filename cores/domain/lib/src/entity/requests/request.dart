@@ -12,3 +12,4 @@ export 'image_to_text_request.dart';
 export 'control_net_request.dart';
 export 'enhance_prompt_request.dart';
 export 'upscale_image_request.dart';
+export 'get_all_model_request.dart';
