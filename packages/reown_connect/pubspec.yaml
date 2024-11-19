@@ -1,4 +1,4 @@
-name: payment_core
+name: reown_connect
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
@@ -10,7 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  in_app_purchase: ^3.2.0
+  reown_appkit: ^1.0.1
+  web3dart: ^2.7.3
 
 dev_dependencies:
   flutter_test:

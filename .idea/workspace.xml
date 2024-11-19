@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="" />
+    <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/transaction.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/apple_payment.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/google_payment.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/payment.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/web3_payment.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/type.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/payment.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/provider/local_storage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/provider/transaction_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/reown_connect/lib/src/ReownConnectImpl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile_fast_ai.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile_fast_ai.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/test/payment_core_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/test/payment_core_test.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,20 +58,21 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/toannv/Documents/Home-Work/mobile_fast_ai/packages/payment_core/lib/src/core/payment&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;flutter.settings&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/otp_code_verification" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_form" />
       <recent name="$PROJECT_DIR$/cores/data/lib/src/dto/request" />
-      <recent name="$PROJECT_DIR$/lib/src/application/global/app_global" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment" />
       <recent name="$PROJECT_DIR$/cores/domain/lib/src/utils" />
     </key>
   </component>
