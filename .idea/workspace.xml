@@ -5,12 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/ai_task_dto.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/control_net_request_dto.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/enhance_prompt_request_dto.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/generate_image_request_dto.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/image_to_text_request_dto.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/remove_background_request_dto.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/upscale_image_request_dto.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/image_generator_repository_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/image_generator_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/base_remote_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/control_net_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/enhance_prompt_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/generate_image_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/image_to_text_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/remove_background_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/upscale_image_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/image_generator_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/utils/validate_base64.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/languages/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_in_with_password/sign_in_with_password_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_in_with_password/sign_in_with_password_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_in_with_password/widgets/login_form_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_in_with_password/widgets/login_form_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/dto/request/request_dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/request_dto.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/remote.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/remote.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/ai_task.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/ai_task.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/update_user_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/update_user_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/repository.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

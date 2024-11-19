@@ -1,5 +1,6 @@
-final class UpdateUserRequest {
-  final String accessToken;
+import 'base_remote_request.dart';
+
+final class UpdateUserRequest extends BaseRemoteRequest {
   final String ?name;
   final String? phoneNumber;
   final String? address;
@@ -8,7 +9,7 @@ final class UpdateUserRequest {
   final int ?gender;
 
   const UpdateUserRequest({
-    required this.accessToken,
+    required super.accessToken,
     this.name,
     this.gender,
     this.phoneNumber,
