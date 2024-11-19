@@ -6,10 +6,13 @@ import 'package:retrofit/retrofit.dart';
 part 'model_service_impl.g.dart';
 
 final class ModelServiceImpl implements ModelService {
+  final ModelServiceGenerator _modelServiceGenerator;
+
+  const ModelServiceImpl(this._modelServiceGenerator);
+
   @override
   Future<BaseResponse> getAll({required String accessToken}) {
-    // TODO: implement getAll
-    throw UnimplementedError();
+    return _modelServiceGenerator.getAll(accessToken);
   }
 }
 
