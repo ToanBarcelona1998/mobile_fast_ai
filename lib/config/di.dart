@@ -5,6 +5,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobile_fast_ai/src/application/data/local/local_storage_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/auth/auth_service_impl.dart';
+import 'package:mobile_fast_ai/src/application/data/service/image_generator/image_generator_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/upload/upload_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/user/user_service_impl.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_local_constant.dart';
@@ -67,6 +68,12 @@ Future<void> initDependency(FastAIConfig config) async {
     ),
   );
 
+  getIt.registerLazySingleton<ImageGeneratorServiceGenerator>(
+        () => ImageGeneratorServiceGenerator(
+      getIt.get<Dio>(),
+    ),
+  );
+
   // Service
   getIt.registerLazySingleton<AuthService>(
     () => AuthServiceImpl(
@@ -91,6 +98,12 @@ Future<void> initDependency(FastAIConfig config) async {
   getIt.registerLazySingleton<UploadService>(
     () => UploadServiceImpl(
       getIt.get<UploadServiceGenerator>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<ImageGeneratorService>(
+    () => ImageGeneratorServiceImpl(
+      getIt.get<ImageGeneratorServiceGenerator>(),
     ),
   );
 
@@ -121,6 +134,12 @@ Future<void> initDependency(FastAIConfig config) async {
     ),
   );
 
+  getIt.registerLazySingleton<ImageGeneratorRepository>(
+        () => ImageGeneratorRepositoryImpl(
+      getIt.get<ImageGeneratorService>(),
+    ),
+  );
+
   // Use case
   getIt.registerLazySingleton<AuthUseCase>(
     () => AuthUseCase(
@@ -139,6 +158,13 @@ Future<void> initDependency(FastAIConfig config) async {
   getIt.registerLazySingleton<UploadUseCase>(
     () => UploadUseCase(
       getIt.get<UploadRepository>(),
+      getIt.get<SecureLocalStorageRepository>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<GeneratorUseCase>(
+        () => GeneratorUseCase(
+      getIt.get<ImageGeneratorRepository>(),
       getIt.get<SecureLocalStorageRepository>(),
     ),
   );

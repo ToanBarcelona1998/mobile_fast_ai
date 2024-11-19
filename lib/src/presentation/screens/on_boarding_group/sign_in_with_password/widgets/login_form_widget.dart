@@ -42,7 +42,9 @@ class LoginFormWidget extends StatelessWidget {
           ),
           constraintManager: ConstraintManager()
             ..email(
-              errorMessage: localization.translate(''),
+              errorMessage: localization.translate(
+                LanguageKey.onBoardingSignInWithPasswordScreenEmailInValid,
+              ),
             ),
           suffix: SvgPicture.asset(
             AssetIconPath.icCommonEmail,
@@ -54,33 +56,42 @@ class LoginFormWidget extends StatelessWidget {
         const SizedBox(
           height: BoxSize.boxSize07,
         ),
-        SignInWithPasswordHidePasswordSelector(builder: (hidePassword) {
-          return NormalTextInputWidget(
-            controller: passwordController,
-            label: localization.translate(
-              LanguageKey.onBoardingSignInWithPasswordScreenPasswordLabel,
-            ),
-            hintText: localization.translate(
-              LanguageKey.onBoardingSignInWithPasswordScreenPasswordHint,
-            ),
-            maxLine: 1,
-            obscureText: hidePassword,
-            onChanged: (password, _) {
-              _onPasswordChange(context, password);
-            },
-            suffix: GestureDetector(
-              behavior: HitTestBehavior.opaque,
-              onTap: () => _onChangeObscurePassword(context),
-              child: hidePassword
-                  ? SvgPicture.asset(
-                      AssetIconPath.icCommonEyeHide,
-                    )
-                  : SvgPicture.asset(
-                      AssetIconPath.icCommonEyeHide,
-                    ),
-            ),
-          );
-        }),
+        SignInWithPasswordHidePasswordSelector(
+          builder: (hidePassword) {
+            return NormalTextInputWidget(
+              controller: passwordController,
+              label: localization.translate(
+                LanguageKey.onBoardingSignInWithPasswordScreenPasswordLabel,
+              ),
+              hintText: localization.translate(
+                LanguageKey.onBoardingSignInWithPasswordScreenPasswordHint,
+              ),
+              maxLine: 1,
+              obscureText: hidePassword,
+              onChanged: (password, _) {
+                _onPasswordChange(context, password);
+              },
+              constraintManager: ConstraintManager()
+                ..notEmpty(
+                  errorMessage: localization.translate(
+                    LanguageKey
+                        .onBoardingSignInWithPasswordScreenPasswordInvalid,
+                  ),
+                ),
+              suffix: GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () => _onChangeObscurePassword(context),
+                child: hidePassword
+                    ? SvgPicture.asset(
+                        AssetIconPath.icCommonEyeHide,
+                      )
+                    : SvgPicture.asset(
+                        AssetIconPath.icCommonEyeHide,
+                      ),
+              ),
+            );
+          },
+        ),
         const SizedBox(
           height: BoxSize.boxSize05,
         ),

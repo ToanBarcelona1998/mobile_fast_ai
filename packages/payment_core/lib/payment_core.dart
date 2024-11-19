@@ -1,7 +1,5 @@
 library payment_core;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+abstract class PaymentCore{
+  Future<void> buy();
 }

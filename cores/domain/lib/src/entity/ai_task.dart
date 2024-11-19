@@ -1,10 +1,22 @@
-enum AITaskType{
-  inference,
-  controlNet,
-  upscale,
-  removeBackground,
-  imageToText,
-  promptEnhance,
+extension AITaskTypeE on AITaskType{
+  static AITaskType from(String type) {
+    return AITaskType.values.firstWhere(
+          (task) => task.type == type,
+    );
+  }
+}
+
+enum AITaskType {
+  inference('imageInference'),
+  controlNet('imageControlNetPreProcess'),
+  upscale('imageUpscale'),
+  removeBackground('imageBackgroundRemoval'),
+  imageToText('imageCaption'),
+  promptEnhance('promptEnhance');
+
+  const AITaskType(this.type);
+
+  final String type;
 }
 
 final class AITask {

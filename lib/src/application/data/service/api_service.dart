@@ -12,4 +12,12 @@ sealed class APIService{
 
   static const String _upload = '/upload';
   static const String upload = _upload;
+
+  static const String _imageGenerator = '/image-generator';
+  static const String generateImages = '$_imageGenerator/generate-images';
+  static const String removeBackground = '$_imageGenerator/remove-background';
+  static const String upscale = '$_imageGenerator/upscale';
+  static const String controlNet = '$_imageGenerator/control-net';
+  static const String imageToText = '$_imageGenerator/image-to-text';
+  static const String enhancePrompt = '$_imageGenerator/enhance-prompt';
 }

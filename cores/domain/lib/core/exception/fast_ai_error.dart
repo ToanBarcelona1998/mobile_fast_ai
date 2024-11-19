@@ -9,6 +9,8 @@ final class FastAIError{
 
   @override
   String toString() {
-    return '[$code]: ${message ?? ''}';
+    return '[$code] ${message ?? ''}';
   }
+
+  static const int developerErrorCode = -1000;
 }

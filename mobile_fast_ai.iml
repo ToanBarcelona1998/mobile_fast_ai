@@ -15,6 +15,12 @@
       <excludeFolder url="file://$MODULE_DIR$/cores/data/build" />
       <excludeFolder url="file://$MODULE_DIR$/cores/data/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/cores/data/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/payment_core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/payment_core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/payment_core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/reown_connect/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/reown_connect/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/reown_connect/build" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
