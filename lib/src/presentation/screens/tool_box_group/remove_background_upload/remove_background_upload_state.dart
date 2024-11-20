@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:domain/domain.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'remove_background_upload_state.freezed.dart';
@@ -28,5 +29,6 @@ class RemoveBackgroundUploadState with _$RemoveBackgroundUploadState {
     RemoveBackgroundUploadStatus status,
     File? image,
     String? error,
+    @Default([]) List<AITask> tasks,
   }) = _RemoveBackgroundUploadState;
 }

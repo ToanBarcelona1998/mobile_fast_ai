@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_event.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_selector.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/languages/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_edit_art_work/photo_to_anime_edit_art_work_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_edit_art_work/widgets/bottom_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_edit_art_work/widgets/generate_image_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_finalize/photo_to_anime_finalize_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_finalize/remove_background_finalize_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_finalize/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_finalize/widgets/bottom_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_finalize/widgets/content_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_finalize/widgets/content_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_upload/photo_to_anime_upload_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_upload/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/widgets/bottom_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_upload/widgets/upload_content_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/widgets/upload_content_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_upload/widgets/upload_image_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/widgets/upload_image_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_state.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,15 +1,16 @@
 import 'dart:convert';
 
 import 'package:domain/domain.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'remove_background_upload_event.dart';
 import 'remove_background_upload_state.dart';
 
-final class RemoveBackgroundBloc
+final class RemoveBackgroundUploadBloc
     extends Bloc<RemoveBackgroundUploadEvent, RemoveBackgroundUploadState> {
   final GeneratorUseCase _generatorUseCase;
 
-  RemoveBackgroundBloc(this._generatorUseCase)
+  RemoveBackgroundUploadBloc(this._generatorUseCase)
       : super(
           const RemoveBackgroundUploadState(),
         ) {
@@ -55,9 +56,14 @@ final class RemoveBackgroundBloc
         state.image!.readAsBytesSync(),
       );
 
-      await _generatorUseCase.removeBackground(
+      final List<AITask> tasks = await _generatorUseCase.removeBackground(
         image: image,
       );
+
+      emit(state.copyWith(
+        status: RemoveBackgroundUploadStatus.removed,
+        tasks: tasks,
+      ));
     } catch (e) {
       LogProvider.log('Remove background error ${e.toString()}');
       emit(
@@ -68,4 +74,6 @@ final class RemoveBackgroundBloc
       );
     }
   }
+
+  static RemoveBackgroundUploadBloc of(BuildContext context) => BlocProvider.of<RemoveBackgroundUploadBloc>(context);
 }
