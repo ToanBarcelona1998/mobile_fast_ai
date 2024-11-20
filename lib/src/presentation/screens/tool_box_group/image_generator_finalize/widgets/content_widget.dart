@@ -8,7 +8,7 @@ import 'package:mobile_fast_ai/src/presentation/widgets/switch_widget.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/text_box_widget.dart';
 import 'package:flutter/material.dart';
 
-class AnimeFinalizeContentWidget extends StatelessWidget {
+class ImageGeneratorFinalizeContentWidget extends StatelessWidget {
   final AppLocalizationManager localization;
   final AppTheme appTheme;
   final String title;
@@ -17,7 +17,7 @@ class AnimeFinalizeContentWidget extends StatelessWidget {
   final String showCFGTitle;
   final String showSeedTitle;
 
-  const AnimeFinalizeContentWidget({
+  const ImageGeneratorFinalizeContentWidget({
     required this.title,
     required this.showPromptTitle,
     required this.showNegativePromptTitle,
@@ -40,7 +40,7 @@ class AnimeFinalizeContentWidget extends StatelessWidget {
               children: [
                 TextSpan(
                   text: localization.translate(
-                    LanguageKey.animeFinalizeScreenAddTitle,
+                    LanguageKey.imageGeneratorFinalizeScreenAddTitle,
                   ),
                   style: AppTypography.heading5Bold.copyWith(
                     color: appTheme.greyScaleColor900,
@@ -48,7 +48,7 @@ class AnimeFinalizeContentWidget extends StatelessWidget {
                 ),
                 TextSpan(
                   text: ' (${localization.translate(
-                    LanguageKey.animeFinalizeScreenOptional,
+                    LanguageKey.imageGeneratorFinalizeScreenOptional,
                   )})',
                   style: AppTypography.bodyLargeRegular.copyWith(
                     color: appTheme.greyScaleColor700,
@@ -68,7 +68,7 @@ class AnimeFinalizeContentWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             firstChildWidget: Text(
               localization.translate(
-                LanguageKey.animeFinalizeScreenShowPrompt,
+                LanguageKey.imageGeneratorFinalizeScreenShowPrompt,
               ),
               style: AppTypography.heading5Bold.copyWith(
                 color: appTheme.greyScaleColor900,
@@ -92,7 +92,7 @@ class AnimeFinalizeContentWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             firstChildWidget: Text(
               localization.translate(
-                LanguageKey.animeFinalizeScreenShowNegativePrompt,
+                LanguageKey.imageGeneratorFinalizeScreenShowNegativePrompt,
               ),
               style: AppTypography.heading5Bold.copyWith(
                 color: appTheme.greyScaleColor900,
@@ -116,7 +116,7 @@ class AnimeFinalizeContentWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             firstChildWidget: Text(
               localization.translate(
-                LanguageKey.animeFinalizeScreenShowCFGScale,
+                LanguageKey.imageGeneratorFinalizeScreenShowCFGScale,
               ),
               style: AppTypography.heading5Bold.copyWith(
                 color: appTheme.greyScaleColor900,
@@ -140,7 +140,7 @@ class AnimeFinalizeContentWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             firstChildWidget: Text(
               localization.translate(
-                LanguageKey.animeFinalizeScreenShowSeed,
+                LanguageKey.imageGeneratorFinalizeScreenShowSeed,
               ),
               style: AppTypography.heading5Bold.copyWith(
                 color: appTheme.greyScaleColor900,

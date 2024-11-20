@@ -1,8 +1,6 @@
+import 'package:domain/src/constant.dart';
 import 'package:domain/src/repository/repository.dart';
 import 'package:domain/src/entity/requests/request.dart';
-
-const String accessTokenKey = 'fast_ai_access_token_key';
-const String refreshTokenKey = 'fast_ai_refresh_token_key';
 
 final class TokenManagement {
   final SecureLocalStorageRepository _repository;

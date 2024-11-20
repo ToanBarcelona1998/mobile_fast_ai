@@ -22,4 +22,8 @@ extension StringValidator on String {
       return false;
     }
   }
+
+  bool validatePrompt(){
+    return length >= 2 && length <= 2000;
+  }
 }

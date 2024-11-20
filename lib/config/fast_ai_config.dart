@@ -1,3 +1,5 @@
+import 'dart:io';
+
 enum FastAIEnvironment {
   dev,
   prod,
@@ -11,8 +13,9 @@ final class FastAIConfig {
   });
 
   factory FastAIConfig.fromJson(Map<String, dynamic> json) {
+    final String baseUrl = Platform.isIOS ? json['base_url_ios'] : json['base_url'];
     return FastAIConfig(
-      baseUrl: json['base_url'],
+      baseUrl: baseUrl,
     );
   }
 }

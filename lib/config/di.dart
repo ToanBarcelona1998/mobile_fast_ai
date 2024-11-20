@@ -6,6 +6,7 @@ import 'package:get_it/get_it.dart';
 import 'package:mobile_fast_ai/src/application/data/local/local_storage_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/auth/auth_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/image_generator/image_generator_service_impl.dart';
+import 'package:mobile_fast_ai/src/application/data/service/model/model_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/upload/upload_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/user/user_service_impl.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_local_constant.dart';
@@ -14,6 +15,7 @@ import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_i
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_form/sign_up_form_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/splash/splash_cubit.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_generator/image_generator_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'fast_ai_config.dart';
 
@@ -36,10 +38,10 @@ Future<void> initDependency(FastAIConfig config) async {
     BaseOptions(
       baseUrl: config.baseUrl,
       connectTimeout: const Duration(
-        milliseconds: 60000,
+        milliseconds: 30000,
       ),
       receiveTimeout: const Duration(
-        milliseconds: 60000,
+        milliseconds: 30000,
       ),
       contentType: 'application/json; charset=utf-8',
     ),
@@ -69,7 +71,13 @@ Future<void> initDependency(FastAIConfig config) async {
   );
 
   getIt.registerLazySingleton<ImageGeneratorServiceGenerator>(
-        () => ImageGeneratorServiceGenerator(
+    () => ImageGeneratorServiceGenerator(
+      getIt.get<Dio>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<ModelServiceGenerator>(
+    () => ModelServiceGenerator(
       getIt.get<Dio>(),
     ),
   );
@@ -107,6 +115,12 @@ Future<void> initDependency(FastAIConfig config) async {
     ),
   );
 
+  getIt.registerLazySingleton<ModelService>(
+    () => ModelServiceImpl(
+      getIt.get<ModelServiceGenerator>(),
+    ),
+  );
+
   // Repository
   getIt.registerLazySingleton<AuthRepository>(
     () => AuthRepositoryImpl(getIt.get<AuthService>()),
@@ -135,8 +149,14 @@ Future<void> initDependency(FastAIConfig config) async {
   );
 
   getIt.registerLazySingleton<ImageGeneratorRepository>(
-        () => ImageGeneratorRepositoryImpl(
+    () => ImageGeneratorRepositoryImpl(
       getIt.get<ImageGeneratorService>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<ModelRepository>(
+    () => ModelRepositoryImpl(
+      getIt.get<ModelService>(),
     ),
   );
 
@@ -152,6 +172,7 @@ Future<void> initDependency(FastAIConfig config) async {
     () => UserUseCase(
       getIt.get<UserRepository>(),
       getIt.get<SecureLocalStorageRepository>(),
+      getIt.get<NormalLocalStorageRepository>(),
     ),
   );
 
@@ -163,8 +184,15 @@ Future<void> initDependency(FastAIConfig config) async {
   );
 
   getIt.registerLazySingleton<GeneratorUseCase>(
-        () => GeneratorUseCase(
+    () => GeneratorUseCase(
       getIt.get<ImageGeneratorRepository>(),
+      getIt.get<SecureLocalStorageRepository>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<ModelUseCase>(
+    () => ModelUseCase(
+      getIt.get<ModelRepository>(),
       getIt.get<SecureLocalStorageRepository>(),
     ),
   );
@@ -199,6 +227,13 @@ Future<void> initDependency(FastAIConfig config) async {
     () => SignUpPersonalInfoBloc(
       getIt.get<AuthUseCase>(),
       getIt.get<UploadUseCase>(),
+    ),
+  );
+
+  getIt.registerFactory<ImageGeneratorBloc>(
+    () => ImageGeneratorBloc(
+      getIt.get<GeneratorUseCase>(),
+      getIt.get<ModelUseCase>(),
     ),
   );
 }

@@ -1,3 +1,4 @@
+import 'package:domain/domain.dart';
 import 'package:mobile_fast_ai/src/cores/app_routes.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/discover_group/creator_detail/creator_detail_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/discover_group/post/discover_post_screen.dart';
@@ -32,9 +33,6 @@ import 'package:mobile_fast_ai/src/presentation/screens/profile_group/setting_no
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/3D_to_image_edit_art_work/3D_to_image_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/3D_to_image_finalize/3D_to_image_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/3D_to_image_upload/3D_to_image_upload_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/anime_edit_art_work/anime_edit_art_work_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/anime_finalize/anime_finalize_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/anime_generator/anime_geneator_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_generator/ai_avatar_generator_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_generator_download/avatar_generator_download.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_generator_finalize/avatar_generator_finalize.dart';
@@ -49,6 +47,8 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/control_n
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/extend_image_edit_art_work/extend_image_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/extend_image_finalize/extend_image_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/extend_image_upload/extend_image_upload_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_generator/image_geneator_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_generator_finalize/image_generator_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_painting_finalize/image_to_painting_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_painting_upload/image_to_painting_upload_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/logo_generator/logo_generator_screen.dart';
@@ -115,9 +115,8 @@ sealed class RoutePath {
   static const String creatorDetail = '${_discover}creator_detail';
   static const String postReport = '${_discover}report';
 
-  static const String animeGenerator = '${_toolBox}anime_generator';
-  static const String animeEditArtWork = '${_toolBox}anime_edit_art_work';
-  static const String animeFinalize = '${_toolBox}anime_finalize';
+  static const String imageGenerator = '${_toolBox}image_generator';
+  static const String imageGeneratorFinalize = '${_toolBox}image_generator_finalize';
 
   static const String realisticGenerator = '${_toolBox}realistic_generator';
   static const String realisticEditArtWork =
@@ -352,22 +351,17 @@ sealed class AppNavigator {
           ),
         );
 
-      case RoutePath.animeGenerator:
+      case RoutePath.imageGenerator:
         return _defaultRoute(
           settings,
-          const AnimeGeneratorScreen(),
+          const ImageGeneratorScreen(),
         );
-      case RoutePath.animeEditArtWork:
+      case RoutePath.imageGeneratorFinalize:
+        final List<AITask> tasks = settings.arguments as List<AITask>;
         return _defaultRoute(
           settings,
-          const AnimeEditArtWorkScreen(),
-        );
-      case RoutePath.animeFinalize:
-        final String url = settings.arguments as String;
-        return _defaultRoute(
-          settings,
-          AnimeFinalizeScreen(
-            url: url,
+          ImageGeneratorFinalizeScreen(
+            tasks: tasks,
           ),
         );
 

@@ -5,12 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/generator_use_case.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/cores/utils/image_generator_extension.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/cores/utils/image_ratio.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/image_generator_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/image_generator_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/image_generator_selector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/image_generator_state.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/core/exception/fast_ai_error.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/core/exception/fast_ai_error.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/use_case.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/utils/validate_base64.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/utils/validate_base64.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/config/config.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/config/config.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/languages/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/dto/request/generate_image_request_dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/generate_image_request_dto.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/generate_image_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/generate_image_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/generator_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/generator_use_case.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/di.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/di.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/fast_ai_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/fast_ai_config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/cores/utils/validator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/utils/validator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_edit_art_work/anime_edit_art_work_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_edit_art_work/widgets/edit_art_work_action_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_edit_art_work/widgets/edit_art_work_download_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_edit_art_work/widgets/edit_art_work_edit_input_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/widgets/input_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_edit_art_work/widgets/edit_art_work_generate_image_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_edit_art_work/widgets/edit_art_work_option_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_finalize/anime_finalize_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator_finalize/image_generator_finalize_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_finalize/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator_finalize/widgets/bottom_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_finalize/widgets/content_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator_finalize/widgets/content_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_generator/anime_geneator_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/image_geneator_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_generator/widgets/anime_style_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/widgets/model_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_generator/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/widgets/bottom_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_generator/widgets/enter_prompt_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/widgets/enter_prompt_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_generator/widgets/espect_ratio_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/widgets/aspect_ratio_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/anime_generator/widgets/input_images_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_edit_art_work/photo_to_anime_edit_art_work_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/photo_to_anime_edit_art_work/photo_to_anime_edit_art_work_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/widgets/text_input_base/text_input_base.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/widgets/text_input_base/text_input_base.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,25 +72,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/toannv/Documents/Home-Work/mobile_fast_ai/packages/payment_core/lib/src/core/payment&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;flutter.settings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/tool_box_group/image_generator",
+    "settings.editor.selected.configurable": "flutter.settings",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator" />
+      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/widgets" />
       <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/otp_code_verification" />
-      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_form" />
-      <recent name="$PROJECT_DIR$/cores/data/lib/src/dto/request" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment" />

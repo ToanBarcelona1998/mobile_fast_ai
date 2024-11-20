@@ -56,9 +56,9 @@ class _PhotoToAnimeEditArtWorkScreenState
                   GestureDetector(
                     behavior: HitTestBehavior.opaque,
                     onTap: () {
-                      AppNavigator.push(RoutePath.animeFinalize, {
-                        'url': randomDummyImg(),
-                      });
+                      // AppNavigator.push(RoutePath.animeFinalize, {
+                      //   'url': randomDummyImg(),
+                      // });
                     },
                     child: Text(
                       localization.translate(
