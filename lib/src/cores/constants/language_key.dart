@@ -271,25 +271,18 @@ sealed class LanguageKey{
   static const String imageGeneratorFinalizeScreenShareToFeedSuccessfulContent= 'image_generator_finalize_screen_share_to_feed_successful_content';
 
 
-  static const String photoToAnimeUploadScreenAppBarTitle = 'photo_to_anime_upload_screen_app_bar_title';
-  static const String photoToAnimeUploadScreenTitle = 'photo_to_anime_upload_screen_title';
-  static const String photoToAnimeUploadScreenContent = 'photo_to_anime_upload_screen_content';
-  static const String photoToAnimeUploadScreenUpload = 'photo_to_anime_upload_screen_upload';
-  static const String photoToAnimeUploadScreenGenerate = 'photo_to_anime_upload_screen_generate';
+  static const String removeBackgroundUploadScreenAppBarTitle = 'remove_background_upload_screen_app_bar_title';
+  static const String removeBackgroundUploadScreenTitle = 'remove_background_upload_screen_title';
+  static const String removeBackgroundUploadScreenContent = 'remove_background_upload_screen_content';
+  static const String removeBackgroundUploadScreenUpload = 'remove_background_upload_screen_upload';
+  static const String removeBackgroundUploadScreenGenerate = 'remove_background_upload_screen_generate';
+  
 
-
-  static const String photoToAnimeEditArtWorkScreenAppBarTitle = 'photo_to_anime_edit_art_work_screen_app_bar_title';
-  static const String photoToAnimeEditArtWorkScreenFinalize = 'photo_to_anime_edit_art_work_screen_finalize';
-  static const String photoToAnimeEditArtWorkScreenReGenerate = 'photo_to_anime_edit_art_work_screen_re_generate';
-  static const String photoToAnimeEditArtWorkScreenDownloadAll = 'photo_to_anime_edit_art_work_screen_download_all';
-  static const String photoToAnimeEditArtWorkScreenGenerating = 'photo_to_anime_edit_art_work_screen_generating';
-
-
-  static const String photoToAnimeFinalizeScreenAppBarTitle = 'photo_to_anime_finalize_screen_app_bar_title';
-  static const String photoToAnimeFinalizeScreenAddTitle = 'photo_to_anime_finalize_screen_add_title';
-  static const String photoToAnimeFinalizeScreenOptional = 'photo_to_anime_finalize_screen_optional';
-  static const String photoToAnimeFinalizeScreenDownloadArt = 'photo_to_anime_finalize_screen_download_art';
-  static const String photoToAnimeFinalizeScreenShareToFeed = 'photo_to_anime_finalize_screen_share_to_feed';
+  static const String removeBackgroundFinalizeScreenAppBarTitle = 'remove_background_finalize_screen_app_bar_title';
+  static const String removeBackgroundFinalizeScreenAddTitle = 'remove_background_finalize_screen_add_title';
+  static const String removeBackgroundFinalizeScreenOptional = 'remove_background_finalize_screen_optional';
+  static const String removeBackgroundFinalizeScreenDownloadArt = 'remove_background_finalize_screen_download_art';
+  static const String removeBackgroundFinalizeScreenShareToFeed = 'remove_background_finalize_screen_share_to_feed';
 
 
   static const String realisticArtGeneratorScreenAppBarTitle = 'realistic_art_generator_screen_app_bar_title';

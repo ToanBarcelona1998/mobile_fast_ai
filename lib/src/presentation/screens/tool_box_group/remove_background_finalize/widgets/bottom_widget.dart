@@ -7,13 +7,13 @@ import 'package:mobile_fast_ai/src/presentation/widgets/app_button.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/divider_widget.dart';
 import 'package:flutter/material.dart';
 
-class PhotoToAnimeFinalizeBottomWidget extends StatelessWidget {
+class RemoveBackgroundFinalizeBottomWidget extends StatelessWidget {
   final AppTheme appTheme;
   final AppLocalizationManager localization;
   final VoidCallback onDownloadArt;
   final VoidCallback onShareToFeed;
 
-  const PhotoToAnimeFinalizeBottomWidget({
+  const RemoveBackgroundFinalizeBottomWidget({
     required this.appTheme,
     required this.localization,
     required this.onDownloadArt,
@@ -40,7 +40,7 @@ class PhotoToAnimeFinalizeBottomWidget extends StatelessWidget {
               Expanded(
                 child: PrimaryAppButton(
                   text: localization.translate(
-                    LanguageKey.photoToAnimeFinalizeScreenDownloadArt,
+                    LanguageKey.removeBackgroundFinalizeScreenDownloadArt,
                   ),
                   backGroundColor: appTheme.primaryColor100,
                   textStyle: AppTypography.bodyXLargeSemiBold.copyWith(
@@ -55,7 +55,7 @@ class PhotoToAnimeFinalizeBottomWidget extends StatelessWidget {
               Expanded(
                 child: PrimaryAppButton(
                   text: localization.translate(
-                    LanguageKey.photoToAnimeFinalizeScreenShareToFeed,
+                    LanguageKey.removeBackgroundFinalizeScreenShareToFeed,
                   ),
                   onPress: onShareToFeed,
                 ),

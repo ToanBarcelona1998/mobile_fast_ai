@@ -54,15 +54,14 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/logo_generator/logo_generator_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/logo_generator_edit_art_work/logo_generator_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/logo_generator_finalize/logo_generator_finalize_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/photo_to_anime_edit_art_work/photo_to_anime_edit_art_work_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/photo_to_anime_finalize/photo_to_anime_finalize_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/photo_to_anime_upload/photo_to_anime_upload_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/realistic_art_edit_art_work/realistic_art_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/realistic_art_finalize/realistic_art_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/realistic_art_generator/realistic_art_generator_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/recolor_edit_art_work/recolor_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/recolor_image_finalize/recolor_image_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/recolor_image_upload/recolor_image_upload_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/remove_background_finalize/remove_background_finalize_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/sketch_to_image_edit_art_work/sketch_to_image_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/sketch_to_image_finalize/sketch_to_image_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/sketch_to_image_upload/sketch_to_image_upload_screen.dart';
@@ -123,11 +122,9 @@ sealed class RoutePath {
       '${_toolBox}realistic_edit_art_work';
   static const String realisticFinalize = '${_toolBox}realistic_finalize';
 
-  static const String photoToAnimeUpload = '${_toolBox}photo_to_anime_upload';
-  static const String photoToAnimeEditArtWork =
-      '${_toolBox}photo_to_anime_edit_art_work';
-  static const String photoToAnimeFinalize =
-      '${_toolBox}photo_to_anime_finalize';
+  static const String removeBackgroundUpload = '${_toolBox}remove_background_upload';
+  static const String removeBackgroundFinalize =
+      '${_toolBox}remove_background_finalize';
 
   static const String textEffect = '${_toolBox}text_effect';
   static const String textEffectOwn = '${_toolBox}text_effect_own';
@@ -365,22 +362,17 @@ sealed class AppNavigator {
           ),
         );
 
-      case RoutePath.photoToAnimeUpload:
+      case RoutePath.removeBackgroundUpload:
         return _defaultRoute(
           settings,
-          const PhotoToAnimeUploadScreen(),
+          const RemoveBackgroundUploadScreen(),
         );
-      case RoutePath.photoToAnimeEditArtWork:
+      case RoutePath.removeBackgroundFinalize:
+        final List<AITask> tasks = settings.arguments as List<AITask>;
         return _defaultRoute(
           settings,
-          const PhotoToAnimeEditArtWorkScreen(),
-        );
-      case RoutePath.photoToAnimeFinalize:
-        final String url = settings.arguments as String;
-        return _defaultRoute(
-          settings,
-          PhotoToAnimeFinalizeScreen(
-            url: url,
+          RemoveBackgroundFinalizeScreen(
+            tasks: tasks,
           ),
         );
       case RoutePath.textEffect:

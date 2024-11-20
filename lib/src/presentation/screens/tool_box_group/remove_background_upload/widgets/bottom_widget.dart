@@ -6,12 +6,12 @@ import 'package:mobile_fast_ai/src/presentation/widgets/app_button.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/divider_widget.dart';
 import 'package:flutter/material.dart';
 
-class PhotoToAnimeUploadBottomWidget extends StatelessWidget {
+class RemoveBackgroundUploadBottomWidget extends StatelessWidget {
   final AppTheme appTheme;
   final AppLocalizationManager localization;
   final VoidCallback onTap;
 
-  const PhotoToAnimeUploadBottomWidget({
+  const RemoveBackgroundUploadBottomWidget({
     required this.appTheme,
     required this.localization,
     required this.onTap,
@@ -34,7 +34,7 @@ class PhotoToAnimeUploadBottomWidget extends StatelessWidget {
           ),
           child: PrimaryAppButton(
             text: localization.translate(
-              LanguageKey.photoToAnimeUploadScreenGenerate,
+              LanguageKey.removeBackgroundUploadScreenGenerate,
             ),
             onPress: onTap,
           ),

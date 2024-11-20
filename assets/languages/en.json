@@ -261,24 +261,18 @@
   "image_generator_finalize_screen_share_to_feed_successful_content" : "Your artwork has been successfully shared to the feed. Now everyone in the community can see your artwork.",
 
 
-  "photo_to_anime_upload_screen_app_bar_title" : "Photo to Anime",
-  "photo_to_anime_upload_screen_title" : "Upload your photo or selfie",
-  "photo_to_anime_upload_screen_content" : "Upload your photo and we'll generate an anime version of you.",
-  "photo_to_anime_upload_screen_upload" : "Upload",
-  "photo_to_anime_upload_screen_generate" : "Generate",
-
-  "photo_to_anime_edit_art_work_screen_app_bar_title" : "Edit Artwork",
-  "photo_to_anime_edit_art_work_screen_finalize" : "Finalize",
-  "photo_to_anime_edit_art_work_screen_re_generate" : "Re-generate",
-  "photo_to_anime_edit_art_work_screen_download_all" : "Download All",
-  "photo_to_anime_edit_art_work_screen_generating" : "Generating...",
+  "remove_background_upload_screen_app_bar_title" : "Photo to Anime",
+  "remove_background_upload_screen_title" : "Upload your photo or selfie",
+  "remove_background_upload_screen_content" : "Upload your photo and we'll generate an anime version of you.",
+  "remove_background_upload_screen_upload" : "Upload",
+  "remove_background_upload_screen_generate" : "Generate",
 
 
-  "photo_to_anime_finalize_screen_app_bar_title" : "Finalize",
-  "photo_to_anime_finalize_screen_add_title" : "Add Title",
-  "photo_to_anime_finalize_screen_optional" : "Optional",
-  "photo_to_anime_finalize_screen_download_art" : "Download Art",
-  "photo_to_anime_finalize_screen_share_to_feed" : "Share to Feed",
+  "remove_background_finalize_screen_app_bar_title" : "Finalize",
+  "remove_background_finalize_screen_add_title" : "Add Title",
+  "remove_background_finalize_screen_optional" : "Optional",
+  "remove_background_finalize_screen_download_art" : "Download Art",
+  "remove_background_finalize_screen_share_to_feed" : "Share to Feed",
 
   "realistic_art_generator_screen_app_bar_title" : "Realistic Art Generator",
   "realistic_art_generator_screen_title" : "Upload an image",

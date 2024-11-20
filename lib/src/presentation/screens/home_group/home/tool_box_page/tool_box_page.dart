@@ -110,12 +110,12 @@ class _ToolBoxPageState extends State<ToolBoxPage> with StateFulBaseScreen {
                   break;
                 case AITaskType.removeBackground:
                   AppNavigator.push(
-                    RoutePath.imageGenerator,
+                    RoutePath.removeBackgroundUpload,
                   );
                   break;
                 case AITaskType.upscale:
                   AppNavigator.push(
-                    RoutePath.photoToAnimeUpload,
+                    RoutePath.imageGenerator,
                   );
                   break;
                 case AITaskType.imageToText:

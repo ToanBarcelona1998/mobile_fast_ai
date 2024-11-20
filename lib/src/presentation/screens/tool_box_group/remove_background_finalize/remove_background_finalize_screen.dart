@@ -1,3 +1,4 @@
+import 'package:domain/domain.dart';
 import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme_builder.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/app_localization_provider.dart';
 import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
@@ -9,21 +10,21 @@ import 'widgets/bottom_widget.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/app_bar_widget.dart';
 import 'package:flutter/material.dart';
 
-class PhotoToAnimeFinalizeScreen extends StatefulWidget {
-  final String url;
+class RemoveBackgroundFinalizeScreen extends StatefulWidget {
+  final List<AITask> tasks;
 
   // add more arguments here
 
-  const PhotoToAnimeFinalizeScreen({
-    required this.url,
+  const RemoveBackgroundFinalizeScreen({
+    required this.tasks,
     super.key,
   });
 
   @override
-  State<PhotoToAnimeFinalizeScreen> createState() => _PhotoToAnimeFinalizeScreenState();
+  State<RemoveBackgroundFinalizeScreen> createState() => _RemoveBackgroundFinalizeScreenState();
 }
 
-class _PhotoToAnimeFinalizeScreenState extends State<PhotoToAnimeFinalizeScreen> {
+class _RemoveBackgroundFinalizeScreenState extends State<RemoveBackgroundFinalizeScreen> {
   @override
   Widget build(BuildContext context) {
     return AppThemeBuilder(
@@ -35,7 +36,7 @@ class _PhotoToAnimeFinalizeScreenState extends State<PhotoToAnimeFinalizeScreen>
               appBar: NormalAppBar(
                 appTheme: appTheme,
                 title: localization.translate(
-                  LanguageKey.photoToAnimeFinalizeScreenAppBarTitle,
+                  LanguageKey.removeBackgroundFinalizeScreenAppBarTitle,
                 ),
               ),
               body: SafeArea(
@@ -51,7 +52,7 @@ class _PhotoToAnimeFinalizeScreenState extends State<PhotoToAnimeFinalizeScreen>
                           child: Column(
                             children: [
                               NetworkImageWidget(
-                                imageUrl: widget.url,
+                                imageUrl: widget.tasks[0].data,
                                 appTheme: appTheme,
                                 width: double.maxFinite,
                                 height: context.h * 0.45,
@@ -59,7 +60,7 @@ class _PhotoToAnimeFinalizeScreenState extends State<PhotoToAnimeFinalizeScreen>
                               const SizedBox(
                                 height: BoxSize.boxSize05,
                               ),
-                              PhotoToAnimeFinalizeContentWidget(
+                              RemoveBackgroundFinalizeContentWidget(
                                 title: 'Chibi Alien Cyberpunk Robo',
                                 appTheme: appTheme,
                                 localization: localization,
@@ -69,7 +70,7 @@ class _PhotoToAnimeFinalizeScreenState extends State<PhotoToAnimeFinalizeScreen>
                         ),
                       ),
                     ),
-                    PhotoToAnimeFinalizeBottomWidget(
+                    RemoveBackgroundFinalizeBottomWidget(
                       appTheme: appTheme,
                       localization: localization,
                       onDownloadArt: () {},
