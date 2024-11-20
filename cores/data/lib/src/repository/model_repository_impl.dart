@@ -33,4 +33,16 @@ final class ModelRepositoryImpl implements ModelRepository {
         )
         .toList();
   }
+
+  @override
+  Future add({required request}) {
+    // TODO: implement add
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<List<Model>> getLocalModels() {
+    // TODO: implement getLocalModels
+    throw UnimplementedError();
+  }
 }

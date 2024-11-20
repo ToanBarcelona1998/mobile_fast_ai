@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/model_dto.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/model_repository_impl.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/model_service.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/get_all_model_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/model_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/application/data/service/model/model_service_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/local/local_database_service.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/dto/dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/dto.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/remote.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/remote.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/repository/model_repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/model_repository_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/repository/model_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/repository/model_repository.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

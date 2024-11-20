@@ -152,6 +152,7 @@ Future<void> initDependency(FastAIConfig config) async {
     () => UserUseCase(
       getIt.get<UserRepository>(),
       getIt.get<SecureLocalStorageRepository>(),
+      getIt.get<NormalLocalStorageRepository>(),
     ),
   );
 
