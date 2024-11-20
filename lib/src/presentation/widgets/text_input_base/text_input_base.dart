@@ -195,7 +195,8 @@ class TextInputWidgetBaseState<T extends TextInputWidgetBase> extends State<T> {
                   AppTypography.bodyLargeMedium.copyWith(
                     color: theme.greyScaleColor400,
                   ),
-              constraints: widget.enableInputConstraint ? widget.boxConstraints : null,
+              constraints:
+                  widget.enableInputConstraint ? widget.boxConstraints : null,
 
               /// This line may be fix in the future.
               counterText: '',
@@ -518,7 +519,28 @@ final class TextInputOnlyTextFieldWidgetState
   Widget build(BuildContext context) {
     return AppThemeBuilder(
       builder: (theme) {
-        return buildTextInput(theme);
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            buildTextInput(theme),
+            errorMessage.isNotNullOrEmpty
+                ? Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: BoxSize.boxSize03,
+                      ),
+                      Text(
+                        errorMessage!,
+                        style: AppTypography.bodyMediumMedium.copyWith(
+                          color: theme.otherColorRed,
+                        ),
+                      ),
+                    ],
+                  )
+                : const SizedBox(),
+          ],
+        );
       },
     );
   }
@@ -575,9 +597,10 @@ final class TextInputWithBoxFormWidgetState
     if (widget.label != null) {
       return Text(
         widget.label!,
-        style: widget.labelStyle ?? AppTypography.bodyLargeSemiBold.copyWith(
-          color: theme.greyScaleColor900,
-        ),
+        style: widget.labelStyle ??
+            AppTypography.bodyLargeSemiBold.copyWith(
+              color: theme.greyScaleColor900,
+            ),
       );
     }
     return null;

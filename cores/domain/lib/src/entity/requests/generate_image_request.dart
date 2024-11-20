@@ -10,7 +10,7 @@ final class GenerateImageRequest extends BaseRemoteRequest {
   final String? maskImage;
   final int? steps;
   final double? strength;
-  final int? cfgScale;
+  final double? cfgScale;
   final int? clipSkip;
   final int number;
 

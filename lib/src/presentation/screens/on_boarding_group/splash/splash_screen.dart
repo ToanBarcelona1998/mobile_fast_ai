@@ -85,7 +85,6 @@ class _SplashScreenState extends State<SplashScreen> with StateFulBaseScreen {
               break;
             case SplashStatus.error:
               AppNavigator.replaceWith(RoutePath.walkThrough);
-              hideLoading();
               break;
           }
         },

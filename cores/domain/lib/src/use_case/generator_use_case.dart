@@ -23,7 +23,7 @@ final class GeneratorUseCase {
     double? strength,
     int? steps,
     int? clipSkip,
-    int? cfgScale,
+    double? cfgScale,
   }) async {
     final String accessToken = await _getAccessToken();
 

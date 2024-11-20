@@ -242,49 +242,33 @@ sealed class LanguageKey{
   static const String creatorDetailScreenShareQrCode = 'creator_detail_screen_share_qr_code';
 
 
-  static const String animeGeneratorScreenAppBarTitle = 'anime_generator_screen_app_bar_title';
-  static const String animeGeneratorScreenEnterPrompt = 'anime_generator_screen_enter_prompt';
-  static const String animeGeneratorScreenExplorePrompt = 'anime_generator_screen_explore_prompt';
-  static const String animeGeneratorScreenTypePromptHint = 'anime_generator_screen_type_prompt_hint';
-  static const String animeGeneratorScreenAspectRatio = 'anime_generator_screen_aspect_ratio';
-  static const String animeGeneratorScreenAnimeStyle = 'anime_generator_screen_anime_style';
-  static const String animeGeneratorScreenOptional= 'anime_generator_screen_optional';
-  static const String animeGeneratorScreenInputImages= 'anime_generator_screen_input_images';
-  static const String animeGeneratorScreenGenerate= 'anime_generator_screen_generate';
-  static const String animeGeneratorScreenUpload= 'anime_generator_screen_up_load';
+  static const String imageGeneratorScreenAppBarTitle = 'image_generator_screen_app_bar_title';
+  static const String imageGeneratorScreenEnterPrompt = 'image_generator_screen_enter_prompt';
+  static const String imageGeneratorScreenEnterNegativePrompt = 'image_generator_screen_enter_negative_prompt';
+  static const String imageGeneratorScreenTypePromptHint = 'image_generator_screen_type_prompt_hint';
+  static const String imageGeneratorScreenPromptLenthInValid = 'image_generator_screen_prompt_length_invalid';
+  static const String imageGeneratorScreenTypeNegativePromptHint = 'image_generator_screen_type_negative_prompt_hint';
+  static const String imageGeneratorScreenAspectRatio = 'image_generator_screen_aspect_ratio';
+  static const String imageGeneratorScreenModel = 'image_generator_screen_model';
+  static const String imageGeneratorScreenGenerate= 'image_generator_screen_generate';
+  static const String imageGeneratorScreenUpload = 'image_generator_screen_up_load';
+  static const String imageGeneratorScreenCFGScale = 'image_generator_screen_cfg_scale';
+  static const String imageGeneratorScreenSeed = 'image_generator_screen_seed';
 
 
-  static const String animeEditArtWorkScreenAppBarTitle = 'anime_edit_art_work_screen_app_bar_title';
-  static const String animeEditArtWorkScreenFinalize = 'anime_edit_art_work_screen_finalize';
-  static const String animeEditArtWorkScreenGenerating = 'anime_edit_art_work_screen_generating';
-  static const String animeEditArtWorkScreenUndo = 'anime_edit_art_work_screen_undo';
-  static const String animeEditArtWorkScreenRegenerate = 'anime_edit_art_work_screen_re_generate';
-  static const String animeEditArtWorkScreenCreateVariation = 'anime_edit_art_work_screen_create_variation';
-  static const String animeEditArtWorkScreenEraseObject = 'anime_edit_art_work_screen_erase_object';
-  static const String animeEditArtWorkScreenEditInput = 'anime_edit_art_work_screen_edit_input';
-  static const String animeEditArtWorkScreenDownload = 'anime_edit_art_work_screen_download';
-  static const String animeEditArtWorkScreenEditPrompt = 'anime_edit_art_work_screen_edit_prompt';
-  static const String animeEditArtWorkScreenAddNegativePrompt = 'anime_edit_art_work_screen_add_negative_prompt';
-  static const String animeEditArtWorkScreenAspectRatio = 'anime_edit_art_work_screen_aspect_ratio';
-  static const String animeEditArtWorkScreenCFGScale = 'anime_edit_art_work_screen_cfg_scale';
-  static const String animeEditArtWorkScreenSeed = 'anime_edit_art_work_screen_seed';
-  static const String animeEditArtWorkScreenCancel = 'anime_edit_art_work_screen_cancel';
-  static const String animeEditArtWorkScreenSave = 'anime_edit_art_work_screen_save';
-
-
-  static const String animeFinalizeScreenAppBarTitle = 'anime_finalize_screen_app_bar_title';
-  static const String animeFinalizeScreenAddTitle = 'anime_finalize_screen_add_title';
-  static const String animeFinalizeScreenOptional= 'anime_finalize_screen_optional';
-  static const String animeFinalizeScreenShowPrompt= 'anime_finalize_screen_show_prompt';
-  static const String animeFinalizeScreenShowNegativePrompt= 'anime_finalize_screen_show_negative_prompt';
-  static const String animeFinalizeScreenShowCFGScale= 'anime_finalize_screen_show_cfg_scale';
-  static const String animeFinalizeScreenShowSeed= 'anime_finalize_screen_show_seed';
-  static const String animeFinalizeScreenDownloadArt= 'anime_finalize_screen_download_art';
-  static const String animeFinalizeScreenShareToFeed= 'anime_finalize_screen_share_to_feed';
-  static const String animeFinalizeScreenShareToFeedSuccessful= 'anime_finalize_screen_share_to_feed_successful';
-  static const String animeFinalizeScreenShareToFeedBackToHome= 'anime_finalize_screen_share_to_feed_back_to_home';
-  static const String animeFinalizeScreenShareToFeedViewArtwork= 'anime_finalize_screen_share_to_feed_view_art_work';
-  static const String animeFinalizeScreenShareToFeedSuccessfulContent= 'finalize_screen_share_to_feed_successful_content';
+  static const String imageGeneratorFinalizeScreenAppBarTitle = 'image_generator_finalize_screen_app_bar_title';
+  static const String imageGeneratorFinalizeScreenAddTitle = 'image_generator_finalize_screen_add_title';
+  static const String imageGeneratorFinalizeScreenOptional= 'image_generator_finalize_screen_optional';
+  static const String imageGeneratorFinalizeScreenShowPrompt= 'image_generator_finalize_screen_show_prompt';
+  static const String imageGeneratorFinalizeScreenShowNegativePrompt= 'image_generator_finalize_screen_show_negative_prompt';
+  static const String imageGeneratorFinalizeScreenShowCFGScale= 'image_generator_finalize_screen_show_cfg_scale';
+  static const String imageGeneratorFinalizeScreenShowSeed= 'image_generator_finalize_screen_show_seed';
+  static const String imageGeneratorFinalizeScreenDownloadArt= 'image_generator_finalize_screen_download_art';
+  static const String imageGeneratorFinalizeScreenShareToFeed= 'image_generator_finalize_screen_share_to_feed';
+  static const String imageGeneratorFinalizeScreenShareToFeedSuccessful= 'image_generator_finalize_screen_share_to_feed_successful';
+  static const String imageGeneratorFinalizeScreenShareToFeedBackToHome= 'image_generator_finalize_screen_share_to_feed_back_to_home';
+  static const String imageGeneratorFinalizeScreenShareToFeedViewArtwork= 'image_generator_finalize_screen_share_to_feed_view_art_work';
+  static const String imageGeneratorFinalizeScreenShareToFeedSuccessfulContent= 'image_generator_finalize_screen_share_to_feed_successful_content';
 
 
   static const String photoToAnimeUploadScreenAppBarTitle = 'photo_to_anime_upload_screen_app_bar_title';

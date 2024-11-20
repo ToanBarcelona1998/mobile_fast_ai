@@ -7,13 +7,13 @@ import 'package:mobile_fast_ai/src/presentation/widgets/app_button.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/divider_widget.dart';
 import 'package:flutter/material.dart';
 
-class AnimeFinalizeBottomWidget extends StatelessWidget {
+class ImageGeneratorFinalizeBottomWidget extends StatelessWidget {
   final AppTheme appTheme;
   final AppLocalizationManager localization;
   final VoidCallback onDownloadArt;
   final VoidCallback onShareToFeed;
 
-  const AnimeFinalizeBottomWidget({
+  const ImageGeneratorFinalizeBottomWidget({
     required this.appTheme,
     required this.localization,
     required this.onDownloadArt,
@@ -31,37 +31,32 @@ class AnimeFinalizeBottomWidget extends StatelessWidget {
         const SizedBox(
           height: BoxSize.boxSize05,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: Spacing.spacing05,
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: PrimaryAppButton(
-                  text: localization.translate(
-                    LanguageKey.animeFinalizeScreenDownloadArt,
-                  ),
-                  backGroundColor: appTheme.primaryColor100,
-                  textStyle: AppTypography.bodyXLargeSemiBold.copyWith(
-                    color: appTheme.primaryColor900,
-                  ),
-                  onPress: onDownloadArt,
+        Row(
+          children: [
+            Expanded(
+              child: PrimaryAppButton(
+                text: localization.translate(
+                  LanguageKey.imageGeneratorFinalizeScreenDownloadArt,
                 ),
-              ),
-              const SizedBox(
-                width: BoxSize.boxSize04,
-              ),
-              Expanded(
-                child: PrimaryAppButton(
-                  text: localization.translate(
-                    LanguageKey.animeFinalizeScreenShareToFeed,
-                  ),
-                  onPress: onShareToFeed,
+                backGroundColor: appTheme.primaryColor100,
+                textStyle: AppTypography.bodyXLargeSemiBold.copyWith(
+                  color: appTheme.primaryColor900,
                 ),
+                onPress: onDownloadArt,
               ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              width: BoxSize.boxSize04,
+            ),
+            Expanded(
+              child: PrimaryAppButton(
+                text: localization.translate(
+                  LanguageKey.imageGeneratorFinalizeScreenShareToFeed,
+                ),
+                onPress: onShareToFeed,
+              ),
+            ),
+          ],
         ),
         const SizedBox(
           height: BoxSize.boxSize05,
