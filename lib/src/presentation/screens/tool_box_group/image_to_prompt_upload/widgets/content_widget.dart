@@ -5,11 +5,11 @@ import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
 import 'package:flutter/material.dart';
 
-class ThreeDToImageUploadContentWidget extends StatelessWidget {
+class ImageToPromptUploadContentWidget extends StatelessWidget {
   final AppLocalizationManager localization;
   final AppTheme appTheme;
 
-  const ThreeDToImageUploadContentWidget({
+  const ImageToPromptUploadContentWidget({
     required this.appTheme,
     required this.localization,
     super.key,
@@ -22,7 +22,7 @@ class ThreeDToImageUploadContentWidget extends StatelessWidget {
       children: [
         Text(
           localization.translate(
-            LanguageKey.threeDToImageUploadScreenTitle,
+            LanguageKey.imageToPromptUploadScreenTitle,
           ),
           style: AppTypography.heading3Bold.copyWith(
             color: appTheme.greyScaleColor900,
@@ -33,7 +33,7 @@ class ThreeDToImageUploadContentWidget extends StatelessWidget {
         ),
         Text(
           localization.translate(
-            LanguageKey.threeDToImageUploadScreenContent,
+            LanguageKey.imageToPromptUploadScreenContent,
           ),
           style: AppTypography.bodyXLargeRegular.copyWith(
             color: appTheme.greyScaleColor900,

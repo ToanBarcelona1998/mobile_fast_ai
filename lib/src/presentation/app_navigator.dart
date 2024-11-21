@@ -30,9 +30,6 @@ import 'package:mobile_fast_ai/src/presentation/screens/profile_group/privacy_po
 import 'package:mobile_fast_ai/src/presentation/screens/profile_group/security/security_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/profile_group/setting/setting_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/profile_group/setting_notification/setting_notification_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/3D_to_image_edit_art_work/3D_to_image_edit_art_work_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/3D_to_image_finalize/3D_to_image_finalize_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/3D_to_image_upload/3D_to_image_upload_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_generator/ai_avatar_generator_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_generator_download/avatar_generator_download.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_generator_finalize/avatar_generator_finalize.dart';
@@ -51,6 +48,8 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_gen
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_generator_finalize/image_generator_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_painting_finalize/image_to_painting_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_painting_upload/image_to_painting_upload_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_prompt_finalize/image_to_prompt_finalize_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_prompt_upload/image_to_prompt_upload_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/logo_generator/logo_generator_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/logo_generator_edit_art_work/logo_generator_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/logo_generator_finalize/logo_generator_finalize_screen.dart';
@@ -149,11 +148,9 @@ sealed class RoutePath {
       '${_toolBox}extend_image_edit_art_work';
   static const String extendImageFinalize = '${_toolBox}extend_image_finalize';
 
-  static const String threeDToImageUpload =
-      '${_toolBox}three_d_to_image_upload';
-  static const String threeDToImageEditArtWork =
-      '${_toolBox}three_d_to_image_edit_art_work';
-  static const String threeDToImageFinalize = '${_toolBox}3D_to_image_finalize';
+  static const String imageToTextUpload =
+      '${_toolBox}image_to_text_upload';
+  static const String imageToTextFinalize = '${_toolBox}image_to_text_finalize';
 
   static const String textToPattern = '${_toolBox}text_to_pattern';
   static const String textToPatternEditArtWork =
@@ -461,22 +458,17 @@ sealed class AppNavigator {
             url: url,
           ),
         );
-      case RoutePath.threeDToImageUpload:
+      case RoutePath.imageToTextUpload:
         return _defaultRoute(
           settings,
-          const ThreeDToImageUploadScreen(),
+          const ImageToPromptUploadScreen(),
         );
-      case RoutePath.threeDToImageEditArtWork:
+      case RoutePath.imageToTextFinalize:
+        final List<AITask> tasks = settings.arguments as List<AITask>;
         return _defaultRoute(
           settings,
-          const ThreeDToImageEditArtWorkScreen(),
-        );
-      case RoutePath.threeDToImageFinalize:
-        final String url = settings.arguments as String;
-        return _defaultRoute(
-          settings,
-          ThreeDToImageFinalizeScreen(
-            url: url,
+          ImageToPromptFinalizeScreen(
+            tasks: tasks,
           ),
         );
       case RoutePath.textToPattern:

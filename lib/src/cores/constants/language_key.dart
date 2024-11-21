@@ -420,26 +420,18 @@ sealed class LanguageKey{
   static const String extendImageFinalizeScreenShareToFeed = 'extend_image_finalize_screen_share_to_feed';
 
 
-  static const String threeDToImageUploadScreenAppBarTitle = '3D_to_image_upload_screen_app_bar_title';
-  static const String threeDToImageUploadScreenTitle = '3D_to_image_upload_screen_title';
-  static const String threeDToImageUploadScreenContent = '3D_to_image_upload_screen_content';
-  static const String threeDToImageUploadScreenUpload = '3D_to_image_upload_screen_upload';
-  static const String threeDToImageUploadScreenEnterPrompt = '3D_to_image_upload_screen_enter_prompt';
-  static const String threeDToImageUploadScreenEnterPromptHint = '3D_to_image_upload_screen_enter_prompt_hint';
-  static const String threeDToImageUploadScreenButtonTitle = '3D_to_image_upload_screen_button_title';
+  static const String imageToPromptUploadScreenAppBarTitle = 'image_to_prompt_upload_screen_app_bar_title';
+  static const String imageToPromptUploadScreenTitle = 'image_to_prompt_upload_screen_title';
+  static const String imageToPromptUploadScreenContent = 'image_to_prompt_upload_screen_content';
+  static const String imageToPromptUploadScreenUpload = 'image_to_prompt_upload_screen_upload';
+  static const String imageToPromptUploadScreenButtonTitle = 'image_to_prompt_upload_screen_button_title';
 
 
-  static const String threeDToImageEditArtWorkScreenAppBarTitle = '3D_to_image_edit_art_work_screen_app_bar_title';
-  static const String threeDToImageEditArtWorkScreenFinalize = '3D_to_image_edit_art_work_screen_finalize';
-  static const String threeDToImageEditArtWorkScreenReGenerate = '3D_to_image_edit_art_work_screen_re_generate';
-  static const String threeDToImageEditArtWorkScreenDownload = '3D_to_image_edit_art_work_screen_download';
-
-
-  static const String threeDToImageFinalizeScreenAppBarTitle = '3D_to_image_finalize_screen_app_bar_title';
-  static const String threeDToImageFinalizeScreenAddTitle = '3D_to_image_finalize_screen_add_title';
-  static const String threeDToImageFinalizeScreenOptional = '3D_to_image_finalize_screen_optional';
-  static const String threeDToImageFinalizeScreenDownloadArt = '3D_to_image_finalize_screen_download_art';
-  static const String threeDToImageFinalizeScreenShareToFeed = '3D_to_image_finalize_screen_share_to_feed';
+  static const String imageToPromptFinalizeScreenAppBarTitle = 'image_to_prompt_finalize_screen_app_bar_title';
+  static const String imageToPromptFinalizeScreenAddTitle = 'image_to_prompt_finalize_screen_add_title';
+  static const String imageToPromptFinalizeScreenOptional = 'image_to_prompt_finalize_screen_optional';
+  static const String imageToPromptFinalizeScreenDownloadArt = 'image_to_prompt_finalize_screen_download_art';
+  static const String imageToPromptFinalizeScreenShareToFeed = 'image_to_prompt_finalize_screen_share_to_feed';
 
 
   static const String textToPatternScreenAppBarTitle = 'text_to_pattern_upload_screen_app_bar_title';

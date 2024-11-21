@@ -6,12 +6,12 @@ import 'package:mobile_fast_ai/src/presentation/widgets/image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ThreeDToImageUploadImageWidget extends StatelessWidget {
+class ImageToPromptUploadImageWidget extends StatelessWidget {
   final String file;
   final AppTheme appTheme;
   final VoidCallback onRemoveFile;
 
-  const ThreeDToImageUploadImageWidget({
+  const ImageToPromptUploadImageWidget({
     required this.file,
     required this.appTheme,
     required this.onRemoveFile,

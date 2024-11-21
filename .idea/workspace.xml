@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_event.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_selector.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/languages/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/dto/request/upscale_image_request_dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/upscale_image_request_dto.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/repository/image_generator_repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/image_generator_repository_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/image_generator_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/image_generator_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/image_to_text_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/image_to_text_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/upscale_image_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/upscale_image_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/generator_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/generator_use_case.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/application/data/service/image_generator/image_generator_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/data/service/image_generator/image_generator_service_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_edit_art_work/sketch_to_image_edit_art_work_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_edit_art_work/widgets/bottom_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_edit_art_work/widgets/generate_image_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_finalize/sketch_to_image_finalize_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/up_scale_image_finalize/upscale_image_finalize_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_finalize/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/up_scale_image_finalize/widgets/bottom_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_finalize/widgets/content_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/up_scale_image_finalize/widgets/content_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_upload/sketch_to_image_upload_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_upload/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/widgets/bottom_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_upload/widgets/content_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/widgets/content_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_upload/widgets/upload_image_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/widgets/upload_image_widget.dart" afterDir="false" />
-    </list>
+    <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

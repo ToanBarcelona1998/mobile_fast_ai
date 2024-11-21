@@ -404,24 +404,18 @@
   "extend_image_finalize_screen_share_to_feed" : "Share to Feed",
 
 
-  "3D_to_image_upload_screen_app_bar_title" : "3D to Images",
-  "3D_to_image_upload_screen_title" : "Upload a 3D image",
-  "3D_to_image_upload_screen_content" : "Upload an image of a simple 3D element, and we'll generate it for you.",
-  "3D_to_image_upload_screen_upload" : "Upload",
-  "3D_to_image_upload_screen_enter_prompt" : "Enter Prompt",
-  "3D_to_image_upload_screen_enter_prompt_hint" : "Type the 3D effect or object you want to generate",
-  "3D_to_image_upload_screen_button_title" : "Generate",
+  "image_to_prompt_upload_screen_app_bar_title" : "Image to prompt",
+  "image_to_prompt_upload_screen_title" : "Upload an image",
+  "image_to_prompt_upload_screen_content" : "Upload an image of a generation AI image, and we'll generate a prompt for you.",
+  "image_to_prompt_upload_screen_upload" : "Upload",
+  "image_to_prompt_upload_screen_button_title" : "Generate",
 
-  "3D_to_image_edit_art_work_screen_app_bar_title" : "Edit Artwork",
-  "3D_to_image_edit_art_work_screen_finalize" : "Finalize",
-  "3D_to_image_edit_art_work_screen_re_generate" : "Re-generate",
-  "3D_to_image_edit_art_work_screen_download" : "Download",
 
-  "3D_to_image_finalize_screen_app_bar_title" : "Finalize",
-  "3D_to_image_finalize_screen_add_title" : "Add Title",
-  "3D_to_image_finalize_screen_optional" : "Optional",
-  "3D_to_image_finalize_screen_download_art" : "Download Art",
-  "3D_to_image_finalize_screen_share_to_feed" : "Share to Feed",
+  "image_to_prompt_finalize_screen_app_bar_title" : "Finalize",
+  "image_to_prompt_finalize_screen_add_title" : "Add Title",
+  "image_to_prompt_finalize_screen_optional" : "Optional",
+  "image_to_prompt_finalize_screen_download_art" : "Download Art",
+  "image_to_prompt_finalize_screen_share_to_feed" : "Share to Feed",
 
 
   "text_to_pattern_upload_screen_app_bar_title" : "Text to Pattern",

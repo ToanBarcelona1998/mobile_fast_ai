@@ -5,12 +5,12 @@ import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/text_box_widget.dart';
 import 'package:flutter/material.dart';
 
-class ThreeDToImageFinalizeContentWidget extends StatelessWidget {
+class ImageToPromptFinalizeContentWidget extends StatelessWidget {
   final AppLocalizationManager localization;
   final AppTheme appTheme;
   final String title;
 
-  const ThreeDToImageFinalizeContentWidget({
+  const ImageToPromptFinalizeContentWidget({
     required this.title,
     required this.appTheme,
     required this.localization,
@@ -27,7 +27,7 @@ class ThreeDToImageFinalizeContentWidget extends StatelessWidget {
           children: [
             TextSpan(
               text: localization.translate(
-                LanguageKey.threeDToImageFinalizeScreenAddTitle,
+                LanguageKey.imageToPromptFinalizeScreenAddTitle,
               ),
               style: AppTypography.heading5Bold.copyWith(
                 color: appTheme.greyScaleColor900,
@@ -35,7 +35,7 @@ class ThreeDToImageFinalizeContentWidget extends StatelessWidget {
             ),
             TextSpan(
               text: ' (${localization.translate(
-                LanguageKey.threeDToImageFinalizeScreenOptional,
+                LanguageKey.imageToPromptFinalizeScreenOptional,
               )})',
               style: AppTypography.bodyLargeRegular.copyWith(
                 color: appTheme.greyScaleColor700,
