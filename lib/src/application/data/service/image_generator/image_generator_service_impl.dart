@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:data/data.dart';
 import 'package:dio/dio.dart';
 import 'package:mobile_fast_ai/src/application/data/service/api_service.dart';
@@ -35,9 +37,12 @@ final class ImageGeneratorServiceImpl implements ImageGeneratorService {
   }
 
   @override
-  Future<BaseResponse> removeBackground(
-      {required String accessToken, required Map<String, dynamic> body}) {
-    return _serviceGenerator.removeBackground(accessToken, body);
+  Future<BaseResponse> removeBackground({
+    required String accessToken,
+    required Map<String, dynamic> body,
+    required File file,
+  }) {
+    return _serviceGenerator.removeBackground(accessToken, body,file);
   }
 
   @override
@@ -83,6 +88,7 @@ abstract class ImageGeneratorServiceGenerator {
   Future<BaseResponse> removeBackground(
     @Header('Authorization') String accessToken,
     @Part() Map<String, dynamic> body,
+    @Part(name: 'file') File file,
   );
 
   @POST(APIService.upscale)

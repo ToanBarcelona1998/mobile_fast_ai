@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -52,12 +50,8 @@ final class RemoveBackgroundUploadBloc
         ),
       );
 
-      final image = base64Encode(
-        state.image!.readAsBytesSync(),
-      );
-
       final List<AITask> tasks = await _generatorUseCase.removeBackground(
-        image: image,
+        image: state.image!,
       );
 
       emit(state.copyWith(

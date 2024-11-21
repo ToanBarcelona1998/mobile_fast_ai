@@ -16,6 +16,7 @@ import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_u
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/splash/splash_cubit.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_generator/image_generator_bloc.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'fast_ai_config.dart';
 
@@ -38,10 +39,10 @@ Future<void> initDependency(FastAIConfig config) async {
     BaseOptions(
       baseUrl: config.baseUrl,
       connectTimeout: const Duration(
-        milliseconds: 30000,
+        milliseconds: 40000,
       ),
       receiveTimeout: const Duration(
-        milliseconds: 30000,
+        milliseconds: 40000,
       ),
       contentType: 'application/json; charset=utf-8',
     ),
@@ -234,6 +235,12 @@ Future<void> initDependency(FastAIConfig config) async {
     () => ImageGeneratorBloc(
       getIt.get<GeneratorUseCase>(),
       getIt.get<ModelUseCase>(),
+    ),
+  );
+
+  getIt.registerFactory<RemoveBackgroundUploadBloc>(
+    () => RemoveBackgroundUploadBloc(
+      getIt.get<GeneratorUseCase>(),
     ),
   );
 }

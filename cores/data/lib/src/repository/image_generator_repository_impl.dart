@@ -54,6 +54,7 @@ final class ImageGeneratorRepositoryImpl implements ImageGeneratorRepository {
     final baseResponse = await _imageGeneratorService.removeBackground(
       accessToken: request.accessToken,
       body: request.toJson(),
+      file: request.image,
     );
 
     return _convertBaseResponseToTask(baseResponse);

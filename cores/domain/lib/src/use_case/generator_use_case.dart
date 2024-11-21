@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:domain/core/core.dart';
 import 'package:domain/src/entity/entity.dart';
 import 'package:domain/src/repository/repository.dart';
@@ -73,13 +75,7 @@ final class GeneratorUseCase {
     );
   }
 
-  Future<List<AITask>> removeBackground({required String image}) async {
-    if (!image.base64Validate()) {
-      throw const FastAIError(
-          code: FastAIError.developerErrorCode,
-          message: 'Image should be base64 format');
-    }
-
+  Future<List<AITask>> removeBackground({required File image}) async {
     final String accessToken = await _getAccessToken();
 
     final RemoveBackgroundRequest request = RemoveBackgroundRequest(

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:data/core/base_response.dart';
 
 abstract interface class ImageGeneratorService {
@@ -19,6 +21,7 @@ abstract interface class ImageGeneratorService {
   Future<BaseResponse> removeBackground({
     required String accessToken,
     required Map<String, dynamic> body,
+    required File file,
   });
 
   Future<BaseResponse> imageToText({
