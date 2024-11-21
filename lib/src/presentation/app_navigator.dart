@@ -62,9 +62,6 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/recolor_i
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/recolor_image_upload/recolor_image_upload_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/remove_background_finalize/remove_background_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_upload_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/sketch_to_image_edit_art_work/sketch_to_image_edit_art_work_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/sketch_to_image_finalize/sketch_to_image_finalize_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/sketch_to_image_upload/sketch_to_image_upload_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/text_effect/text_effect_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/text_effect_edit_art_work/text_effect_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/text_effect_finalize/text_effect_finalize_screen.dart';
@@ -73,6 +70,8 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/text_to_p
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/text_to_pattern_edit_art_work/text_to_pattern_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/text_to_pattern_finalize/text_to_pattern_finalize_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/up_scale_image_finalize/upscale_image_finalize_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_screen.dart';
 
 import 'screens/tool_box_group/image_to_painting_edit_art_work/image_to_painting_edit_art_work_screen.dart';
 
@@ -166,11 +165,9 @@ sealed class RoutePath {
   static const String logoGeneratorEditArtWork = '${_toolBox}edit_art_work';
   static const String logoGeneratorFinalize = '${_toolBox}finalize';
 
-  static const String sketchToImageUpload = '${_toolBox}sketch_to_image_upload';
-  static const String sketchToImageEditArtWork =
-      '${_toolBox}sketch_to_image_edit_art_work';
-  static const String sketchToImageFinalize =
-      '${_toolBox}sketch_to_image_finalize';
+  static const String upscaleImageUpload = '${_toolBox}upscale_image_upload';
+  static const String upscaleImageFinalize =
+      '${_toolBox}upscale_image_finalize';
 
   static const String controlNetUpload = '${_toolBox}control_net_upload';
   static const String controlNetEditArtWork =
@@ -536,22 +533,17 @@ sealed class AppNavigator {
             url: url,
           ),
         );
-      case RoutePath.sketchToImageUpload:
+      case RoutePath.upscaleImageUpload:
         return _defaultRoute(
           settings,
-          const SketchToImageUploadScreen(),
+          const UpscaleImageUploadScreen(),
         );
-      case RoutePath.sketchToImageEditArtWork:
+      case RoutePath.upscaleImageFinalize:
+        final List<AITask> tasks = settings.arguments as List<AITask>;
         return _defaultRoute(
           settings,
-          const SketchToImageEditArtWorkScreen(),
-        );
-      case RoutePath.sketchToImageFinalize:
-        final String url = settings.arguments as String;
-        return _defaultRoute(
-          settings,
-          SketchToImageFinalizeScreen(
-            url: url,
+          UpscaleImageFinalizeScreen(
+            tasks: tasks,
           ),
         );
       case RoutePath.realisticGenerator:

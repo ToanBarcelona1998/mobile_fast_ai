@@ -44,6 +44,7 @@ final class ImageGeneratorRepositoryImpl implements ImageGeneratorRepository {
     final baseResponse = await _imageGeneratorService.imageToText(
       accessToken: request.accessToken,
       body: request.toJson(),
+      file: request.image
     );
 
     return _convertBaseResponseToTask(baseResponse);
@@ -65,6 +66,7 @@ final class ImageGeneratorRepositoryImpl implements ImageGeneratorRepository {
     final baseResponse = await _imageGeneratorService.upscale(
       accessToken: request.accessToken,
       body: request.toJson(),
+      file: request.image,
     );
 
     return _convertBaseResponseToTask(baseResponse);

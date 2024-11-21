@@ -1,7 +1,9 @@
+import 'dart:io';
+
 import 'base_remote_request.dart';
 
 final class UpScaleImageRequest extends BaseRemoteRequest {
-  final String image;
+  final File image;
   final int scaleFactor;
 
   const UpScaleImageRequest({

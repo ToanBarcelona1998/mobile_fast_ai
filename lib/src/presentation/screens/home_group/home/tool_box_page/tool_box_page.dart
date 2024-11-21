@@ -115,7 +115,7 @@ class _ToolBoxPageState extends State<ToolBoxPage> with StateFulBaseScreen {
                   break;
                 case AITaskType.upscale:
                   AppNavigator.push(
-                    RoutePath.imageGenerator,
+                    RoutePath.upscaleImageUpload,
                   );
                   break;
                 case AITaskType.imageToText:
@@ -130,7 +130,7 @@ class _ToolBoxPageState extends State<ToolBoxPage> with StateFulBaseScreen {
                   break;
                 case AITaskType.controlNet:
                   AppNavigator.push(
-                    RoutePath.sketchToImageUpload,
+                    RoutePath.imageGenerator,
                   );
                   break;
                 default:

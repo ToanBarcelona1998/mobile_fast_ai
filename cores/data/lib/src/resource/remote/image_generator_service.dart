@@ -16,6 +16,7 @@ abstract interface class ImageGeneratorService {
   Future<BaseResponse> upscale({
     required String accessToken,
     required Map<String, dynamic> body,
+    required File file,
   });
 
   Future<BaseResponse> removeBackground({
@@ -27,6 +28,7 @@ abstract interface class ImageGeneratorService {
   Future<BaseResponse> imageToText({
     required String accessToken,
     required Map<String, dynamic> body,
+    required File file,
   });
 
   Future<BaseResponse> controlNetProcessor({

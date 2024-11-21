@@ -335,25 +335,19 @@ sealed class LanguageKey{
   static const String textEffectFinalizeScreenShareToFeed = 'text_effect_finalize_screen_share_to_feed';
 
 
-  static const String sketchToImageUploadScreenAppBarTitle = 'sketch_to_image_upload_screen_app_bar_title';
-  static const String sketchToImageUploadScreenTitle = 'sketch_to_image_upload_screen_title';
-  static const String sketchToImageUploadScreenContent = 'sketch_to_image_upload_screen_content';
-  static const String sketchToImageUploadScreenUpload = 'sketch_to_image_upload_screen_upload';
-  static const String sketchToImageUploadScreenGenerate = 'sketch_to_image_upload_screen_generate';
+  static const String upscaleImageUploadScreenAppBarTitle = 'upscale_image_upload_screen_app_bar_title';
+  static const String upscaleImageUploadScreenTitle = 'upscale_image_upload_screen_title';
+  static const String upscaleImageUploadScreenContent = 'upscale_image_upload_screen_content';
+  static const String upscaleImageUploadScreenUpload = 'upscale_image_upload_screen_upload';
+  static const String upscaleImageUploadScreenGenerate = 'upscale_image_upload_screen_generate';
+  static const String upscaleImageUploadScreenScaleFactor = 'upscale_image_upload_screen_scale_factor';
 
 
-  static const String sketchToImageEditArtWorkScreenAppBarTitle = 'sketch_to_image_edit_art_work_screen_app_bar_title';
-  static const String sketchToImageEditArtWorkScreenFinalize = 'sketch_to_image_edit_art_work_screen_finalize';
-  static const String sketchToImageEditArtWorkScreenReGenerate = 'sketch_to_image_edit_art_work_screen_re_generate';
-  static const String sketchToImageEditArtWorkScreenDownloadAll = 'sketch_to_image_edit_art_work_screen_download_all';
-  static const String sketchToImageEditArtWorkScreenGenerating = 'sketch_to_image_edit_art_work_screen_generating';
-
-
-  static const String sketchToImageFinalizeScreenAppBarTitle = 'sketch_to_image_finalize_screen_app_bar_title';
-  static const String sketchToImageFinalizeScreenAddTitle = 'sketch_to_image_finalize_screen_add_title';
-  static const String sketchToImageFinalizeScreenOptional = 'sketch_to_image_finalize_screen_optional';
-  static const String sketchToImageFinalizeScreenDownloadArt = 'sketch_to_image_finalize_screen_download_art';
-  static const String sketchToImageFinalizeScreenShareToFeed = 'sketch_to_image_finalize_screen_share_to_feed';
+  static const String upscaleImageFinalizeScreenAppBarTitle = 'upscale_image_finalize_screen_app_bar_title';
+  static const String upscaleImageFinalizeScreenAddTitle = 'upscale_image_finalize_screen_add_title';
+  static const String upscaleImageFinalizeScreenOptional = 'upscale_image_finalize_screen_optional';
+  static const String upscaleImageFinalizeScreenDownloadArt = 'upscale_image_finalize_screen_download_art';
+  static const String upscaleImageFinalizeScreenShareToFeed = 'upscale_image_finalize_screen_share_to_feed';
 
 
   static const String imageToPaintingUploadScreenAppBarTitle = 'image_to_painting_upload_screen_app_bar_title';

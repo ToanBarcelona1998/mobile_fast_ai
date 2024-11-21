@@ -5,18 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_selector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_state.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/dto/request/remove_background_request_dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/remove_background_request_dto.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/languages/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/data/lib/src/dto/request/upscale_image_request_dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/dto/request/upscale_image_request_dto.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cores/data/lib/src/repository/image_generator_repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/repository/image_generator_repository_impl.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/image_generator_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/data/lib/src/resource/remote/image_generator_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/remove_background_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/remove_background_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/image_to_text_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/image_to_text_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/upscale_image_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/entity/requests/upscale_image_request.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/generator_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/generator_use_case.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/di.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/di.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/application/data/service/image_generator/image_generator_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/data/service/image_generator/image_generator_service_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/remove_background_upload/widgets/bottom_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_edit_art_work/sketch_to_image_edit_art_work_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_edit_art_work/widgets/bottom_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_edit_art_work/widgets/generate_image_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_finalize/sketch_to_image_finalize_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/up_scale_image_finalize/upscale_image_finalize_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_finalize/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/up_scale_image_finalize/widgets/bottom_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_finalize/widgets/content_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/up_scale_image_finalize/widgets/content_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_upload/sketch_to_image_upload_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_upload/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/widgets/bottom_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_upload/widgets/content_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/widgets/content_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/sketch_to_image_upload/widgets/upload_image_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/widgets/upload_image_widget.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,25 +62,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/tool_box_group/image_generator&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;flutter.settings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/tool_box_group/upscale_image_upload",
+    "settings.editor.selected.configurable": "flutter.settings",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/widgets" />
       <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info" />
-      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/otp_code_verification" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment" />

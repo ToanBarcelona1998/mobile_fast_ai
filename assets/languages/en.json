@@ -323,24 +323,19 @@
   "text_effect_finalize_screen_share_to_feed" : "Share to Feed",
 
 
-  "sketch_to_image_upload_screen_app_bar_title" : "Sketch to Images",
-  "sketch_to_image_upload_screen_title" : "Upload a sketch",
-  "sketch_to_image_upload_screen_content" : "Upload your sketch, and we’ll generate an AI image version for you.",
-  "sketch_to_image_upload_screen_upload" : "Upload",
-  "sketch_to_image_upload_screen_generate" : "Generate",
-
-  "sketch_to_image_edit_art_work_screen_app_bar_title" : "Edit Artwork",
-  "sketch_to_image_edit_art_work_screen_finalize" : "Finalize",
-  "sketch_to_image_edit_art_work_screen_re_generate" : "Re-generate",
-  "sketch_to_image_edit_art_work_screen_download_all" : "Download All",
-  "sketch_to_image_edit_art_work_screen_generating" : "Generating...",
+  "upscale_image_upload_screen_app_bar_title" : "Upscale image",
+  "upscale_image_upload_screen_title" : "Upload a image",
+  "upscale_image_upload_screen_content" : "Upload your image, and we’ll upscale an AI image version for you.",
+  "upscale_image_upload_screen_upload" : "Upload",
+  "upscale_image_upload_screen_generate" : "Generate",
+  "upscale_image_upload_screen_scale_factor" : "Scale factor",
 
 
-  "sketch_to_image_finalize_screen_app_bar_title" : "Finalize",
-  "sketch_to_image_finalize_screen_add_title" : "Add Title",
-  "sketch_to_image_finalize_screen_optional" : "Optional",
-  "sketch_to_image_finalize_screen_download_art" : "Download Art",
-  "sketch_to_image_finalize_screen_share_to_feed" : "Share to Feed",
+  "upscale_image_finalize_screen_app_bar_title" : "Finalize",
+  "upscale_image_finalize_screen_add_title" : "Add Title",
+  "upscale_image_finalize_screen_optional" : "Optional",
+  "upscale_image_finalize_screen_download_art" : "Download Art",
+  "upscale_image_finalize_screen_share_to_feed" : "Share to Feed",
 
 
   "image_to_painting_upload_screen_app_bar_title" : "Images to Painting",
