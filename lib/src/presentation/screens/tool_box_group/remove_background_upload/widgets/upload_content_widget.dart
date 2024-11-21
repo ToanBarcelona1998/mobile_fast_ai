@@ -5,11 +5,11 @@ import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
 import 'package:flutter/material.dart';
 
-class SketchToImageUploadContentWidget extends StatelessWidget {
+class RemoveBackgroundUploadContentWidget extends StatelessWidget {
   final AppLocalizationManager localization;
   final AppTheme appTheme;
 
-  const SketchToImageUploadContentWidget({
+  const RemoveBackgroundUploadContentWidget({
     required this.appTheme,
     required this.localization,
     super.key,
@@ -22,7 +22,7 @@ class SketchToImageUploadContentWidget extends StatelessWidget {
       children: [
         Text(
           localization.translate(
-            LanguageKey.sketchToImageUploadScreenTitle,
+            LanguageKey.removeBackgroundUploadScreenTitle,
           ),
           style: AppTypography.heading3Bold.copyWith(
             color: appTheme.greyScaleColor900,
@@ -33,7 +33,7 @@ class SketchToImageUploadContentWidget extends StatelessWidget {
         ),
         Text(
           localization.translate(
-            LanguageKey.sketchToImageUploadScreenContent,
+            LanguageKey.removeBackgroundUploadScreenContent,
           ),
           style: AppTypography.bodyXLargeRegular.copyWith(
             color: appTheme.greyScaleColor900,

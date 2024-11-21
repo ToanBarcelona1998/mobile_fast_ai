@@ -7,17 +7,17 @@ import 'package:mobile_fast_ai/src/presentation/widgets/app_button.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/divider_widget.dart';
 import 'package:flutter/material.dart';
 
-class SketchToImageEditArtWorkBottomWidget extends StatelessWidget {
-  final AppLocalizationManager localization;
+class UpscaleImageFinalizeBottomWidget extends StatelessWidget {
   final AppTheme appTheme;
-  final VoidCallback onReGenerateTap;
-  final VoidCallback onDownloadAllTap;
+  final AppLocalizationManager localization;
+  final VoidCallback onDownloadArt;
+  final VoidCallback onShareToFeed;
 
-  const SketchToImageEditArtWorkBottomWidget({
+  const UpscaleImageFinalizeBottomWidget({
     required this.appTheme,
     required this.localization,
-    required this.onReGenerateTap,
-    required this.onDownloadAllTap,
+    required this.onDownloadArt,
+    required this.onShareToFeed,
     super.key,
   });
 
@@ -40,13 +40,13 @@ class SketchToImageEditArtWorkBottomWidget extends StatelessWidget {
               Expanded(
                 child: PrimaryAppButton(
                   text: localization.translate(
-                    LanguageKey.sketchToImageEditArtWorkScreenReGenerate,
+                    LanguageKey.upscaleImageFinalizeScreenDownloadArt,
                   ),
-                  backGroundColor: appTheme.primaryColor50,
-                  textStyle: AppTypography.bodyLargeSemiBold.copyWith(
+                  backGroundColor: appTheme.primaryColor100,
+                  textStyle: AppTypography.bodyXLargeSemiBold.copyWith(
                     color: appTheme.primaryColor900,
                   ),
-                  onPress: onReGenerateTap,
+                  onPress: onDownloadArt,
                 ),
               ),
               const SizedBox(
@@ -55,9 +55,9 @@ class SketchToImageEditArtWorkBottomWidget extends StatelessWidget {
               Expanded(
                 child: PrimaryAppButton(
                   text: localization.translate(
-                    LanguageKey.sketchToImageEditArtWorkScreenDownloadAll,
+                    LanguageKey.upscaleImageFinalizeScreenShareToFeed,
                   ),
-                  onPress: onDownloadAllTap,
+                  onPress: onShareToFeed,
                 ),
               ),
             ],

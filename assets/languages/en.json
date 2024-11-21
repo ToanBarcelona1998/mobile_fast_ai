@@ -261,24 +261,18 @@
   "image_generator_finalize_screen_share_to_feed_successful_content" : "Your artwork has been successfully shared to the feed. Now everyone in the community can see your artwork.",
 
 
-  "photo_to_anime_upload_screen_app_bar_title" : "Photo to Anime",
-  "photo_to_anime_upload_screen_title" : "Upload your photo or selfie",
-  "photo_to_anime_upload_screen_content" : "Upload your photo and we'll generate an anime version of you.",
-  "photo_to_anime_upload_screen_upload" : "Upload",
-  "photo_to_anime_upload_screen_generate" : "Generate",
-
-  "photo_to_anime_edit_art_work_screen_app_bar_title" : "Edit Artwork",
-  "photo_to_anime_edit_art_work_screen_finalize" : "Finalize",
-  "photo_to_anime_edit_art_work_screen_re_generate" : "Re-generate",
-  "photo_to_anime_edit_art_work_screen_download_all" : "Download All",
-  "photo_to_anime_edit_art_work_screen_generating" : "Generating...",
+  "remove_background_upload_screen_app_bar_title" : "Photo to Anime",
+  "remove_background_upload_screen_title" : "Upload your photo or selfie",
+  "remove_background_upload_screen_content" : "Upload your photo and we'll generate an anime version of you.",
+  "remove_background_upload_screen_upload" : "Upload",
+  "remove_background_upload_screen_generate" : "Generate",
 
 
-  "photo_to_anime_finalize_screen_app_bar_title" : "Finalize",
-  "photo_to_anime_finalize_screen_add_title" : "Add Title",
-  "photo_to_anime_finalize_screen_optional" : "Optional",
-  "photo_to_anime_finalize_screen_download_art" : "Download Art",
-  "photo_to_anime_finalize_screen_share_to_feed" : "Share to Feed",
+  "remove_background_finalize_screen_app_bar_title" : "Finalize",
+  "remove_background_finalize_screen_add_title" : "Add Title",
+  "remove_background_finalize_screen_optional" : "Optional",
+  "remove_background_finalize_screen_download_art" : "Download Art",
+  "remove_background_finalize_screen_share_to_feed" : "Share to Feed",
 
   "realistic_art_generator_screen_app_bar_title" : "Realistic Art Generator",
   "realistic_art_generator_screen_title" : "Upload an image",
@@ -329,24 +323,19 @@
   "text_effect_finalize_screen_share_to_feed" : "Share to Feed",
 
 
-  "sketch_to_image_upload_screen_app_bar_title" : "Sketch to Images",
-  "sketch_to_image_upload_screen_title" : "Upload a sketch",
-  "sketch_to_image_upload_screen_content" : "Upload your sketch, and we’ll generate an AI image version for you.",
-  "sketch_to_image_upload_screen_upload" : "Upload",
-  "sketch_to_image_upload_screen_generate" : "Generate",
-
-  "sketch_to_image_edit_art_work_screen_app_bar_title" : "Edit Artwork",
-  "sketch_to_image_edit_art_work_screen_finalize" : "Finalize",
-  "sketch_to_image_edit_art_work_screen_re_generate" : "Re-generate",
-  "sketch_to_image_edit_art_work_screen_download_all" : "Download All",
-  "sketch_to_image_edit_art_work_screen_generating" : "Generating...",
+  "upscale_image_upload_screen_app_bar_title" : "Upscale image",
+  "upscale_image_upload_screen_title" : "Upload a image",
+  "upscale_image_upload_screen_content" : "Upload your image, and we’ll upscale an AI image version for you.",
+  "upscale_image_upload_screen_upload" : "Upload",
+  "upscale_image_upload_screen_generate" : "Generate",
+  "upscale_image_upload_screen_scale_factor" : "Scale factor",
 
 
-  "sketch_to_image_finalize_screen_app_bar_title" : "Finalize",
-  "sketch_to_image_finalize_screen_add_title" : "Add Title",
-  "sketch_to_image_finalize_screen_optional" : "Optional",
-  "sketch_to_image_finalize_screen_download_art" : "Download Art",
-  "sketch_to_image_finalize_screen_share_to_feed" : "Share to Feed",
+  "upscale_image_finalize_screen_app_bar_title" : "Finalize",
+  "upscale_image_finalize_screen_add_title" : "Add Title",
+  "upscale_image_finalize_screen_optional" : "Optional",
+  "upscale_image_finalize_screen_download_art" : "Download Art",
+  "upscale_image_finalize_screen_share_to_feed" : "Share to Feed",
 
 
   "image_to_painting_upload_screen_app_bar_title" : "Images to Painting",

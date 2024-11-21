@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:data/data.dart';
 import 'package:dio/dio.dart';
 import 'package:mobile_fast_ai/src/application/data/service/api_service.dart';
@@ -11,38 +13,56 @@ final class ImageGeneratorServiceImpl implements ImageGeneratorService {
   const ImageGeneratorServiceImpl(this._serviceGenerator);
 
   @override
-  Future<BaseResponse> controlNetProcessor(
-      {required String accessToken, required Map<String, dynamic> body}) {
+  Future<BaseResponse> controlNetProcessor({
+    required String accessToken,
+    required Map<String, dynamic> body,
+  }) {
     return _serviceGenerator.controlNetProcessor(accessToken, body);
   }
 
   @override
-  Future<BaseResponse> enhancePrompt(
-      {required String accessToken, required Map<String, dynamic> body}) {
+  Future<BaseResponse> enhancePrompt({
+    required String accessToken,
+    required Map<String, dynamic> body,
+  }) {
     return _serviceGenerator.enhancePrompt(accessToken, body);
   }
 
   @override
-  Future<BaseResponse> generateImage(
-      {required String accessToken, required Map<String, dynamic> body}) {
+  Future<BaseResponse> generateImage({
+    required String accessToken,
+    required Map<String, dynamic> body,
+  }) {
     return _serviceGenerator.generateImage(accessToken, body);
   }
 
   @override
-  Future<BaseResponse> imageToText(
-      {required String accessToken, required Map<String, dynamic> body}) {
+  Future<BaseResponse> imageToText({
+    required String accessToken,
+    required Map<String, dynamic> body,
+    required File file,
+  }) {
+    body['file'] = MultipartFile.fromFile(file.path);
     return _serviceGenerator.imageToText(accessToken, body);
   }
 
   @override
-  Future<BaseResponse> removeBackground(
-      {required String accessToken, required Map<String, dynamic> body}) {
+  Future<BaseResponse> removeBackground({
+    required String accessToken,
+    required Map<String, dynamic> body,
+    required File file,
+  }) {
+    body['file'] = MultipartFile.fromFile(file.path);
     return _serviceGenerator.removeBackground(accessToken, body);
   }
 
   @override
-  Future<BaseResponse> upscale(
-      {required String accessToken, required Map<String, dynamic> body}) {
+  Future<BaseResponse> upscale({
+    required String accessToken,
+    required Map<String, dynamic> body,
+    required File file,
+  }) {
+    body['file'] = MultipartFile.fromFile(file.path);
     return _serviceGenerator.upscale(accessToken, body);
   }
 }

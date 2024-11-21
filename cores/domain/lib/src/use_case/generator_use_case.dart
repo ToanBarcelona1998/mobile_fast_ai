@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:domain/core/core.dart';
 import 'package:domain/src/entity/entity.dart';
 import 'package:domain/src/repository/repository.dart';
@@ -49,15 +51,9 @@ final class GeneratorUseCase {
   }
 
   Future<List<AITask>> upScaleImage({
-    required String image,
+    required File image,
     required int scaleFactor,
   }) async {
-    if (!image.base64Validate()) {
-      throw const FastAIError(
-          code: FastAIError.developerErrorCode,
-          message: 'Image should be base64 format');
-    }
-
     final String accessToken = await _getAccessToken();
 
     final UpScaleImageRequest request = UpScaleImageRequest(
@@ -73,13 +69,7 @@ final class GeneratorUseCase {
     );
   }
 
-  Future<List<AITask>> removeBackground({required String image}) async {
-    if (!image.base64Validate()) {
-      throw const FastAIError(
-          code: FastAIError.developerErrorCode,
-          message: 'Image should be base64 format');
-    }
-
+  Future<List<AITask>> removeBackground({required File image}) async {
     final String accessToken = await _getAccessToken();
 
     final RemoveBackgroundRequest request = RemoveBackgroundRequest(
@@ -111,13 +101,7 @@ final class GeneratorUseCase {
     );
   }
 
-  Future<List<AITask>> imageToText({required String image}) async {
-    if (!image.base64Validate()) {
-      throw const FastAIError(
-          code: FastAIError.developerErrorCode,
-          message: 'Image should be base64 format');
-    }
-
+  Future<List<AITask>> imageToText({required File image}) async {
     final String accessToken = await _getAccessToken();
 
     final ImageToTextRequest request = ImageToTextRequest(

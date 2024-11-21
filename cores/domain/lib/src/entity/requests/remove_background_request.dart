@@ -1,7 +1,9 @@
+import 'dart:io';
+
 import 'base_remote_request.dart';
 
 final class RemoveBackgroundRequest extends BaseRemoteRequest {
-  final String image;
+  final File image;
 
   const RemoveBackgroundRequest({
     required this.image,

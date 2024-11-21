@@ -6,12 +6,12 @@ import 'package:mobile_fast_ai/src/presentation/widgets/image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class PhotoToAnimeUploadImageWidget extends StatelessWidget {
+class RemoveBackgroundUploadImageWidget extends StatelessWidget {
   final String file;
   final AppTheme appTheme;
   final VoidCallback onRemoveFile;
 
-  const PhotoToAnimeUploadImageWidget({
+  const RemoveBackgroundUploadImageWidget({
     required this.file,
     required this.appTheme,
     required this.onRemoveFile,
