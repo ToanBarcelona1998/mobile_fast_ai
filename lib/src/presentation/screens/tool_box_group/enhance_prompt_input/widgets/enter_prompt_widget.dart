@@ -4,11 +4,11 @@ import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/text_input_base/text_input_base.dart';
 import 'package:flutter/material.dart';
 
-class BatchArtGeneratorEnterPromptWidget extends StatelessWidget {
+class EnhancePromptInputEnterPromptWidget extends StatelessWidget {
   final TextEditingController enterPromptController;
   final AppLocalizationManager localization;
 
-  const BatchArtGeneratorEnterPromptWidget({
+  const EnhancePromptInputEnterPromptWidget({
     required this.enterPromptController,
     required this.localization,
     super.key,
@@ -22,11 +22,11 @@ class BatchArtGeneratorEnterPromptWidget extends StatelessWidget {
         minHeight: BoxSize.boxSize16,
       ),
       hintText: localization.translate(
-        LanguageKey.batchArtGeneratorScreenEnterPromptHint,
+        LanguageKey.enhancePromptInputScreenEnterPromptHint,
       ),
       controller: enterPromptController,
       label: localization.translate(
-        LanguageKey.batchArtGeneratorScreenEnterPrompt,
+        LanguageKey.enhancePromptInputScreenEnterPrompt,
       ),
     );
   }

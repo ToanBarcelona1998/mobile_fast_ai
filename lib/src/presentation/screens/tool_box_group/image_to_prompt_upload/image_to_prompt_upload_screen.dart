@@ -127,7 +127,7 @@ class _ImageToPromptUploadScreenState extends State<ImageToPromptUploadScreen>
       case ImageToPromptUploadStatus.generated:
         hideLoading();
         AppNavigator.push(
-          RoutePath.imageToTextFinalize,
+          RoutePath.imageToTextResult,
           state.tasks,
         );
         break;

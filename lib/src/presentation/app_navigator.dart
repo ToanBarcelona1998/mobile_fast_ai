@@ -34,13 +34,11 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_ge
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_generator_download/avatar_generator_download.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_generator_finalize/avatar_generator_finalize.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_generator_upload/avatar_generator_upload_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/batch_art_generator/batch_art_generator_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/batch_art_generator_detail/batch_art_generator_detail_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/batch_art_generator_finalize/batch_art_generator_finalize_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/batch_art_generator_list/batch_art_generator_list_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/control_net_edit_art_work/control_net_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/control_net_finalize/control_net_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/control_net_upload/control_net_upload_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_promot_input_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/enhance_prompt_result/enhance_prompt_result_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/extend_image_edit_art_work/extend_image_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/extend_image_finalize/extend_image_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/extend_image_upload/extend_image_upload_screen.dart';
@@ -48,7 +46,6 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_gen
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_generator_finalize/image_generator_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_painting_finalize/image_to_painting_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_painting_upload/image_to_painting_upload_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_prompt_finalize/image_to_prompt_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_prompt_upload/image_to_prompt_upload_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/logo_generator/logo_generator_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/logo_generator_edit_art_work/logo_generator_edit_art_work_screen.dart';
@@ -73,6 +70,7 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/up_scale_
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_screen.dart';
 
 import 'screens/tool_box_group/image_to_painting_edit_art_work/image_to_painting_edit_art_work_screen.dart';
+import 'screens/tool_box_group/image_to_prompt_result/image_to_prompt_result_screen.dart';
 
 sealed class RoutePath {
   static const String splash = '/';
@@ -113,14 +111,16 @@ sealed class RoutePath {
   static const String postReport = '${_discover}report';
 
   static const String imageGenerator = '${_toolBox}image_generator';
-  static const String imageGeneratorFinalize = '${_toolBox}image_generator_finalize';
+  static const String imageGeneratorFinalize =
+      '${_toolBox}image_generator_finalize';
 
   static const String realisticGenerator = '${_toolBox}realistic_generator';
   static const String realisticEditArtWork =
       '${_toolBox}realistic_edit_art_work';
   static const String realisticFinalize = '${_toolBox}realistic_finalize';
 
-  static const String removeBackgroundUpload = '${_toolBox}remove_background_upload';
+  static const String removeBackgroundUpload =
+      '${_toolBox}remove_background_upload';
   static const String removeBackgroundFinalize =
       '${_toolBox}remove_background_finalize';
 
@@ -148,9 +148,8 @@ sealed class RoutePath {
       '${_toolBox}extend_image_edit_art_work';
   static const String extendImageFinalize = '${_toolBox}extend_image_finalize';
 
-  static const String imageToTextUpload =
-      '${_toolBox}image_to_text_upload';
-  static const String imageToTextFinalize = '${_toolBox}image_to_text_finalize';
+  static const String imageToTextUpload = '${_toolBox}image_to_text_upload';
+  static const String imageToTextResult = '${_toolBox}image_to_text_result';
 
   static const String textToPattern = '${_toolBox}text_to_pattern';
   static const String textToPatternEditArtWork =
@@ -171,13 +170,8 @@ sealed class RoutePath {
       '${_toolBox}control_net_edit_art_work';
   static const String controlNetFinalize = '${_toolBox}control_net_finalize';
 
-  static const String batchArtGenerator = '${_toolBox}batch_art_generator';
-  static const String batchArtGeneratorList =
-      '${_toolBox}batch_art_generator_list';
-  static const String batchArtGeneratorDetail =
-      '${_toolBox}batch_art_generator_detail';
-  static const String batchArtGeneratorFinalize =
-      '${_toolBox}batch_art_generator_finalize';
+  static const String enhancePromptInput = '${_toolBox}enhance_prompt_input';
+  static const String enhancePromptResult = '${_toolBox}enhance_prompt_result';
 
   static const String _myProfile = '$home/my_profile/';
   static const String setting = '${_myProfile}setting';
@@ -223,7 +217,8 @@ sealed class AppNavigator {
           const ResetPasswordScreen(),
         );
       case RoutePath.otpCodeVerification:
-        final Map<String,dynamic> args = settings.arguments as Map<String,dynamic>;
+        final Map<String, dynamic> args =
+            settings.arguments as Map<String, dynamic>;
         return _defaultRoute(
           settings,
           OtpCodeVerificationScreen(
@@ -463,11 +458,11 @@ sealed class AppNavigator {
           settings,
           const ImageToPromptUploadScreen(),
         );
-      case RoutePath.imageToTextFinalize:
+      case RoutePath.imageToTextResult:
         final List<AITask> tasks = settings.arguments as List<AITask>;
         return _defaultRoute(
           settings,
-          ImageToPromptFinalizeScreen(
+          ImageToPromptResultScreen(
             tasks: tasks,
           ),
         );
@@ -556,30 +551,17 @@ sealed class AppNavigator {
             url: url,
           ),
         );
-      case RoutePath.batchArtGenerator:
+      case RoutePath.enhancePromptInput:
         return _defaultRoute(
           settings,
-          const BatchArtGeneratorScreen(),
+          const EnhancePromptInputScreen(),
         );
-      case RoutePath.batchArtGeneratorList:
+      case RoutePath.enhancePromptResult:
+        final List<AITask> tasks = settings.arguments as List<AITask>;
         return _defaultRoute(
           settings,
-          const BatchArtGeneratorListScreen(),
-        );
-      case RoutePath.batchArtGeneratorDetail:
-        final String url = settings.arguments as String;
-        return _defaultRoute(
-          settings,
-          BatchArtGeneratorDetailScreen(
-            url: url,
-          ),
-        );
-      case RoutePath.batchArtGeneratorFinalize:
-        final String url = settings.arguments as String;
-        return _defaultRoute(
-          settings,
-          BatchArtGeneratorFinalizeScreen(
-            url: url,
+          EnhancePromptResultScreen(
+            tasks: tasks,
           ),
         );
       case RoutePath.setting:

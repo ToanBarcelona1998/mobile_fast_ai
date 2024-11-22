@@ -120,12 +120,12 @@ class _ToolBoxPageState extends State<ToolBoxPage> with StateFulBaseScreen {
                   break;
                 case AITaskType.imageToText:
                   AppNavigator.push(
-                    RoutePath.realisticGenerator,
+                    RoutePath.imageToTextUpload,
                   );
                   break;
                 case AITaskType.promptEnhance:
                   AppNavigator.push(
-                    RoutePath.textEffect,
+                    RoutePath.enhancePromptInput,
                   );
                   break;
                 case AITaskType.controlNet:
