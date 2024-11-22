@@ -40,14 +40,16 @@ class SignupFormWidget extends StatelessWidget {
             LanguageKey.onBoardingSignupFormScreenEmail,
           ),
           onChanged: (email, _) {
-            _onEmailChange(context,email);
+            _onEmailChange(context, email);
           },
           hintText: localization.translate(
             LanguageKey.onBoardingSignupFormScreenEmailHint,
           ),
           constraintManager: ConstraintManager()
             ..email(
-              errorMessage: localization.translate(''),
+              errorMessage: localization.translate(
+                LanguageKey.onBoardingSignupFormScreenEmailInvalid,
+              ),
             ),
           suffix: SvgPicture.asset(
             AssetIconPath.icCommonEmail,
@@ -56,35 +58,39 @@ class SignupFormWidget extends StatelessWidget {
         const SizedBox(
           height: BoxSize.boxSize07,
         ),
-        SignUpFormHidePasswordSelector(
-          builder: (obscurePassword) {
-            return NormalTextInputWidget(
-              controller: passwordController,
-              label: localization.translate(
-                LanguageKey.onBoardingSignupFormScreenPassword,
+        SignUpFormHidePasswordSelector(builder: (obscurePassword) {
+          return NormalTextInputWidget(
+            controller: passwordController,
+            label: localization.translate(
+              LanguageKey.onBoardingSignupFormScreenPassword,
+            ),
+            hintText: localization.translate(
+              LanguageKey.onBoardingSignupFormScreenPasswordHint,
+            ),
+            maxLine: 1,
+            obscureText: obscurePassword,
+            onChanged: (password, _) {
+              _onPasswordChange(context, password);
+            },
+            constraintManager: ConstraintManager()
+              ..notEmpty(
+                errorMessage: localization.translate(
+                  LanguageKey.onBoardingSignupFormScreenPasswordInvalid,
+                ),
               ),
-              hintText: localization.translate(
-                LanguageKey.onBoardingSignupFormScreenPasswordHint,
-              ),
-              maxLine: 1,
-              obscureText: obscurePassword,
-              onChanged: (password, _) {
-                _onPasswordChange(context,password);
-              },
-              suffix: GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                onTap: () => _onChangeObscurePassword(context),
-                child: obscurePassword
-                    ? SvgPicture.asset(
-                        AssetIconPath.icCommonEyeHide,
-                      )
-                    : SvgPicture.asset(
-                        AssetIconPath.icCommonEyeHide,
-                      ),
-              ),
-            );
-          }
-        ),
+            suffix: GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: () => _onChangeObscurePassword(context),
+              child: obscurePassword
+                  ? SvgPicture.asset(
+                      AssetIconPath.icCommonEyeHide,
+                    )
+                  : SvgPicture.asset(
+                      AssetIconPath.icCommonEyeHide,
+                    ),
+            ),
+          );
+        }),
         const SizedBox(
           height: BoxSize.boxSize05,
         ),
@@ -121,19 +127,19 @@ class SignupFormWidget extends StatelessWidget {
     );
   }
 
-  void _onPasswordChange(BuildContext context,String password) {
+  void _onPasswordChange(BuildContext context, String password) {
     SignUpFormBloc.of(context).add(
       SignUpFormOnChangePasswordEvent(password),
     );
   }
 
-  void _onEmailChange(BuildContext context,String email) {
+  void _onEmailChange(BuildContext context, String email) {
     SignUpFormBloc.of(context).add(
       SignUpFormOnChangeEmailEvent(email),
     );
   }
 
-  void _onChangeObscurePassword(BuildContext context){
+  void _onChangeObscurePassword(BuildContext context) {
     SignUpFormBloc.of(context).add(
       const SignUpFormOnChangeHidePasswordEvent(),
     );

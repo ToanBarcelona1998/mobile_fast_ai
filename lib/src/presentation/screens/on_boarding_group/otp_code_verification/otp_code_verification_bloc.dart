@@ -60,7 +60,9 @@ final class OtpCodeVerificationBloc
     );
   }
 
-  void _onResend() async {}
+  void _onResend() async {
+
+  }
 
   void _onConfirm(
     OtpCodeVerificationOnSubmitEvent event,

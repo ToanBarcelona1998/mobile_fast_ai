@@ -1,3 +1,5 @@
+import 'package:mobile_fast_ai/src/application/global/app_global/app_global_cubit.dart';
+import 'package:mobile_fast_ai/src/application/global/app_global/app_global_state.dart';
 import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme_builder.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/app_localization_provider.dart';
@@ -85,7 +87,9 @@ class _SettingScreenState extends State<SettingScreen> {
       child: SettingLogoutWidget(
         appTheme: appTheme,
         localization: localization,
-        onAgree: () {},
+        onAgree: () {
+          AppGlobalCubit.of(context).changeStatus(AppGlobalStatus.unauthorized);
+        },
       ),
     );
   }

@@ -148,6 +148,12 @@ final class SignUpPersonalInfoBloc
         gender: state.gender,
         address: state.address,
       );
+
+      emit(
+        state.copyWith(
+          status: SignUpPersonalInfoStatus.success,
+        ),
+      );
     } catch (e) {
       emit(
         state.copyWith(

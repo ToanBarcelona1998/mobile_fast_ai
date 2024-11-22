@@ -5,6 +5,7 @@ import 'package:mobile_fast_ai/config/di.dart';
 import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
 import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
+import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
 import 'package:mobile_fast_ai/src/cores/utils/context_extension.dart';
 import 'package:mobile_fast_ai/src/cores/utils/flutter_toast.dart';
 import 'package:mobile_fast_ai/src/presentation/app_navigator.dart';
@@ -19,6 +20,7 @@ import 'package:flutter/material.dart';
 
 import 'widgets/bottom_widget.dart';
 import 'widgets/content_widget.dart';
+import 'widgets/scale_factor_widget.dart';
 import 'widgets/upload_image_widget.dart';
 
 class UpscaleImageUploadScreen extends StatefulWidget {
@@ -67,6 +69,13 @@ class _UpscaleImageUploadScreenState extends State<UpscaleImageUploadScreen>
                       height: context.h * 0.45,
                     );
                   },
+                ),
+                const SizedBox(
+                  height: BoxSize.boxSize05,
+                ),
+                UpscaleImageUploadScaleFactorWidget(
+                  appTheme: appTheme,
+                  localization: localization,
                 ),
               ],
             ),

@@ -43,7 +43,9 @@ class SignupPersonalInfoInputFormWidget extends StatelessWidget {
       children: [
         PickAvatarWidget(
           url: AssetImagePath.commonDefaultAvatar,
-          onPickImageSuccess: (imgPath) {},
+          onPickImageSuccess: (imgPath) {
+            _onPickFile(context,imgPath);
+          },
           avatarType: PhotoType.assets,
           imageType: ImageType.svg,
         ),
@@ -202,6 +204,14 @@ class SignupPersonalInfoInputFormWidget extends StatelessWidget {
     SignUpPersonalInfoBloc.of(context).add(
       SignUpPersonalInfoEvent.onPhoneNumberChange(
         phoneNumber,
+      ),
+    );
+  }
+
+  void _onPickFile(BuildContext context , String image){
+    SignUpPersonalInfoBloc.of(context).add(
+      SignUpPersonalInfoEvent.onPickImage(
+        image,
       ),
     );
   }

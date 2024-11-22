@@ -10,6 +10,7 @@ import 'package:mobile_fast_ai/src/application/data/service/model/model_service_
 import 'package:mobile_fast_ai/src/application/data/service/upload/upload_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/user/user_service_impl.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_local_constant.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/home_group/home/my_profile/my_profile_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/otp_code_verification/otp_code_verification_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_in_with_password/sign_in_with_password_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_form/sign_up_form_bloc.dart';
@@ -262,6 +263,13 @@ Future<void> initDependency(FastAIConfig config) async {
   getIt.registerFactory<EnhancePromptInputBloc>(
     () => EnhancePromptInputBloc(
       getIt.get<GeneratorUseCase>(),
+    ),
+  );
+
+
+  getIt.registerFactory<MyProfileBloc>(
+    () => MyProfileBloc(
+      getIt.get<UserUseCase>(),
     ),
   );
 }
