@@ -44,9 +44,18 @@ final class UpscaleImageUploadBloc
     UpscaleImageUploadEventOnChangeScaleFactor event,
     Emitter<UpscaleImageUploadState> emit,
   ) {
+    int scaleFactor = state.scaleFactor + event.scaleFactor;
+
+    if (scaleFactor < 2) {
+      scaleFactor = 2;
+    }
+    if (scaleFactor > 4) {
+      scaleFactor = 4;
+    }
+
     emit(
       state.copyWith(
-        scaleFactor: event.scaleFactor,
+        scaleFactor: scaleFactor,
       ),
     );
   }
@@ -79,5 +88,6 @@ final class UpscaleImageUploadBloc
     }
   }
 
-  static UpscaleImageUploadBloc of(BuildContext context) => BlocProvider.of<UpscaleImageUploadBloc>(context);
+  static UpscaleImageUploadBloc of(BuildContext context) =>
+      BlocProvider.of<UpscaleImageUploadBloc>(context);
 }
