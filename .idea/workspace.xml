@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/widgets/sign_up_personal_info_input_form_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/widgets/sign_up_personal_info_input_form_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_selector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,18 +49,18 @@
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/tool_box_group/enhance_prompt_input",
+    "last_opened_file_path": "/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/home_group/home/my_profile",
     "settings.editor.selected.configurable": "flutter.settings",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_result/widgets" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_upload" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload" />
-      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/widgets" />
