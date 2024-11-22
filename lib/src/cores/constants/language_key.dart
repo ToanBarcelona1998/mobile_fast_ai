@@ -8,6 +8,8 @@ sealed class LanguageKey{
   static const String commonGenderMale = 'common_gender_male';
   static const String commonGenderFeMale = 'common_gender_female';
   static const String commonGenderOther = 'common_gender_other';
+  
+  static const String commonCopy = 'common_copy';
 
   static const String onBoardingWalkThroughScreenFirstPageTitle = 'on_boarding_walk_through_screen_first_page_title';
   static const String onBoardingWalkThroughScreenFirstPageContent = 'on_boarding_walk_through_screen_first_page_content';
@@ -427,11 +429,8 @@ sealed class LanguageKey{
   static const String imageToPromptUploadScreenButtonTitle = 'image_to_prompt_upload_screen_button_title';
 
 
-  static const String imageToPromptFinalizeScreenAppBarTitle = 'image_to_prompt_finalize_screen_app_bar_title';
-  static const String imageToPromptFinalizeScreenAddTitle = 'image_to_prompt_finalize_screen_add_title';
-  static const String imageToPromptFinalizeScreenOptional = 'image_to_prompt_finalize_screen_optional';
-  static const String imageToPromptFinalizeScreenDownloadArt = 'image_to_prompt_finalize_screen_download_art';
-  static const String imageToPromptFinalizeScreenShareToFeed = 'image_to_prompt_finalize_screen_share_to_feed';
+  static const String imageToPromptResultScreenAppBarTitle = 'image_to_prompt_result_screen_app_bar_title';
+  static const String imageToPromptResultScreenCopy = 'image_to_prompt_result_screen_copy';
 
 
   static const String textToPatternScreenAppBarTitle = 'text_to_pattern_upload_screen_app_bar_title';
@@ -501,32 +500,15 @@ sealed class LanguageKey{
   static const String controlNetFinalizeScreenShareToFeed = 'control_net_finalize_screen_share_to_feed';
 
 
-  static const String batchArtGeneratorScreenAppBarTitle = 'batch_art_generator_screen_app_bar_title';
-  static const String batchArtGeneratorScreenEnterPrompt = 'batch_art_generator_screen_enter_prompt';
-  static const String batchArtGeneratorScreenEnterPromptHint = 'batch_art_generator_screen_enter_prompt_hint';
-  static const String batchArtGeneratorScreenBatchProduction = 'batch_art_generator_screen_batch_production';
-  static const String batchArtGeneratorScreenAspectRatio = 'batch_art_generator_screen_aspect_ratio';
-  static const String batchArtGeneratorScreenArtStyle = 'batch_art_generator_screen_art_style';
-  static const String batchArtGeneratorScreenInputImages = 'batch_art_generator_screen_input_images';
-  static const String batchArtGeneratorScreenOptional = 'batch_art_generator_screen_optional';
-  static const String batchArtGeneratorScreenUpload = 'batch_art_generator_screen_upload';
-  static const String batchArtGeneratorScreenGenerate = 'batch_art_generator_screen_generate';
+  static const String enhancePromptInputScreenAppBarTitle = 'enhance_prompt_input_screen_app_bar_title';
+  static const String enhancePromptInputScreenEnterPrompt = 'enhance_prompt_input_screen_enter_prompt';
+  static const String enhancePromptInputScreenPromptInvalid = 'enhance_prompt_input_screen_prompt_invalid';
+  static const String enhancePromptInputScreenEnterPromptHint = 'enhance_prompt_input_screen_enter_prompt_hint';
+  static const String enhancePromptInputScreenGenerate = 'enhance_prompt_input_screen_generate';
 
 
-  static const String batchArtGeneratorListScreenAppBarTitle = 'batch_art_generator_list_screen_app_bar_title';
-  static const String batchArtGeneratorListScreenReGenerate = 'batch_art_generator_list_screen_re_generate';
-  static const String batchArtGeneratorListScreenDownloadAll = 'batch_art_generator_list_screen_download_all';
-
-
-  static const String batchArtGeneratorDetailScreenFinalize = 'batch_art_generator_detail_screen_finalize';
-  static const String batchArtGeneratorDetailScreenShare = 'batch_art_generator_detail_screen_share';
-  static const String batchArtGeneratorDetailScreenDownload = 'batch_art_generator_detail_screen_download';
-
-  static const String batchArtGeneratorFinalizeScreenAppBarTitle = 'batch_art_generator_finalize_screen_app_bar_title';
-  static const String batchArtGeneratorFinalizeScreenAddTitle = 'batch_art_generator_finalize_screen_add_title';
-  static const String batchArtGeneratorFinalizeScreenOptional = 'batch_art_generator_finalize_screen_optional';
-  static const String batchArtGeneratorFinalizeScreenDownloadArt = 'batch_art_generator_finalize_screen_download_art';
-  static const String batchArtGeneratorFinalizeScreenShareToFeed = 'batch_art_generator_finalize_screen_share_to_feed';
+  static const String enhancePromptResultScreenAppBarTitle = 'enhance_prompt_result_screen_app_bar_title';
+  static const String enhancePromptResultScreenCopy = 'enhance_prompt_result_screen_copy';
 
 
   static const String userProfileScreenAppBarTitle = 'user_profile_screen_app_bar_title';

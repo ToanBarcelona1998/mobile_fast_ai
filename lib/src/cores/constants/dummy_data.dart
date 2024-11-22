@@ -1,6 +1,8 @@
 //
 import 'dart:math';
 
+import 'package:domain/domain.dart';
+
 Random random = Random();
 
 String randomDummyImg() {
@@ -80,3 +82,19 @@ const dummyTextColor = [
   'A3A35C',
   '34B166'
 ];
+
+const AITask promptTask = AITask(
+  id: 0,
+  data:
+      'photo of a ginger woman, in space, futuristic space suit, (freckles:0.8) cute face, sci-fi, dystopian, detailed eyes, blue eyes',
+  createdAt: '',
+  taskType: AITaskType.promptEnhance,
+);
+
+const AITask imageTask = AITask(
+  id: 0,
+  data:
+      'https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/470ce5ae-497e-414f-bd8b-cc1bf67086ef/original=true,quality=90/02501-2802306715.jpeg',
+  createdAt: '',
+  taskType: AITaskType.inference,
+);

@@ -9,6 +9,8 @@
   "common_gender_female": "Female",
   "common_gender_other": "Other",
 
+  "common_copy" : "Copy successful",
+
   "on_boarding_walk_through_screen_first_page_title" : "Turn your words into artwork instantly",
   "on_boarding_walk_through_screen_first_page_content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
   "on_boarding_walk_through_screen_second_page_title" : "Create and share your artwork with ease",
@@ -261,9 +263,9 @@
   "image_generator_finalize_screen_share_to_feed_successful_content" : "Your artwork has been successfully shared to the feed. Now everyone in the community can see your artwork.",
 
 
-  "remove_background_upload_screen_app_bar_title" : "Photo to Anime",
+  "remove_background_upload_screen_app_bar_title" : "Remove background",
   "remove_background_upload_screen_title" : "Upload your photo or selfie",
-  "remove_background_upload_screen_content" : "Upload your photo and we'll generate an anime version of you.",
+  "remove_background_upload_screen_content" : "Upload your photo and we'll remove background version of you.",
   "remove_background_upload_screen_upload" : "Upload",
   "remove_background_upload_screen_generate" : "Generate",
 
@@ -411,11 +413,8 @@
   "image_to_prompt_upload_screen_button_title" : "Generate",
 
 
-  "image_to_prompt_finalize_screen_app_bar_title" : "Finalize",
-  "image_to_prompt_finalize_screen_add_title" : "Add Title",
-  "image_to_prompt_finalize_screen_optional" : "Optional",
-  "image_to_prompt_finalize_screen_download_art" : "Download Art",
-  "image_to_prompt_finalize_screen_share_to_feed" : "Share to Feed",
+  "image_to_prompt_result_screen_app_bar_title" : "Result",
+  "image_to_prompt_result_screen_copy" : "Copy",
 
 
   "text_to_pattern_upload_screen_app_bar_title" : "Text to Pattern",
@@ -482,30 +481,15 @@
   "control_net_finalize_screen_share_to_feed" : "Share to Feed",
 
 
-  "batch_art_generator_screen_app_bar_title" : "Batch Art Generator",
-  "batch_art_generator_screen_enter_prompt" : "Enter Prompt",
-  "batch_art_generator_screen_enter_prompt_hint" : "Type a description, condition, or art that you want to generate",
-  "batch_art_generator_screen_batch_production" : "Batch Production",
-  "batch_art_generator_screen_aspect_ratio" : "Aspect Ratio",
-  "batch_art_generator_screen_art_style" : "Art Style",
-  "batch_art_generator_screen_input_images" : "Input Images",
-  "batch_art_generator_screen_optional" : "Optional",
-  "batch_art_generator_screen_upload" : "Upload",
-  "batch_art_generator_screen_generate" : "Generate",
+  "enhance_prompt_input_screen_app_bar_title" : "Enhance prompt",
+  "enhance_prompt_input_screen_enter_prompt" : "Enter Prompt",
+  "enhance_prompt_input_screen_prompt_invalid" : "Prompt should be between 2-2000 characters",
+  "enhance_prompt_input_screen_enter_prompt_hint" : "Type a description, condition, or art that you want to generate",
+  "enhance_prompt_input_screen_generate" : "Enhance",
+  
 
-  "batch_art_generator_list_screen_app_bar_title" : "Batch Art Generator",
-  "batch_art_generator_list_screen_re_generate" : "Re-generate",
-  "batch_art_generator_list_screen_download_all" : "Download All",
-
-  "batch_art_generator_detail_screen_finalize" : "Finalize",
-  "batch_art_generator_detail_screen_share" : "Re-generate",
-  "batch_art_generator_detail_screen_download" : "Download",
-
-  "batch_art_generator_finalize_screen_app_bar_title" : "Finalize",
-  "batch_art_generator_finalize_screen_add_title" : "Add Title",
-  "batch_art_generator_finalize_screen_optional" : "Optional",
-  "batch_art_generator_finalize_screen_download_art" : "Download Art",
-  "batch_art_generator_finalize_screen_share_to_feed" : "Share to Feed",
+  "enhance_prompt_result_screen_app_bar_title" : "Enhance prompt result",
+  "enhance_prompt_result_screen_copy" : "Copy",
 
 
   "user_profile_screen_app_bar_title" : "Profile",
