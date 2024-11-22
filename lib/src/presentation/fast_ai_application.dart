@@ -104,7 +104,7 @@ class _FastAIApplicationState extends State<FastAIApplication>
         AppNavigator.push(RoutePath.home);
         break;
       case AppGlobalStatus.unauthorized:
-        AppNavigator.replaceAllWith(RoutePath.signInWithPassword);
+        AppNavigator.replaceAllWith(RoutePath.walkThrough);
         break;
     }
   }

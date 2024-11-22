@@ -84,7 +84,7 @@ class _SplashScreenState extends State<SplashScreen> with StateFulBaseScreen {
               AppGlobalCubit.of(context).changeStatus(AppGlobalStatus.authorized);
               break;
             case SplashStatus.error:
-              AppNavigator.replaceWith(RoutePath.home); // For testing
+              AppNavigator.replaceWith(RoutePath.walkThrough);
               break;
           }
         },

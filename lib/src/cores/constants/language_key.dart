@@ -71,8 +71,10 @@ sealed class LanguageKey{
   static const String onBoardingSignupFormScreenContent = 'on_boarding_sign_up_form_screen_content';
   static const String onBoardingSignupFormScreenEmail = 'on_boarding_sign_up_form_screen_email';
   static const String onBoardingSignupFormScreenEmailHint = 'on_boarding_sign_up_form_screen_email_hint';
+  static const String onBoardingSignupFormScreenEmailInvalid = 'on_boarding_sign_up_form_screen_email_invalid';
   static const String onBoardingSignupFormScreenPassword = 'on_boarding_sign_up_form_screen_password';
   static const String onBoardingSignupFormScreenPasswordHint = 'on_boarding_sign_up_form_screen_password_hint';
+  static const String onBoardingSignupFormScreenPasswordInvalid = 'on_boarding_sign_up_form_screen_password_invalid';
   static const String onBoardingSignupFormScreenAgreeTerm = 'on_boarding_sign_up_form_screen_agree_term';
   static const String onBoardingSignupFormScreenTerm = 'on_boarding_sign_up_form_screen_term';
   static const String onBoardingSignupFormScreenAlreadyAccount = 'on_boarding_sign_up_form_screen_already_account';
