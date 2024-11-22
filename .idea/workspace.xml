@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/languages/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/fast_ai_application.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/fast_ai_application.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/otp_code_verification/otp_code_verification_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/otp_code_verification/otp_code_verification_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_form/widgets/sign_up_form_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_form/widgets/sign_up_form_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/profile_group/setting/setting_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/profile_group/setting/setting_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/widgets/sign_up_personal_info_input_form_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/sign_up_personal_info/widgets/sign_up_personal_info_input_form_widget.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
