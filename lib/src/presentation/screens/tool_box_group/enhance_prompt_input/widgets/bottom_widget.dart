@@ -2,18 +2,19 @@ import 'package:mobile_fast_ai/src/application/global/app_theme/app_theme.dart';
 import 'package:mobile_fast_ai/src/application/global/localization/localization_manager.dart';
 import 'package:mobile_fast_ai/src/cores/constants/language_key.dart';
 import 'package:mobile_fast_ai/src/cores/constants/size_constant.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_bloc.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_event.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_selector.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/app_button.dart';
 import 'package:mobile_fast_ai/src/presentation/widgets/divider_widget.dart';
 import 'package:flutter/material.dart';
 
 class EnhancePromptInputBottomWidget extends StatelessWidget {
   final AppLocalizationManager localization;
-  final VoidCallback onTap;
   final AppTheme appTheme;
 
   const EnhancePromptInputBottomWidget({
     required this.localization,
-    required this.onTap,
     required this.appTheme,
     super.key,
   });
@@ -28,13 +29,24 @@ class EnhancePromptInputBottomWidget extends StatelessWidget {
         const SizedBox(
           height: BoxSize.boxSize05,
         ),
-        PrimaryAppButton(
-          text: localization.translate(
-            LanguageKey.enhancePromptInputScreenGenerate,
-          ),
-          onPress: onTap,
+        EnhancePromptInputIsReadySubmitSelector(
+          builder: (isReadySubmit) {
+            return PrimaryAppButton(
+              isDisable: !isReadySubmit,
+              text: localization.translate(
+                LanguageKey.enhancePromptInputScreenGenerate,
+              ),
+              onPress: () => _onSubmit(context),
+            );
+          }
         ),
       ],
+    );
+  }
+
+  void _onSubmit(BuildContext context) {
+    EnhancePromptInputBloc.of(context).add(
+      const EnhancePromptInputEventOnSubmit(),
     );
   }
 }

@@ -5,37 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/cores/utils/copy.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_result/widgets/prompt_widget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_result/widgets/prompt_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_selector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_state.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/languages/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/config/di.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/di.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/dummy_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/dummy_data.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/cores/constants/language_key.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/app_navigator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/tool_box_page/tool_box_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator/batch_art_generator_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_promot_input_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator/widgets/art_style_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator/widgets/aspect_ratio_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator/widgets/batch_production_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/widgets/batch_production_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/widgets/bottom_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator/widgets/enter_prompt_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/widgets/enter_prompt_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator/widgets/input_images_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator_detail/batch_art_generator_detail_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_result/enhance_prompt_result_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator_detail/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_result/widgets/bottom_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator_finalize/batch_art_generator_finalize_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator_finalize/widgets/bottom_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator_finalize/widgets/content_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator_list/batch_art_generator_list_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator_list/widgets/bottom_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/batch_art_generator_list/widgets/generate_image_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_finalize/image_to_prompt_finalize_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_result/image_to_prompt_result_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_finalize/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_result/widgets/bottom_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_finalize/widgets/content_widget.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_upload/image_to_prompt_upload_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_upload/image_to_prompt_upload_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_upload/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_upload/widgets/bottom_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_promot_input_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/widgets/bottom_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/widgets/bottom_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/widgets/enter_prompt_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input/widgets/enter_prompt_widget.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,18 +55,18 @@
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/tool_box_group/image_to_prompt_result/widgets",
+    "last_opened_file_path": "/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/tool_box_group/enhance_prompt_input",
     "settings.editor.selected.configurable": "flutter.settings",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/enhance_prompt_input" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_result/widgets" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_to_prompt_upload" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload" />
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator" />
-      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/image_generator/widgets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment" />

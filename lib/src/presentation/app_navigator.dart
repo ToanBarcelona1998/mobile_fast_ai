@@ -37,7 +37,7 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/avatar_ge
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/control_net_edit_art_work/control_net_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/control_net_finalize/control_net_finalize_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/control_net_upload/control_net_upload_screen.dart';
-import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_promot_input_screen.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/enhance_prompt_result/enhance_prompt_result_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/extend_image_edit_art_work/extend_image_edit_art_work_screen.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/extend_image_finalize/extend_image_finalize_screen.dart';

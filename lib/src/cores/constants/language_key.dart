@@ -502,6 +502,7 @@ sealed class LanguageKey{
 
   static const String enhancePromptInputScreenAppBarTitle = 'enhance_prompt_input_screen_app_bar_title';
   static const String enhancePromptInputScreenEnterPrompt = 'enhance_prompt_input_screen_enter_prompt';
+  static const String enhancePromptInputScreenPromptInvalid = 'enhance_prompt_input_screen_prompt_invalid';
   static const String enhancePromptInputScreenEnterPromptHint = 'enhance_prompt_input_screen_enter_prompt_hint';
   static const String enhancePromptInputScreenGenerate = 'enhance_prompt_input_screen_generate';
 

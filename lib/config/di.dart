@@ -15,6 +15,7 @@ import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_i
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_form/sign_up_form_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/sign_up_personal_info/sign_up_personal_info_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/splash/splash_cubit.dart';
+import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/enhance_prompt_input/enhance_prompt_input_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_generator/image_generator_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_prompt_upload/image_to_prompt_upload_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_bloc.dart';
@@ -247,13 +248,19 @@ Future<void> initDependency(FastAIConfig config) async {
   );
 
   getIt.registerFactory<UpscaleImageUploadBloc>(
-        () => UpscaleImageUploadBloc(
+    () => UpscaleImageUploadBloc(
       getIt.get<GeneratorUseCase>(),
     ),
   );
 
   getIt.registerFactory<ImageToPromptUploadBloc>(
-        () => ImageToPromptUploadBloc(
+    () => ImageToPromptUploadBloc(
+      getIt.get<GeneratorUseCase>(),
+    ),
+  );
+
+  getIt.registerFactory<EnhancePromptInputBloc>(
+    () => EnhancePromptInputBloc(
       getIt.get<GeneratorUseCase>(),
     ),
   );

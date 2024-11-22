@@ -483,6 +483,7 @@
 
   "enhance_prompt_input_screen_app_bar_title" : "Enhance prompt",
   "enhance_prompt_input_screen_enter_prompt" : "Enter Prompt",
+  "enhance_prompt_input_screen_prompt_invalid" : "Prompt should be between 2-2000 characters",
   "enhance_prompt_input_screen_enter_prompt_hint" : "Type a description, condition, or art that you want to generate",
   "enhance_prompt_input_screen_generate" : "Enhance",
   
