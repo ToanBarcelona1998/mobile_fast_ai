@@ -64,6 +64,8 @@ dependencies:
     path: ./cores/domain
   data:
     path: ./cores/data
+  payment_core:
+    path: packages/payment_core
 
 dev_dependencies:
   flutter_test:

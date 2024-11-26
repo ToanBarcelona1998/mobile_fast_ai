@@ -1,32 +1,61 @@
+import 'dart:io';
+
 import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:in_app_purchase_storekit/store_kit_wrappers.dart';
+import 'package:payment_core/src/core/entity/entity.dart';
+import 'package:payment_core/src/core/utils/payment_store.dart';
 
 import 'payment.dart';
 
-final class ApplePayment implements IPayment{
-  @override
-  Future<void> sendRequest() async{
-    final Set<String> ids = {};
+final class ApplePayment implements IPayment<StorePaymentRequest> {
 
-    final InAppPurchase inAppPurchase = InAppPurchase.instance;
+  final InAppPurchase _inAppPurchase = InAppPurchase.instance;
 
-    final ProductDetailsResponse response = await inAppPurchase.queryProductDetails(ids);
+  ///region xoá phiên giao dịch cũ trên ios
+  Future<void> _clearPurchases() async {
+    if (Platform.isIOS) {
+      await _inAppPurchase.restorePurchases();
 
+      final transactions = await SKPaymentQueueWrapper().transactions();
 
-    final List<ProductDetails> productDetails = response.productDetails;
+      if (transactions.isEmpty) return;
 
-    final ProductDetails productDetail = productDetails[0];
-
-    await InAppPurchase.instance.buyNonConsumable(
-      purchaseParam: PurchaseParam(
-        productDetails: productDetail,
-      ),
-    );
+      for (final tran in transactions) {
+        await SKPaymentQueueWrapper().finishTransaction(tran);
+      }
+    }
   }
 
   @override
-  Stream streamResult() {
-    // TODO: implement streamResult
-    throw UnimplementedError();
+  Future<void> request({
+    required StorePaymentRequest request,
+  }) async {
+    final isAvailable = await _inAppPurchase.isAvailable();
+
+    if (!isAvailable) {
+      throw 'Store is not available';
+    }
+
+    await _clearPurchases();
+
+    await _inAppPurchase.buyWithId(request.id);
   }
 
+  @override
+  Future<String?> getVerifier() async {
+    await _inAppPurchase.purchaseStream.first;
+
+    List<PurchaseDetails> purchaseDetails =
+        await _inAppPurchase.purchaseStream.first;
+
+    for (final purchaseDetail in purchaseDetails) {
+      if (purchaseDetail.status == PurchaseStatus.canceled) {
+        return null;
+      }
+
+      return purchaseDetail.verificationData.serverVerificationData;
+    }
+
+    return null;
+  }
 }

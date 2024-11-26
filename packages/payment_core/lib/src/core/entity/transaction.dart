@@ -1,4 +1,4 @@
-import 'package:payment_core/src/core/type.dart';
+import 'type.dart';
 
 final class CoreTransaction {
   final int id;

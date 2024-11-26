@@ -5,12 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_event.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_selector.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile/my_profile_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/screens/on_boarding_group/splash/splash_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/entity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_core_request/index.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_core_request/payment_core_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_request/index.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_request/payment_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_request/store_payment_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_request/web3_payment_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/provider_request/complete_transaction_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/provider_request/create_transaction_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/provider_request/provider_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/provider/local_storage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/provider/provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/provider/transaction_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/utils/payment_store.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/transaction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/transaction.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/apple_payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/apple_payment.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/google_payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/google_payment.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/payment.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/web3_payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/web3_payment.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/type.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/type.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/payment.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/provider/local_storage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/provider/transaction_provider.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/reown_connect/lib/src/ReownConnectImpl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/reown_connect/lib/src/ReownConnectImpl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,18 +65,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/home_group/home/my_profile",
-    "settings.editor.selected.configurable": "flutter.settings",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/toannv/Documents/Home-Work/mobile_fast_ai/lib/src/presentation/screens/home_group/home/my_profile&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;flutter.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/home_group/home/my_profile" />
@@ -63,9 +86,11 @@
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload/widgets" />
-      <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment" />
-      <recent name="$PROJECT_DIR$/cores/domain/lib/src/utils" />
+      <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity" />
+      <recent name="$PROJECT_DIR$/packages/payment_core/lib/src" />
+      <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core" />
+      <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core/request" />
+      <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

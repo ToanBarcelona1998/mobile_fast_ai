@@ -67,7 +67,7 @@ final class ReownConnectImpl implements ReownConnect {
         method: 'personal_sign',
         params: [
           encodedMessage,
-          _appKitModal.session!.address!,
+          _appKitModal.session!.email,
         ],
       ),
     );

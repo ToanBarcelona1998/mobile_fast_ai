@@ -1,5 +1,7 @@
-abstract interface class IPayment {
-  Future<void> sendRequest();
+import 'package:payment_core/src/core/entity/entity.dart';
 
-  Stream streamResult();
+abstract interface class IPayment<R extends PaymentRequest> {
+  Future<void> request({required R request});
+
+  Future<String?> getVerifier();
 }
