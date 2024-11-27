@@ -21,6 +21,7 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_gen
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_prompt_upload/image_to_prompt_upload_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_bloc.dart';
+import 'package:objectbox/objectbox.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'fast_ai_config.dart';
 

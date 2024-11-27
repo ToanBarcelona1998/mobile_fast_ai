@@ -1,0 +1,52 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:8782194583789253403",
+      "lastPropertyId": "5:3453317996424551179",
+      "name": "OTransaction",
+      "properties": [
+        {
+          "id": "1:6498483752480061915",
+          "name": "id",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:7235905593482492729",
+          "name": "status",
+          "type": 9
+        },
+        {
+          "id": "3:791012469907321425",
+          "name": "methodId",
+          "type": 6
+        },
+        {
+          "id": "4:6664942771396207424",
+          "name": "packageId",
+          "type": 6
+        },
+        {
+          "id": "5:3453317996424551179",
+          "name": "creditsPurchased",
+          "type": 6
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:8782194583789253403",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

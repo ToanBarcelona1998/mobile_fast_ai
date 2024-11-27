@@ -67,6 +67,10 @@ dependencies:
   payment_core:
     path: packages/payment_core
 
+  #local storage
+  objectbox_flutter_libs: ^4.0.3
+  objectbox: ^4.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -74,6 +78,7 @@ dev_dependencies:
   freezed: ^2.5.7
   build_runner: ^2.4.13
   json_serializable: ^6.8.0
+  objectbox_generator: ^4.0.3
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

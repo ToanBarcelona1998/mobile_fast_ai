@@ -24,4 +24,8 @@ sealed class APIService{
 
   static const String _model = '/model';
   static const String getAllModel = '$_model/get-all';
+
+  static const String _transaction = '/transaction';
+  static const String createTransaction = '$_transaction/create-transaction';
+  static const String completeTransaction = '$_transaction/complete-transaction';
 }

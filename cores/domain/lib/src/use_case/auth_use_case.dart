@@ -110,4 +110,12 @@ final class AuthUseCase {
       ),
     );
   }
+
+  Future<String> getAccessToken() async {
+    final TokenManagement tokenManagement =
+        TokenManagement(_secureLocalStorageRepository);
+    return ErrorHandler.getInstance().call(
+      request: tokenManagement.getBearerToken(),
+    );
+  }
 }

@@ -5,33 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/entity.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_core_request/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_core_request/payment_core_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_request/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_request/payment_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_request/store_payment_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/payment_request/web3_payment_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/provider_request/complete_transaction_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/provider_request/create_transaction_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/provider_request/provider_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/provider/local_storage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/provider/provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/provider/transaction_provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/utils/payment_store.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/local_transaction_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/obj_transaction.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/request/payment_core_request_dto.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/transaction/transaction_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/transaction_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/cores/utils/payment_core.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/auth_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/auth_use_case.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/di.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/di.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/transaction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/transaction.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/apple_payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/apple_payment.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/google_payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/google_payment.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/payment.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/web3_payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/payment/web3_payment.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/type.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/type.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/payment.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/provider/local_storage.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/provider/transaction_provider.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/reown_connect/lib/src/ReownConnectImpl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/reown_connect/lib/src/ReownConnectImpl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core_impl.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -86,11 +72,11 @@
       <recent name="$PROJECT_DIR$/lib/src/presentation/screens/tool_box_group/upscale_image_upload" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/application/provider/payment_core" />
       <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity" />
       <recent name="$PROJECT_DIR$/packages/payment_core/lib/src" />
       <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/core" />
       <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core/request" />
-      <recent name="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
