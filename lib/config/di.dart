@@ -9,6 +9,9 @@ import 'package:mobile_fast_ai/src/application/data/service/image_generator/imag
 import 'package:mobile_fast_ai/src/application/data/service/model/model_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/upload/upload_service_impl.dart';
 import 'package:mobile_fast_ai/src/application/data/service/user/user_service_impl.dart';
+import 'package:mobile_fast_ai/src/application/provider/payment_core/local_transaction_provider.dart';
+import 'package:mobile_fast_ai/src/application/provider/payment_core/transaction/transaction_service.dart';
+import 'package:mobile_fast_ai/src/application/provider/payment_core/transaction_provider.dart';
 import 'package:mobile_fast_ai/src/cores/constants/app_local_constant.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/home_group/home/my_profile/my_profile_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/on_boarding_group/otp_code_verification/otp_code_verification_bloc.dart';
@@ -22,12 +25,13 @@ import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/image_to_
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/remove_background_upload/remove_background_bloc.dart';
 import 'package:mobile_fast_ai/src/presentation/screens/tool_box_group/upscale_image_upload/upscale_image_upload_bloc.dart';
 import 'package:objectbox/objectbox.dart';
+import 'package:payment_core/payment_core.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'fast_ai_config.dart';
 
 final GetIt getIt = GetIt.instance;
 
-Future<void> initDependency(FastAIConfig config) async {
+Future<void> initDependency(FastAIConfig config,Store store) async {
   const FlutterSecureStorage secureStorage = FlutterSecureStorage(
     aOptions: AndroidOptions(
       encryptedSharedPreferences: true,
@@ -84,6 +88,12 @@ Future<void> initDependency(FastAIConfig config) async {
 
   getIt.registerLazySingleton<ModelServiceGenerator>(
     () => ModelServiceGenerator(
+      getIt.get<Dio>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<TransactionServiceGenerator>(
+    () => TransactionServiceGenerator(
       getIt.get<Dio>(),
     ),
   );
@@ -203,6 +213,25 @@ Future<void> initDependency(FastAIConfig config) async {
     ),
   );
 
+  // provider
+  getIt.registerLazySingleton<LocalPaymentStorage>(
+    () => LocalTransactionProvider(store),
+  );
+
+  final authUseCase = getIt.get<AuthUseCase>();
+
+  getIt.registerLazySingleton<TransactionProvider>(
+    () => TransactionProviderI(
+      authUseCase.getAccessToken,
+      getIt.get<TransactionServiceGenerator>(),
+    ),
+  );
+
+  PaymentCore.create(
+    localPaymentStorage: getIt.get<LocalPaymentStorage>(),
+    transactionProvider: getIt.get<TransactionProvider>(),
+  );
+
   // Bloc
   getIt.registerFactory<SplashCubit>(
     () => SplashCubit(
@@ -266,7 +295,6 @@ Future<void> initDependency(FastAIConfig config) async {
       getIt.get<GeneratorUseCase>(),
     ),
   );
-
 
   getIt.registerFactory<MyProfileBloc>(
     () => MyProfileBloc(

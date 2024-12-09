@@ -1,3 +1,4 @@
+import 'package:mobile_fast_ai/src/application/provider/payment_core/obj_transaction.dart';
 import 'package:mobile_fast_ai/src/application/provider/payment_core/request/payment_core_request_dto.dart';
 import 'package:mobile_fast_ai/src/application/provider/payment_core/transaction/transaction_service.dart';
 import 'package:payment_core/payment_core.dart';
@@ -22,9 +23,7 @@ final class TransactionProviderI implements TransactionProvider {
       request.toJson(),
     );
 
-    final data = baseResponse.handleResponse();
-
-    throw UnimplementedError();
+    return baseResponse.handleResponse();
   }
 
   @override
@@ -40,6 +39,10 @@ final class TransactionProviderI implements TransactionProvider {
 
     final data = baseResponse.handleResponse();
 
-    throw UnimplementedError();
+    final tx = data['purchase'];
+
+    final OTransaction oTransaction = OTransaction.fromJson(tx);
+
+    return oTransaction.toCoreTx;
   }
 }

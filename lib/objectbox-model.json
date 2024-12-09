@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:8782194583789253403",
-      "lastPropertyId": "5:3453317996424551179",
+      "lastPropertyId": "7:2338062184202255375",
       "name": "OTransaction",
       "properties": [
         {
@@ -33,6 +33,16 @@
           "id": "5:3453317996424551179",
           "name": "creditsPurchased",
           "type": 6
+        },
+        {
+          "id": "6:1859677826257878916",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "7:2338062184202255375",
+          "name": "updatedAt",
+          "type": 9
         }
       ],
       "relations": []

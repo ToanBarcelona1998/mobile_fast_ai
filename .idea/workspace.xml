@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9fb878-b0e6-4fba-8ab9-e84e6509de10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/local_transaction_provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/obj_transaction.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/request/payment_core_request_dto.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/transaction/transaction_service.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/transaction_provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/cores/utils/payment_core.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cores/domain/lib/src/use_case/auth_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/cores/domain/lib/src/use_case/auth_use_case.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/config/di.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/di.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/data/service/api_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/payment_core.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/objectbox-model.json" beforeDir="false" afterPath="$PROJECT_DIR$/lib/objectbox-model.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/application/provider/payment_core/obj_transaction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/obj_transaction.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/application/provider/payment_core/transaction_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/application/provider/payment_core/transaction_provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/transaction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/core/entity/transaction.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/payment_core/lib/src/payment_core_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -8,6 +8,8 @@ import 'package:mobile_fast_ai/src/application/global/localization/localization_
 import 'package:mobile_fast_ai/src/cores/error_handle_impl.dart';
 import 'package:mobile_fast_ai/src/presentation/fast_ai_application.dart';
 import 'package:flutter/material.dart';
+import 'package:objectbox/objectbox.dart';
+import 'objectbox.g.dart';
 
 import 'src/cores/constants/asset_path.dart';
 
@@ -39,6 +41,10 @@ Future<Map<String, dynamic>> _loadConfig() async {
   return jsonDecode(loader);
 }
 
+Future<Store> _openStore()async{
+  return openStore(directory: 'fast_ai_storage');
+}
+
 class LogProviderImpl implements LogProvider {
   @override
   void printLog(String message) {
@@ -56,6 +62,8 @@ void main() async {
   // Load languages
   await AppLocalizationManager.instance.load();
 
+  final store = await _openStore();
+
   final rootConfig = await _loadConfig();
 
   final fastAIConfig = FastAIConfig.fromJson(rootConfig);
@@ -66,7 +74,7 @@ void main() async {
     fastAiErrorHandler,
   );
 
-  await di.initDependency(fastAIConfig);
+  await di.initDependency(fastAIConfig,store);
 
   runApp(
     const FastAIApplication(),
